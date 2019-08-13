@@ -1,0 +1,68 @@
+.buttons-set button.button{
+  float: none;
+}
+/*Botoes*/
+.botao_principal,
+.botao_principal--medio{
+  width: auto;
+  height: auto;
+  line-height: 28px;
+  text-align: center;
+  background-color: var(--cor_principal);
+  border-radius: var(--borda);
+  padding: 10px 15px;
+  margin: var(--espaco) 0;
+  float: right;
+}
+.botao_principal,
+.botao_principal button,
+.botao_principal a,
+.botao_principal--medio,
+.botao_principal--medio button,
+.botao_principal--medio a{
+  text-transform: uppercase !important;
+  color: var(--cor_branco);
+  font-size: 24px;
+}
+/*Botão Medio*/
+.botao_principal--medio,
+.botao_principal--medio button,
+.botao_principal--medio a{
+  font-size: 18px;
+}
+/*Botão com icone*/
+.botao_principal span:first-child,
+.botao_principal--medio span:first-child{
+ margin-right: 15px;
+}
+/*Links*/
+.link_principal,
+.link_principal--dois{
+  width: auto;
+  height: auto;
+  line-height: 1em;
+  padding: 0;
+  margin: var(--espaco) 0;
+  float: left;
+}
+.link_principal,
+.link_principal button,
+.link_principal a,
+.link_principal--dois,
+.link_principal--dois button,
+.link_principal--dois a{
+  text-transform: uppercase !important;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--cor_branco--escuro);
+}
+/*Links Dois*/
+.link_principal--dois,
+.link_principal--dois button,
+.link_principal--dois a{
+  color: var(--cor_principal);
+}
+/*Links c/ Icone*/
+.link_principal--icon{
+
+}

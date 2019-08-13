@@ -1,0 +1,41 @@
+.produto_foto{
+  float: left;
+  width: 40%;
+}
+.product-image img{
+  margin: var(--espaco) auto;
+  max-width: 100%;
+  height: auto;
+  box-shadow: var(--sombra);
+}
+.mousetrap{
+  height: 100% !important;
+  width: 100% !important;
+}
+.produto_dados{
+  padding: var(--espaco) !important;
+  margin: 0 !important;
+  width: 60%;
+  float: left;
+}
+.add-to-cart .botao_principal--medio{
+  float: left;
+}
+.qty-container,
+.qty-container p,
+.qty-container input{
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+  margin: 0;
+}
+.qty-container input{
+  text-align: center !important;
+  line-height: 24px;
+  color: var(--cor_branco--escuro);
+  width: 24px !important;
+  border: 1px solid var(--cor_branco--escuro);
+  border-radius: var(--borda);
+}
+#qty{
+  width: 26px !important;
+}

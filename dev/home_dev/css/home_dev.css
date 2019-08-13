@@ -1,0 +1,12 @@
+body{
+  background: #000 url("../imagens/background.jpg") no-repeat top left;
+  padding: 0;
+  margin: 0;
+}
+a,
+p{
+  color: #fff;
+}
+p{
+  margin: 20px;
+}

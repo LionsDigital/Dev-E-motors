@@ -1,0 +1,31 @@
+.menu-vertical{
+  width: calc(100% - var(--espaco) * 2);
+  max-width: calc(300px - var(--espaco) * 2);
+  background-color: var(--cor_branco--claro);
+  border-radius: var(--borda);
+  padding: var(--espaco);
+  padding-bottom: calc(var(--espaco) * 2);
+  box-shadow: var(--sombra);
+  margin: var(--espaco) 0;
+}
+.menu-vertical--titulo h2{
+  line-height: 38px !important;
+  font-size: 24px !important;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+.menu-vertical ul{
+  padding: 0 var(--espaco);
+  list-style: none;
+}
+.menu-vertical li{
+  line-height: 2em;
+}
+.menu-vertical li::before{
+  content: "\2022";
+  color: var(--cor_principal);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}

@@ -1,0 +1,31 @@
+.footer_linha{
+  width: 80%;
+  margin: 0 10%;
+}
+.footer_coluna{
+  text-align: center;
+  float: left;
+  width: 25%;
+}
+.footer_coluna,
+.footer_coluna a{
+  color: #fff;
+}
+.copyright-container p{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.footer_coluna h3{
+  font-size: 24px;
+  line-height: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer_coluna a{
+  font-size: 18px;
+  line-height: 1.5em;
+}

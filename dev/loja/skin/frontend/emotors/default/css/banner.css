@@ -1,0 +1,25 @@
+.home_banner--moto{
+  float: right;
+  height: 500px;
+  margin: 250px 350px;
+}
+.bt_slide {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  clear: both;
+  margin: 40px 0 0 0;
+}
+.bt_slide a{
+  color: #fff !important;
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 18px;
+  padding: 10px 20px !important;
+  background: #00cd5b;
+  border-radius: 8px;
+}
+.bt_slide a:hover{
+  color: #00cd5b !important;
+  background: #fff;
+}

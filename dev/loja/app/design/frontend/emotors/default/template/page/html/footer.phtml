@@ -1,0 +1,58 @@
+<?php echo $this->getChildHtml('bottomContainer'); ?>
+
+<div class="footer-container">
+	<div class="footer row clearfix">
+		<div class="grid_18 footer_linha">
+      <ul class="footer_coluna">
+        <li><h3>Coluna</h3></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+      </ul>
+      <ul class="footer_coluna">
+        <li><h3>Coluna</h3></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+      </ul>
+      <ul class="footer_coluna">
+        <li><h3>Coluna</h3></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+      </ul>
+      <ul class="footer_coluna">
+        <li><h3>Coluna</h3></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+        <li><a href="/">Item</a></li>
+      </ul>
+		</div>
+	</div>
+</div>
+
+<?php $athleteHelper = Mage::helper('athlete'); ?>
+
+<?php if (!$athleteHelper->getCfg('footer/copyright_line')): ?>
+
+<div class="copyright-container">
+	<div class="row clearfix">
+		<div class="grid_18">
+      <p><?php echo $this->getCopyright() ?></p>
+		</div>
+	</div>
+</div>
+
+<?php endif; ?>

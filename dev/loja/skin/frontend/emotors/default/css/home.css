@@ -1,0 +1,88 @@
+body{
+  background-color: #000 !important;
+}
+a:hover{
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: unset !important;
+}
+.slide-content-container,
+.header.header-1.row,
+.nossos_modelos{
+  max-width: 1400px !important;
+}
+.row{
+  max-width: 100% !important;
+}
+/*
+.nossos_modelos{
+  margin: 0 auto !important;
+}
+h2{
+  font-size: 40px !important;
+  line-height: 1.2em !important;
+  text-align: center;
+}
+.nossos_modelos h2{
+  color: #00cd5b;
+  margin: 30px 0 40px 0;
+}
+.nossos_modelos p{
+  max-width: 400px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin: auto;
+}
+.grid_18{
+  padding: 0 !important;
+}
+.home_vatagens{
+  width: 100%;
+  height: auto;
+}
+.home_vatagens--coluna-um,
+.home_vatagens--coluna-dois{
+  width: 50%;
+  height: auto;
+}
+.home_vatagens--coluna-um{
+  float: left;
+}
+.vatagens_coluna--um-item a{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0 !important;
+}
+.home_vatagens--coluna-dois{
+  float: right;
+}
+.vatagens_coluna--um-item{
+  text-align: end;
+}
+.vatagens_coluna--um-item a:hover{
+  background-color: #fff !important;
+}
+.home_vatagens--coluna-dois{
+  text-align: start;
+}
+.home_vatagens--coluna-dois img{
+  position: absolute;
+  margin-top: 108px;
+}
+.home_carrocel{
+  background-color: #dfdfdf;
+  padding: 100px 0;
+  width: 100%;
+  clear: both;
+}
+.home_formas-pagamento{
+  text-align: center;
+  margin-top: 40px;
+}
+*/
+.home_modelos p{
+  max-width: 800px;
+  text-align: justify !important;
+  margin: 0 auto !important;
+}

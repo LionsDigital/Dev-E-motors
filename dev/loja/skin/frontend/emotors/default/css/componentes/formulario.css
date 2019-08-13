@@ -1,0 +1,81 @@
+.form-list input.input-text,
+input.input-text,
+.form-list .input-box,
+.form-list li{
+  border: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  font-size: 1em;
+  height: auto;
+  width: auto;
+}
+.formulario{
+  max-width: 380px;
+  margin: 150px auto;
+}
+.formulario_cabecalho{
+  margin-bottom: var(--espaco);
+}
+.formulario_cabecalho h3{
+  text-align: center;
+}
+.formulario_body{
+  max-width: calc(100% - calc(var(--espaco) * 2));
+  border-radius: var(--borda);
+  padding: var(--espaco);
+  margin: var(--espaco) 0;
+  background-color: var(--cor_branco--claro);
+  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.formulario_item,
+.formulario_item input,
+.formulario_item i{
+  background-color: rgba(0, 0, 0, 0);
+}
+.formulario_item input,
+.formulario_item i{
+  line-height: 40px !important;
+  font-size: 24px !important;
+}
+.formulario_item input{
+  padding: 0 15px !important;
+  width: calc(100% - 50px) !important;
+}
+.formulario_item .linha{
+  border: 1px solid var(--cor_branco--escuro);
+  border-radius: var(--borda);
+  margin-bottom: var(--espaco);
+}
+.formulario_item i{
+  padding-left: 15px;
+  color: var(--cor_principal);
+}
+.formulario .botao_principal{
+  float: right;
+  margin: 0 0 20px 0;
+}
+.formulario .link_principal,
+.formulario .link_principal--dois{
+  float: left;
+  margin: 0;
+}
+.formulario_itens{
+  margin: 0;
+}
+.formulario_checkbox{
+  font-size: 12px !important;
+  text-align: center;
+}
+.formulario .link_principal.linha,
+.formulario .link_principal.linha a,
+.formulario .link_principal--dois.linha,
+.formulario .link_principal--dois.linha a{
+  text-align: center;
+}
+.formulario .link_principal.linha,
+.formulario .link_principal--dois.linha{
+  float: none;
+  padding: 10px 0;
+  border-top: 1px solid var(--cor_branco--escuro);
+}

@@ -1,0 +1,90 @@
+/*
+.header-container{
+  position: absolute;
+  z-index: 999;
+  top:0;
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.header-container.full-header{
+  background-color: rgba(0, 0, 0, 0)
+}
+.logo-emotors  img{
+  height: 100px;
+  width: auto;
+}
+.top-links .links li, .top-links .links li a{
+  line-height: 20px;
+  font-size: 14px;
+  color:#fff;
+  height: auto;
+}
+.top-links .links li a:hover{
+  color:#000;
+  background-color: #00cd5b;
+  border-radius: 8px;
+}
+.menu_principal{
+  margin: 10px 0;
+}
+.menu_principal--items{
+  float: left;
+}
+.menu_principal--carrinho{
+  float: right;
+}
+.menu_principal--items{
+  margin: 0;
+}
+.menu_principal--item{
+  line-height: 35px;
+  font-size: 18px;
+  color:#fff;
+  margin: 0 10px;
+}
+.menu_principal--item:hover{
+  color: #00cd5b;
+  text-decoration: underline;
+}
+.menu_principal--carrinho .header-switch-trigger.summary.icon-black{
+  margin: 0;
+  padding: 0 15px;
+  background-color: #00cd5b;
+  border-radius: 8px;
+}
+*/
+/*New Code*/
+.cabecalho{
+  z-index: 999;
+}
+.cabecalho_logo{
+  width: 200px;
+  max-width: 200px;
+}
+.cabecalho_logo,
+.cabecalho_logo img{
+  max-height: 100px;
+  padding: 0;
+  margin: var(--espaco);
+}
+.top-links-container,
+.top-links-container a{
+  color: var(--cor_branco) !important;
+  font-size: 14px !important;
+  line-height: 2em !important;
+}
+.top-links-container{
+  color: var(--cor_principal) !important;
+}
+.menu_principal--item{
+  color: var(--cor_branco) !important;
+  font-size: 18px !important;
+  line-height: 2em !important;
+  margin-right: 20px !important;
+  font-weight: 700 !important;
+}
+.menu_principal--item:hover{
+  color: var(--cor_principal) !important;
+}

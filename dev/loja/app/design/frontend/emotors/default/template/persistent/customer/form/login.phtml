@@ -1,0 +1,93 @@
+<?php
+/**
+* Magento
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE_AFL.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@magentocommerce.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade Magento to newer
+* versions in the future. If you wish to customize Magento for your
+* needs please refer to http://www.magentocommerce.com for more information.
+*
+* @category    design
+* @package     base_default
+* @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+* @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*/
+?>
+<?php
+/**
+* Customer login form template
+*
+* @see app/design/frontend/base/default/template/customer/form/login.phtml
+*/
+/** @var $this Mage_Customer_Block_Form_Login */
+?>
+<style>
+  .main-container .content-container{background: none !important;}
+</style>
+<div class="account-login">
+<div class="linha formulario">
+<div class="block-title linha formulario_cabecalho">
+<h3 class="h3_branco">Bem-vindo(a) a</h3>
+<h1>E-motors</h1>
+</div>
+<div class="block-content linha formulario_body">
+<?php echo $this->getMessagesBlock()->toHtml() ?>
+<form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
+<?php echo $this->getBlockHtml('formkey'); ?>
+<ul class="form-list formulario_itens">
+<li class="formulario_item">
+<div class="input-box linha">
+<i class="fas fa-envelope"></i>
+<input type="text" name="login[username]" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Email Address')) ?>" placeholder="E-mail" />
+</div>
+</li>
+<li class="formulario_item">
+<div class="input-box linha">
+<i class="fas fa-lock"></i>
+<input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Password')) ?>" placeholder="Senha" />
+</div>
+</li>
+<?php echo $this->getChildHtml('form.additional.info'); ?>
+<?php echo $this->getChildHtml('persistent.remember.me'); ?>
+<?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+<div class="botao_principal">
+  <button type="submit" class="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Login')) ?>" name="send" id="send2">
+    <?php echo Mage::helper('core')->quoteEscape($this->__('Login')) ?>
+  </button>
+</div>
+</ul>
+<div class="link_principal linha">
+  <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="forgot-password linha" id="forgot-password">
+    <?php echo Mage::helper('core')->quoteEscape($this->__('Forgot Your Password?')) ?>
+  </a>
+</div>
+<?php if (Mage::helper('checkout')->isContextCheckout()): ?>
+<input name="context" type="hidden" value="checkout" />
+<?php endif; ?>
+</form>
+<div class="new-users link_principal--dois linha">
+  <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Register')) ?>" class="button invert" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';">
+    <?php echo Mage::helper('core')->quoteEscape($this->__('Register')) ?>
+  </button>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var dataForm = new VarienForm('login-form', true);
+var dataForgetForm = new VarienForm('form-validate', true);
+//]]>
+</script>
+</div>

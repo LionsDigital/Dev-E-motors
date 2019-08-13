@@ -1,0 +1,45 @@
+body,
+h1,
+h2,
+h3,
+p,
+a,
+button,
+input{
+  font-family: 'Montserrat', sans-serif !important;
+  line-height: 1.5em !important;
+  text-align: left !important;
+}
+body,
+p{
+  font-size: 14px
+  color: var(--cor_preto) !important;
+}
+h1,
+h2{
+  text-transform: uppercase !important;
+  color: var(--cor_principal) !important;
+  text-align: center !important;
+}
+h3,
+p{
+   text-transform: none !important;
+}
+h1{
+  font-size: 48px !important;
+  font-weight: 200 !important;
+}
+h2,
+h3{
+  font-weight: 600 !important;
+}
+h2{
+  font-size: 36px !important;
+}
+h3{
+  font-size: 24px !important;
+  color: var(--cor_preto) !important;
+}
+.h3_branco{
+  color: var(--cor_branco) !important;
+}

@@ -1,0 +1,6 @@
+.sidebar_left{
+  width: calc(21.4% - var(--espaco) * 2) !important;
+  max-width: 300px;
+  padding: 0 !important;
+  margin: 0 !important;
+}

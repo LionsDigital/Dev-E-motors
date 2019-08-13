@@ -1,0 +1,5 @@
+.coluna-principal{
+  width: calc(78.6% - var(--espaco) * 2) !important;
+  margin: 0 !important;
+  float: right !important;
+}

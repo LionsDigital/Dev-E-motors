@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+:root{
+  --cor_principal: #00CD5B;
+  --cor_secundaria: #23212C;
+  --cor_preto: #191919;
+  --cor_branco: #DFDFDF;
+  --cor_branco--claro: #f4f4f4;
+  --cor_branco--escuro: #5E5E5E;
+  --borda: 8px;
+  --espaco: 20px;
+  --sombra: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.linha{
+  width: 100%;
+  height: auto;
+  clear: both;
+}
+.main-container{
+  padding-top: 150px !important;
+  background: url("/media/emotors/imgs/bg-um.jpg") #010101 !important;
+  background-position: top left !important;
+  background-repeat: no-repeat !important;
+}
+.main-container.col-layouts.col1-layout{
+  padding: 0;
+}
+.main-container .content-container{
+  background: url("/media/emotors/imgs/bg-dois.jpg") #010101 !important;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+}
+.main-container  .main.row{
+  padding: var(--espaco) !important;
+  max-width: 1400px !important;
+}
