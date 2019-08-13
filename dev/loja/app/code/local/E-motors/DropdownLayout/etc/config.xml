@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <E-motors_DropdownLayout>
+            <version>1.0.0</version>
+        </E-motors_DropdownLayout>
+    </modules>
+    <global>
+        <page>
+            <layouts>
+                <newlayout module="page" translate="label">
+                    <label>E-motors Home</label>
+                    <template>page/e-motors_home.phtml</template>
+                    <layout_handle>emotorshome</layout_handle>
+                </newlayout>
+            </layouts>
+        </page>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <E-motors_DropdownLayout>
+                    <file>E-motors_DropdownLayout.xml</file>
+                </E-motors_DropdownLayout>
+            </updates>
+        </layout>
+    </frontend>
+</config>

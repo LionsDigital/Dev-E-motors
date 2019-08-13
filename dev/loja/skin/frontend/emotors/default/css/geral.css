@@ -17,21 +17,7 @@
   height: auto;
   clear: both;
 }
-.main-container{
-  padding-top: 150px !important;
-  background: url("/media/emotors/imgs/bg-um.jpg") #010101 !important;
-  background-position: top left !important;
-  background-repeat: no-repeat !important;
-}
-.main-container.col-layouts.col1-layout{
-  padding: 0;
-}
-.main-container .content-container{
-  background: url("/media/emotors/imgs/bg-dois.jpg") #010101 !important;
-  background-position: top center !important;
-  background-repeat: no-repeat !important;
-}
-.main-container  .main.row{
+.conteudo{
+  max-width: calc(1400px - var(--espaco) * 2) !important;
   padding: var(--espaco) !important;
-  max-width: 1400px !important;
 }
