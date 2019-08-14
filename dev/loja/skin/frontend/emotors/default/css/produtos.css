@@ -1,3 +1,4 @@
+/*
 .products-grid{
   width: 100% !important;
   margin: 60px 0 !important;
@@ -31,6 +32,8 @@
 .products-grid .product-name a{
   color: #666 !important;
 }
+*/
+/*
 .bts .bt-vejamais{
   width: auto !important;
   background: rgba(0, 0, 0, 0) !important;
@@ -56,6 +59,8 @@
   font-weight: 200 !important;
   text-transform: none !important;
 }
+*/
+/*
 .product-name a{
   background: rgba(0, 0, 0, 0) !important;
 }
@@ -87,4 +92,31 @@
 }
 .products-grid h3 a{
   text-align: center !important;
+}
+*/
+.products-grid{
+  width: calc(100% - var(--espaco) * 2) !important;
+  padding: var(--espaco) !important;
+}
+.products-grid li{
+  width: calc(calc(100% / 3) - var(--espaco) * 4) !important;
+  padding: 0 calc(var(--espaco) * 2) !important;
+}
+.product-image,
+.product-image img{
+  width: 100% !important;
+  height: auto !important;
+}
+.nossos-produtos .products-grid .product-description--short,
+.nossos-produtos .products-grid .product-valor{
+  display: none;
+}
+.products-grid h3,
+.product-name,
+.product-name a{
+  text-align: center !important;
+  width: 100%;
+}
+.nossos-produtos .link_principal{
+  line-height: 48px !important;
 }

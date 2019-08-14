@@ -1,6 +1,3 @@
-body{
-  background-color: #000 !important;
-}
 a:hover{
   background-color: rgba(0, 0, 0, 0) !important;
   color: unset !important;
@@ -13,76 +10,74 @@ a:hover{
 .row{
   max-width: 100% !important;
 }
-/*
-.nossos_modelos{
-  margin: 0 auto !important;
+.slide-img{
+  background-color: #000 !important;
 }
-h2{
-  font-size: 40px !important;
-  line-height: 1.2em !important;
-  text-align: center;
-}
-.nossos_modelos h2{
-  color: #00cd5b;
-  margin: 30px 0 40px 0;
-}
-.nossos_modelos p{
-  max-width: 400px;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
-  margin: auto;
-}
-.grid_18{
-  padding: 0 !important;
-}
-.home_vatagens{
+.home .cabecalho{
+  position: absolute !important;
+  top: 0;
   width: 100%;
-  height: auto;
 }
-.home_vatagens--coluna-um,
-.home_vatagens--coluna-dois{
-  width: 50%;
-  height: auto;
+.home .header-container{
+  background-color: rgba(255, 255, 255, 0) !important;
 }
-.home_vatagens--coluna-um{
+.home p{
+  max-width: calc(480px - var(--espaco) * 2);
+  margin: var(--espaco) auto 0 auto;
+  text-align: justify;
+}
+.detalhes-produtos{
+  padding: calc(var(--espaco) * 2) 0;
+}
+.detalhes-produtos,
+.detalhes-produtos .conteudo{
+  background-color: var(--cor_secundaria) !important;
+  text-align: center;
+}
+.detalhes-produtos h2,
+.detalhes-produtos h3{
+  color: var(--cor_branco) !important;
+  text-align: center !important;
+}
+.detalhes-produtos .botao_principal{
+  float: none;
+  width: 280px;
+  margin-left: calc(50% - 140px);
+}
+.detalhes-produtos .conteudo img{
+  margin: calc(var(--espaco) * 2) 0;
+}
+.conteudo{
+  padding: 0 var(--espaco) !important;
+}
+.home-informacoes--box1,
+.home-informacoes--box2{
   float: left;
+  width: calc(50% - var(--espaco) * 2);
+  padding: 0 var(--espaco);
 }
-.vatagens_coluna--um-item a{
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0 !important;
+.home-informacoes--box1{
+  background: #fff url("/media/emotors/imgs/rua.png") no-repeat bottom right !important;
+  background-size: auto 100% !important;
+  min-height: 800px;
 }
-.home_vatagens--coluna-dois{
+.home-informacoes--box2{
+  background: #fff url("/media/emotors/imgs/vantagens--moto.jpg") no-repeat bottom left !important;
+  min-height: 800px;
+  background-size: 100% auto !important;
+}
+.box1_item{
+  margin: var(--espaco) 0;
   float: right;
 }
-.vatagens_coluna--um-item{
-  text-align: end;
+.box1_item:first-child img,
+.box1_item:nth-child(3) img{
+  margin-top: calc(var(--espaco) * 2);
 }
-.vatagens_coluna--um-item a:hover{
-  background-color: #fff !important;
+.box1_item:nth-child(3) img,
+.box1_item:last-child img{
+  margin-right: 160px;
 }
-.home_vatagens--coluna-dois{
-  text-align: start;
-}
-.home_vatagens--coluna-dois img{
-  position: absolute;
-  margin-top: 108px;
-}
-.home_carrocel{
-  background-color: #dfdfdf;
-  padding: 100px 0;
-  width: 100%;
-  clear: both;
-}
-.home_formas-pagamento{
-  text-align: center;
-  margin-top: 40px;
-}
-*/
-.home_modelos p{
-  max-width: 800px;
-  text-align: justify !important;
-  margin: 0 auto !important;
+.box1_item:first-child img{
+  margin-right: 20px;
 }
