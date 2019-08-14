@@ -90,11 +90,16 @@
         <div class="home-informacoes--box2"></div>
       </div>
       <div class="todos_produtos linha">
-        <div class="conteudo">          
+        <div class="conteudo">
           <?php
           $filter = Mage::getModel('widget/template_filter');
           echo $filter->filter('{{widget type="catalog/product_widget_new" display_type="all_products" products_count="4" template="catalog/product/widget/new/content/new_grid.phtml"}}')
           ?>
+        </div>
+      </div>
+      <div class="formas-de-pagamento linha">
+        <div class="conteudo">
+          <img src="/media/emotors/imgs/formas-de-pagamento.jpg" alt="Formas de pagamento">
         </div>
       </div>
       <div class="main-container col-layouts col1-layout">

@@ -52,7 +52,10 @@
                   <a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_product->getShortDescription(); ?></a>
                 </div>
                 <div class="product-valor">
-                  <p><?php echo $_product->getPrice(); ?></p>
+                  <h3>
+                    <span>R$</span>
+                    <?php echo $_product->getPrice(); ?>
+                  </h3>
                 </div>
                 <div class="linha">
                     <a

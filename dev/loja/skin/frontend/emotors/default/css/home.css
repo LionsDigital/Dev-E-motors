@@ -81,3 +81,8 @@ a:hover{
 .box1_item:first-child img{
   margin-right: 20px;
 }
+.formas-de-pagamento img{
+  width: calc(100% - var(--espaco) * 4);
+  height: auto;
+  padding: calc(var(--espaco) * 2);
+}
