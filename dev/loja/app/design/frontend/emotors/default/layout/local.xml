@@ -82,6 +82,7 @@
 				<action method="addCss"><stylesheet>css/componentes/sidebars.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/componentes/paginas.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/paginas/produto.css</stylesheet></action>
+				<action method="addCss"><stylesheet>css/paginas/produtos.css</stylesheet></action>
 		</reference>
 
 

@@ -1,0 +1,53 @@
+.e-motors_sidebar--esquerda{
+  width: calc(20% - var(--espaco) * 2);
+}
+.conteudo_principal{
+  width: calc(80% - var(--espaco) * 2);
+}
+.e-motors_sidebar--esquerda,
+.conteudo_principal{
+  padding: var(--espaco);
+  float: left;
+}
+.block{
+  background-color: rgba(255, 255, 255, 0) !important;
+  border: none !important;
+}
+.block h3{
+  color: var(--cor_principal) !important;
+}
+.block-content{
+  font-size: 14px !important;
+}
+.block-subscribe,
+.block-viewed{
+  display: none;
+}
+.category-produtos .products-grid,
+.products-grid .item{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.category-produtos .products-grid{
+  width: 100% !important;
+}
+.products-grid .item{
+  width: calc(calc(100% / 3) - var(--espaco) * 2) !important;
+  margin: var(--espaco) !important;
+  float: left !important;
+}
+.special-price,
+.special-price h2,
+.special-price span{
+  text-align: center !important;
+  width: 100% !important;
+}
+.label-bottom-left{
+  left: 10px;
+  bottom: 30px;
+}
+.products-grid img,
+.products-grid .old-price{
+  margin: 0 !important;
+  padding: 0 !important;
+}

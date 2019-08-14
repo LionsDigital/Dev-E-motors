@@ -48,23 +48,26 @@
 <div class="wrapper">
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
-      <?php echo $this->getChildHtml('header') ?>
+        <?php echo $this->getChildHtml('header') ?>
+
 	    <div class="main-container col-layouts col2-layout col2-left-layout conteudo">
 		    <div class="content-container">
-<div class="main row">
-	<div class="e-motors_sidebar--esquerda">
-		<?php echo $this->getChildHtml('left'); ?>
-	</div>
-	<div class="conteudo_principal">
-		<?php echo $this->getChildHtml('global_messages') ?>
-		<?php echo $this->getChildHtml('breadcrumbs') ?>
-		<?php echo $this->getChildHtml('content') ?>
-	</div>
-</div>
+			    <div class="main row">
+	         <div class="col-main-wrap coluna-principal">
+						<div class="col-main grid_13">
+							<?php echo $this->getChildHtml('global_messages') ?>
+							<?php echo $this->getChildHtml('breadcrumbs') ?>
+							<?php echo $this->getChildHtml('content') ?>
+						</div>
+					</div>
+					<div class="sidebar col-left grid_5 sidebar_left">
+	                    <?php echo $this->getChildHtml('left'); ?>
+	                </div>
+	            </div>
             </div>
 			<?php echo $this->getChildHtml('athlete_brands'); ?>
+		    <?php echo $this->getChildHtml('footer') ?>
         </div>
-				<?php echo $this->getChildHtml('footer') ?>
 	    <?php echo $this->getChildHtml('global_cookie_notice') ?>
 	    <?php echo $this->getChildHtml('before_body_end') ?>
     </div>
