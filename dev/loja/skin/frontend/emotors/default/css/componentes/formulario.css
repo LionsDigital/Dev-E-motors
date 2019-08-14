@@ -18,7 +18,7 @@ input.input-text,
   margin-bottom: var(--espaco);
 }
 .formulario_cabecalho h3{
-  text-align: center;
+  text-align: center !important;
 }
 .formulario_body{
   max-width: calc(100% - calc(var(--espaco) * 2));
@@ -78,4 +78,9 @@ input.input-text,
   float: none;
   padding: 10px 0;
   border-top: 1px solid var(--cor_branco--escuro);
+}
+.customer-account-login .page,
+.customer-account-create .page,
+.customer-account-forgotpassword .page{
+  background: #000 url("/media/emotors/imgs/bg-um.jpg") no-repeat top left !important;
 }

@@ -13,14 +13,6 @@ a:hover{
 .slide-img{
   background-color: #000 !important;
 }
-.home .cabecalho{
-  position: absolute !important;
-  top: 0;
-  width: 100%;
-}
-.home .header-container{
-  background-color: rgba(255, 255, 255, 0) !important;
-}
 .home p{
   max-width: calc(480px - var(--espaco) * 2);
   margin: var(--espaco) auto 0 auto;
@@ -84,5 +76,8 @@ a:hover{
 .formas-de-pagamento img{
   width: calc(100% - var(--espaco) * 4);
   height: auto;
-  padding: calc(var(--espaco) * 2);
+  padding: calc(var(--espaco) * 4) calc(var(--espaco) * 2);
+}
+.nossos-produtos--dados{
+  padding: var(--espaco) 0 !important;
 }

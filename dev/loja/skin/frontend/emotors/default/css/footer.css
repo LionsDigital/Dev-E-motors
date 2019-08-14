@@ -1,3 +1,4 @@
+/*
 .footer_linha{
   width: 80%;
   margin: 0 10%;
@@ -28,4 +29,25 @@
 .footer_coluna a{
   font-size: 18px;
   line-height: 1.5em;
+}
+*/
+.footer{
+  padding: calc(var(--espaco) * 2) 0 !important;
+}
+.footer,
+.footer .conteudo{
+  background-color: var(--cor_preto) !important;
+}
+.footer_coluna{
+  width: calc(100% / 4 - var(--espaco)) !important;
+  margin: 0 calc(var(--espaco) / 2) !important;
+  float: left;
+}
+.footer_coluna,
+.footer_coluna a,
+.footer_coluna h3{
+  color: var(--cor_branco) !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  line-height: 1.8em !important;
 }
