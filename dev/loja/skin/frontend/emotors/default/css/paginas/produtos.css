@@ -51,3 +51,27 @@
   margin: 0 !important;
   padding: 0 !important;
 }
+.toolbar,
+.toolbar .sorter,
+.sorter div,
+.sorter p{
+  background-color: var(--cor_branco) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.toolbar{
+  width: calc(100% - var(--espaco) * 2) !important;
+  padding: calc(var(--espaco) / 2) var(--espaco) !important;
+}
+.sorter div,
+.sorter p{
+  margin: 0 calc(var(--espaco) / 2) !important;
+}
+.view-mode .grid,
+.view-mode .list,
+.pager .pages li a:hover,
+.pager .pages li.current,
+.toolbar-dropdown ul li a:hover,
+.toolbar-dropdown ul li.selected a{
+    background-color: var(--cor_principal) !important;
+}

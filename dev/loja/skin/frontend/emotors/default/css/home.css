@@ -39,8 +39,12 @@ a:hover{
 .detalhes-produtos .conteudo img{
   margin: calc(var(--espaco) * 2) 0;
 }
-.conteudo{
+.home .conteudo{
   padding: 0 var(--espaco) !important;
+}
+.home.page{
+  background-image: none !important;
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 .home-informacoes--box1,
 .home-informacoes--box2{
@@ -80,4 +84,5 @@ a:hover{
 }
 .nossos-produtos--dados{
   padding: var(--espaco) 0 !important;
+  margin-top: var(--espaco);
 }

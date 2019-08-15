@@ -72,9 +72,8 @@
 				<action method="addCss"><stylesheet>css/slider.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/banner.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/home.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/produtos.css</stylesheet></action>
+				<action method="addCss"><stylesheet>css/componentes/produtos.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/footer.css</stylesheet></action>
-				<!---->
 				<action method="addCss"><stylesheet>css/componentes/fontes.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/componentes/formulario.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/componentes/botoes.css</stylesheet></action>

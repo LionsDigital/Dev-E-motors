@@ -15,6 +15,9 @@
 body{
   background-color: rgba(255, 255, 255, 0);
 }
+.page{
+  background: var(--cor_branco--claro) url("/media/emotors/imgs/bg-dois.jpg") repeat top center;
+}
 .linha{
   width: 100%;
   height: auto;
@@ -24,8 +27,8 @@ body{
   width: calc(100% - var(--espaco) * 2);
   max-width: calc(1400px - var(--espaco) * 2) !important;
   padding: var(--espaco) !important;
-  background-color: #fff !important;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 .col1-layout{
   padding: 0 !important;
