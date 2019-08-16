@@ -65,23 +65,26 @@
 
 			<action method="addItem"><type>skin_js</type><script>js/script.js</script></action>
       <!--E-motors-->
-				<action method="addCss"><stylesheet>css/default.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/geral.css</stylesheet></action>
-				<!---->
-        <action method="addCss"><stylesheet>css/header.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/slider.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/banner.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/home.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/componentes/produtos.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/footer.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/componentes/fontes.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/componentes/formulario.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/componentes/botoes.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/componentes/menus.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/componentes/sidebars.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/componentes/paginas.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/paginas/produto.css</stylesheet></action>
-				<action method="addCss"><stylesheet>css/paginas/produtos.css</stylesheet></action>
+				<!--CSSs Gerais-->
+					<action method="addCss"><stylesheet>css/default.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/geral.css</stylesheet></action>
+				<!--CSSs de Componentes-->
+					<action method="addCss"><stylesheet>css/componentes/header.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/slider.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/banner.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/produtos.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/footer.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/fontes.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/formulario.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/botoes.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/menus.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/sidebars.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/componentes/paginas.css</stylesheet></action>
+				<!--CSSs de Paginas-->
+					<action method="addCss"><stylesheet>css/paginas/home.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/paginas/produto.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/paginas/produtos.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/paginas/carrinho.css</stylesheet></action>
 		</reference>
 
 

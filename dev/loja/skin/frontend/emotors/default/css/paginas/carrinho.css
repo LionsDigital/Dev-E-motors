@@ -1,0 +1,19 @@
+#shopping-cart-table{
+  width: calc(70% - var(--espaco)) !important;
+  float: left !important;
+  padding: 0 calc(var(--espaco) / 2) !important;
+}
+#shopping-cart-table tbody,
+#shopping-cart-table tbody tr,
+#shopping-cart-table td img,
+#shopping-cart-table td a{
+  width: 100% !important;
+}
+#shopping-cart-table td{
+  width: calc(25% - var(--espaco)) !important;
+  margin: 0 calc(var(--espaco) / 2) !important;
+}
+#shopping-cart-table td:nth-child(2),
+#shopping-cart-table td:nth-child(3){
+  float: left;
+}

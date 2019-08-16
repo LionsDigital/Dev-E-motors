@@ -70,35 +70,37 @@
             <?php endif; ?>
                 <col width="1" />
             <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
-                <thead>
-                    <tr>
-                        <th rowspan="<?php echo $mergedCells; ?>">&nbsp;</th>
-                        <th rowspan="<?php echo $mergedCells; ?>">
-                          <p>Produto</p>
-                        </th>
-                        <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
-                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center">
-                          <p>Favoritar</p>
-                        </th>
-                        <?php endif ?>
-                        <th class="a-center" colspan="<?php echo $mergedCells; ?>">
-                          <p>Preço Unitário</p>
-                        </th>
-                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center">
-                          <p>Qtd</p>
-                        </th>
-                        <th class="a-center" colspan="<?php echo $mergedCells; ?>"><?php echo $this->__('Subtotal') ?></th>
-                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center">&nbsp;</th>
-                    </tr>
-                    <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
-                    <tr>
-                        <th class="a-right"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
-                        <th><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
-                        <th class="a-right"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
-                        <th><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
-                    </tr>
-                    <?php endif; ?>
-                </thead>
+<!--
+<thead>
+<tr>
+<th rowspan="<//?php echo $mergedCells; ?>">&nbsp;</th>
+<th rowspan="<//?php echo $mergedCells; ?>">
+<p>Produto</p>
+</th>
+<//?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
+<th rowspan="<//?php echo $mergedCells; ?>" class="a-center">
+<p>Favoritar</p>
+</th>
+<//?php endif ?>
+<th class="a-center" colspan="<//?php echo $mergedCells; ?>">
+<p>Preço Unitário</p>
+</th>
+<th rowspan="<//?php echo $mergedCells; ?>" class="a-center">
+<p>Qtd</p>
+</th>
+<th class="a-center" colspan="<//?php echo $mergedCells; ?>"><//?php echo $this->__('Subtotal') ?></th>
+<th rowspan="<//?php echo $mergedCells; ?>" class="a-center">&nbsp;</th>
+</tr>
+<//?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+<tr>
+<th class="a-right"><//?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
+<th><//?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
+<th class="a-right"><//?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
+<th><//?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
+</tr>
+<//?php endif; ?>
+</thead>
+-->
                 <tfoot>
                     <tr>
                         <td colspan="50" class="a-right">

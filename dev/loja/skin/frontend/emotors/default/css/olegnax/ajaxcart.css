@@ -4,13 +4,15 @@
 .oxajax-cart-options .product-image a:hover {background:transparent}
 
 #fancybox-close { top: 0; right: 0; background: #000 url('../../images/athlete/btn_remove_sprite.png') 5px 4px no-repeat; }
-#fancybox-close:hover { background-color: #ffe51e; background-position: 5px -17px }
+#fancybox-close:hover { background-color: var(--cor_principal); background-position: 5px -17px }
 
 .ajax-message { width: 280px; max-width: 100%; text-align: center; }
+/*
 .ajax-message button.button { margin: 5px }
 .ajax-message p{ padding: 10px}
 .ajax-message a { display: inline-block; padding: 1px 4px 1px; color: #000; text-decoration: none;}
 .ajax-message a:hover { background: #000; color: #fff; text-decoration: none;}
+*/
 
 .products-grid .product-image {position: relative}
 .products-list .product-image {position: relative}
