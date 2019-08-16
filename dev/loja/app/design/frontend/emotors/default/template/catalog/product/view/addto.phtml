@@ -32,37 +32,28 @@ $athleteHelper = $this->helper('athlete');
 <?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
 
 <ul class="add-to-links">
-	<?php if ($this->helper('wishlist')->isAllow()) : ?>
-	    <li>
-        <div class="link_principal link_principal--icon">          
-          <a class="link-wishlist" href="<?php echo $_wishlistSubmitUrl ?>" onclick="productAddToCartForm.submitLight(this, this.href); return false;">
-            <i class="fas fa-star"></i>
-            <?php echo $this->__('Add to Wishlist') ?>
-          </a>
-        </div>
-      </li>
-	<?php endif; ?>
-	<?php
-	    $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product);
-	?>
-	<?php if($_compareUrl) : ?>
 	    <li>
         <div class="link_principal link_principal--icon">
-          <a class="link-compare" href="<?php echo $_compareUrl ?>">
-            <i class="fas fa-gift"></i>
-            <?php echo $this->__('Add to Compare') ?>
+          <a class="item" href="#">
+            <i class="fas fa-wallet"></i>
+            <p>Item</p>
           </a>
         </div>
       </li>
-	<?php endif; ?>
-	<?php if ($this->canEmailToFriend()): ?>
+	    <li>
+        <div class="link_principal link_principal--icon">
+          <a class="item" href="#">
+            <i class="fas fa-bus"></i>
+            <p>Item</p>
+          </a>
+        </div>
+      </li>
 		<li>
-      <div class="link_principal link_principal--icon">
-        <a class="link-email-friend" onclick="window.top.location.href='<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>';">
-          <i class="fas fa-envelope"></i>
-          <?php echo $this->__('Email to a Friend') ?>
-        </a>
-      </div>
+			<div class="link_principal link_principal--icon">
+				<a class="item" href="#">
+					<i class="fas fa-user-friends"></i>
+					<p>Item</p>
+				</a>
+			</div>
     </li>
-	<?php endif; ?>
 </ul>

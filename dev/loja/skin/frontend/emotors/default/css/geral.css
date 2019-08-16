@@ -34,3 +34,6 @@ body{
   padding: 0 !important;
   margin: 0 !important;
 }
+.sale-label.label-top-left{
+  display: none !important;
+}
