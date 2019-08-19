@@ -72,45 +72,45 @@
         <col width="1" />
         <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
 
-        <thead>
+        <!--thead>
           <tr>
-            <th rowspan="<?php echo $mergedCells; ?>">&nbsp;</th>
-            <th rowspan="<?php echo $mergedCells; ?>">
+            <th rowspan="<//?php echo $mergedCells; ?>">&nbsp;</th>
+            <th rowspan="<//?php echo $mergedCells; ?>">
               <p>Produto</p>
             </th>
-            <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
-            <th rowspan="<?php echo $mergedCells; ?>" class="a-center">
+            <//?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
+            <th rowspan="<//?php echo $mergedCells; ?>" class="a-center">
               <p>Favoritar</p>
             </th>
-            <?php endif ?>
-            <th class="a-center" colspan="<?php echo $mergedCells; ?>">
+            <//?php endif ?>
+            <th class="a-center" colspan="<//?php echo $mergedCells; ?>">
               <p>Preço Unitário</p>
             </th>
-            <th rowspan="<?php echo $mergedCells; ?>" class="a-center">
+            <th rowspan="<//?php echo $mergedCells; ?>" class="a-center">
               <p>Qtd</p>
             </th>
-            <th class="a-center" colspan="<?php echo $mergedCells; ?>">
-              <?php echo $this->__('Subtotal') ?>
+            <th class="a-center" colspan="<//?php echo $mergedCells; ?>">
+              <//?php echo $this->__('Subtotal') ?>
             </th>
-            <th rowspan="<?php echo $mergedCells; ?>" class="a-center">&nbsp;</th>
+            <th rowspan="<//?php echo $mergedCells; ?>" class="a-center">&nbsp;</th>
           </tr>
-          <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+          <//?php if ($this->helper('tax')->displayCartBothPrices()): ?>
           <tr>
             <th class="a-right">
-              <?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?>
+              <//?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?>
             </th>
             <th>
-              <?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?>
+              <//?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?>
             </th>
             <th class="a-right">
-              <?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?>
+              <//?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?>
             </th>
             <th>
-              <?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?>
+              <//?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?>
             </th>
           </tr>
-          <?php endif; ?>
-        </thead>
+          <//?php endif; ?>
+        </thead-->
 
         <tfoot>
           <tr>
@@ -143,9 +143,9 @@
             </td>
           </tr>
         </tfoot>
-        <tbody>
+        <tbody class="carrinho_produtos">
           <?php foreach($this->getItems() as $_item): ?>
-          <?php echo $this->getItemHtml($_item) ?>
+            <?php echo $this->getItemHtml($_item) ?>
           <?php endforeach ?>
         </tbody>
       </table>
