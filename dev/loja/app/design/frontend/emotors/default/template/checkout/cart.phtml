@@ -47,7 +47,7 @@
   <?php echo $this->getMessagesBlock()->toHtml() ?>
   <?php echo $this->getChildHtml('form_before') ?>
 
-  <form action="<?php echo $this->getFormActionUrl() ?>" method="post">
+  <form class="conteudo_principal" action="<?php echo $this->getFormActionUrl() ?>" method="post">
     <?php echo $this->getBlockHtml('formkey'); ?>
     <fieldset>
       <table id="shopping-cart-table" class="data-table cart-table">
@@ -154,21 +154,21 @@
   </form>
 
 
-  <div class="row cart-collaterals">
-    <div class="grid_18 top-line"></div>
-    <div class="grid_6">
+  <div class="row cart-collaterals carrinho_sidebar--direita">
+    <div></div>
+    <div>
       <div class="block block_shipping">
         <?php /* Extensions placeholder */ ?>
         <?php echo $this->getChildHtml('checkout.cart.extra') ?>
         <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
       </div>
     </div>
-    <div class="grid_6">
+    <div>
       <div class="block block_coupon">
         <?php echo $this->getChildHtml('coupon') ?>
       </div>
     </div>
-    <div class="grid_6">
+    <div>
       <div class="block block_totals clearfix">
         <div class="block_totals_indent">
           <?php echo $this->getChildHtml('totals'); ?>

@@ -1,7 +1,8 @@
-#shopping-cart-table{
-  width: calc(80% - var(--espaco) * 2) !important;
-  margin: 0 var(--espaco) !important;
+.conteudo_principal{
+  width: calc(80% - var(--espaco)) !important;
+  margin: 0 calc(var(--espaco) / 2) !important;
   padding: calc(var(--espaco) / 2) 0 !important;
+  float: left !important;
 }
 #shopping-cart-table tr{
   width: 100% !important;
@@ -11,7 +12,7 @@
   padding: 0 !important;
   margin: 0 !important;
 }
-.carrinho_produtos td h2{
+.cart h2{
   font-size: 24px !important;
 }
 .carrinho_produtos tr td:first-child{
@@ -45,4 +46,10 @@
 }
 .qty-container{
   margin: auto !important;
+}
+.carrinho_sidebar--direita{
+  max-width: calc(20% - var(--espaco)) !important;
+  margin: 0 !important;
+  padding: 0 calc(var(--espaco) / 2) !important;
+  float: right !important;
 }
