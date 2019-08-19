@@ -86,3 +86,6 @@ a:hover{
   padding: var(--espaco) 0 !important;
   margin-top: var(--espaco);
 }
+.home .products-grid .item{
+  margin: calc(var(--espaco) * 2) !important;
+}
