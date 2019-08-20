@@ -1,0 +1,17 @@
+.checkout-onepage-index .conteudo_principal{
+  width: calc(80% - var(--espaco)) !important;
+}
+.checkout-onepage-index .carrinho_sidebar--direita{
+  max-width: calc(20% - var(--espaco)) !important;
+}
+.step-title{
+  border: 1px solid var(--cor_principal);
+}
+.step-title span{
+  border-right: 1px solid var(--cor_principal);
+}
+.step-title,
+.step-title span{
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-radius: var(--borda);
+}

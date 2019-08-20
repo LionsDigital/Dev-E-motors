@@ -43,7 +43,7 @@ input.input-text,
 .formulario_item input,
 .formulario_item select{
   padding: 0 15px !important;
-  width: calc(100% - 50px) !important;
+  width: calc(100% - 60px) !important;
 }
 .formulario_item .linha{
   border: 1px solid var(--cor_branco--escuro);

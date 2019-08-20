@@ -85,6 +85,7 @@
 					<action method="addCss"><stylesheet>css/paginas/produto.css</stylesheet></action>
 					<action method="addCss"><stylesheet>css/paginas/produtos.css</stylesheet></action>
 					<action method="addCss"><stylesheet>css/paginas/carrinho.css</stylesheet></action>
+					<action method="addCss"><stylesheet>css/paginas/finalizar_compra.css</stylesheet></action>
 		</reference>
 
 

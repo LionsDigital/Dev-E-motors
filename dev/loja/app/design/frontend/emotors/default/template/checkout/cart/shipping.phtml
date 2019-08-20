@@ -31,16 +31,16 @@
        <form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="shipping-zip-form">
             <p><?php echo $this->__('Enter your destination to get a shipping estimate.') ?></p>
             <ul class="form-list">
-                <li>
-                    <label for="country" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
-                    <div class="input-box">
+                <li class="formulario_item">
+                    <div class="linha">
+                      <i class="fas fa-globe-africa"></i>
                         <?php echo Mage::getBlockSingleton('directory/data')->getCountryHtmlSelect($this->getEstimateCountryId()) ?>
                     </div>
                 </li>
             <?php //if($this->getStateActive()): ?>
-                <li>
-                    <label for="region_id"<?php if ($this->isStateProvinceRequired()) echo ' class="required"' ?>><?php if ($this->isStateProvinceRequired()) echo '<em>*</em>' ?><?php echo $this->__('State/Province') ?></label>
-                    <div class="input-box">
+                <li class="formulario_item">
+                    <div class="linha">
+                      <i class="fas fa-city"></i>
                         <select id="region_id" name="region_id" title="<?php echo Mage::helper('core')->quoteEscape($this->__('State/Province')) ?>" style="display:none;"<?php echo ($this->isStateProvinceRequired() ? ' class="validate-select"' : '') ?>>
                             <option value=""><?php echo $this->__('Please select region, state or province') ?></option>
                         </select>
@@ -54,15 +54,15 @@
                 </li>
             <?php //endif; ?>
             <?php if($this->getCityActive()): ?>
-                <li>
+                <li class="formulario_item">
                     <label for="city"<?php if ($this->isCityRequired()) echo ' class="required"' ?>><?php if ($this->isCityRequired()) echo '<em>*</em>' ?><?php echo $this->__('City') ?></label>
-                    <div class="input-box">
+                    <div class="linha">
                         <input class="input-text<?php if ($this->isCityRequired()):?> required-entry<?php endif;?>" id="city" type="text" name="estimate_city" value="<?php echo $this->escapeHtml($this->getEstimateCity()) ?>" />
                     </div>
                 </li>
             <?php endif; ?>
                 <li class="formulario_item">
-                    <div class="input-box linha">
+                    <div class="linha">
                         <i class="fas fa-map"></i>
                         <input class="input-text validate-postcode<?php if ($this->isZipCodeRequired()):?> required-entry<?php endif;?>" type="text" id="postcode" name="estimate_postcode" value="<?php echo $this->escapeHtml($this->getEstimatePostcode()) ?>" placeholder="CEP"/>
                     </div>

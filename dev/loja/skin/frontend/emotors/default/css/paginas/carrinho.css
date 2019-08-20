@@ -1,5 +1,5 @@
 .conteudo_principal{
-  width: calc(80% - var(--espaco)) !important;
+  width: calc(70% - var(--espaco)) !important;
   margin: 0 calc(var(--espaco) / 2) !important;
   padding: calc(var(--espaco) / 2) 0 !important;
   float: left !important;
@@ -48,7 +48,7 @@
   margin: auto !important;
 }
 .carrinho_sidebar--direita{
-  max-width: calc(20% - var(--espaco)) !important;
+  max-width: calc(30% - var(--espaco)) !important;
   margin: 0 !important;
   padding: 0 calc(var(--espaco) / 2) !important;
   float: right !important;
