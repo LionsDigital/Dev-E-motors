@@ -36,6 +36,11 @@
  margin-right: 15px;
 }
 /*Links*/
+button.link_principal,
+button.link_principal--dois{
+  background: rgba(255, 255, 255, 0);
+  border: none;
+}
 .link_principal,
 .link_principal--dois{
   width: auto;

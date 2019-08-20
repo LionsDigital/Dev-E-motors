@@ -15,3 +15,13 @@
   background-color: rgba(255, 255, 255, 0) !important;
   border-radius: var(--borda);
 }
+.pagamento_cartao-credito--data,
+.pagamento_cartao-credito--digitos{
+  float: left !important;
+  width: calc(50% - var(--espaco) * 2) !important;
+  padding: 0 var(--espaco) !important;
+}
+.v-fix{
+  width: calc(50% - var(--espaco)) !important;
+  margin: 0 calc(var(--espaco) / 2) !important;
+}

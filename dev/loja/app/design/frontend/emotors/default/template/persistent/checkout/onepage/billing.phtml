@@ -49,12 +49,10 @@
                         </div>
                     </div>
         <?php if(!$this->isCustomerLoggedIn()): ?>
-                    <div class="field">
-                        <label for="billing:email" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
-                        <div class="input-box">
-                            <input type="text" name="billing[email]" id="billing:email" value="<?php echo $this->escapeHtml($this->getAddress()->getEmail()) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Email Address')) ?>" class="input-text validate-email required-entry" />
+                        <div class="linha">
+                          <i class="fas fa-envelope"></i>
+                            <input type="text" name="billing[email]" id="billing:email" placeholder="E-mail" value="<?php echo $this->escapeHtml($this->getAddress()->getEmail()) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Email Address')) ?>" class="input-text validate-email required-entry" />
                         </div>
-                    </div>
         <?php endif; ?>
                 </li>
         <?php $_streetValidationClass = $this->helper('customer/address')->getAttributeValidationClass('street'); ?>
@@ -185,8 +183,11 @@
         <input type="hidden" name="billing[use_for_shipping]" value="1" />
     <?php endif; ?>
     <div class="buttons-set" id="billing-buttons-container">
-        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-        <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue')) ?>" class="button" onclick="billing.save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+      <div class="botao_principal--medio">
+        <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue')) ?>" class="button" onclick="billing.save()">
+            <?php echo $this->__('Continue') ?>
+        </button>
+      </div>
         <span class="please-wait" id="billing-please-wait" style="display:none;">
             <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo Mage::helper('core')->quoteEscape($this->__('Loading next step...')) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Loading next step...')) ?>" class="v-middle" /> <?php echo $this->__('Loading next step...') ?>
         </span>
