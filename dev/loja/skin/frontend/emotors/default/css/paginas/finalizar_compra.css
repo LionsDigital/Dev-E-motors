@@ -25,3 +25,12 @@
   width: calc(50% - var(--espaco)) !important;
   margin: 0 calc(var(--espaco) / 2) !important;
 }
+#dt_method_checkmo{
+  display: none;
+}
+#checkout-review-table .product-name{
+  text-align: left !important;
+}
+#ccsave_cc_cid{
+  width: calc(100% - 60px) !important;
+}
