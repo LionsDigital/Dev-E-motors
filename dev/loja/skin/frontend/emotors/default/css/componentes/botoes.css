@@ -65,6 +65,6 @@ button.link_principal--dois{
 .link_principal--dois,
 .link_principal--dois button,
 .link_principal--dois a{
-  color: var(--cor_principal);
+  color: var(--cor_principal) !important;
 }
 /*Links c/ Icone*/
