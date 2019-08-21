@@ -77,4 +77,36 @@ if (empty($menu_position)) $menu_position = 1;
 		</div>
 	</div>
 <?php echo $this->getChildHtml('topContainer'); ?>
-<?php echo $this->getChildHtml('athlete_slideshow'); ?>
+<?//php echo $this->getChildHtml('athlete_slideshow'); ?>
+<div class="home_banner">
+	<div class="conteudo">
+		<div class="home_banner--moto">
+			<img src="/media/emotors/home/banner/home_banner--moto.png" alt="Moto">
+		</div>
+		<p class="home_banner--texto">
+			<span class="home_banner--texto-um"></span>
+			<br/>
+			<span class="home_banner--texto-dois"></span>
+		</p>
+		<div class="home_banner--botao">
+			<a href="#"></a>
+		</div>
+</div>
+</div>
+<script type="text/javascript">
+	let i = 0;
+	let txtUm = 'Melhor opção';
+	let txtDois = 'em mobilidade';
+	let txtBt = 'Conheça a marca';
+	let speed = 10;
+
+	document.querySelector(".home_banner").addEventListener("load", typeWriter());
+
+	function typeWriter() {
+				document.querySelector(".home_banner--texto-um").innerHTML += txtUm.charAt(i);
+				document.querySelector(".home_banner--texto-dois").innerHTML += txtDois.charAt(i);
+				document.querySelector(".home_banner--botao a").innerHTML += txtBt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+	}
+</script>
