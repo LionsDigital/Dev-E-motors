@@ -88,7 +88,8 @@
 					<action method="addCss"><stylesheet>css/paginas/finalizar_compra.css</stylesheet></action>
 				<!--Home Banner-->
 					<action method="addCss"><stylesheet>css/componentes/home_banner/home_banner.css</stylesheet></action>
-					<action method="addJs"><script>js/componentes/home_banner/home_banner.js</script></action>
+					<action method="addJs"><script>emotors/componentes/home_banner/home_banner.js</script></action>
+					<action method="addJs"><script>emotors/componentes/header.js</script></action>
 		</reference>
 
 

@@ -4,8 +4,6 @@ let txtDois = 'em mobilidade';
 let txtBt = 'Conheça a marca';
 let speed = 10;
 
-document.querySelector(".home_banner").addEventListener("load", typeWriter());
-
 function typeWriter() {
       document.querySelector(".home_banner--texto-um").innerHTML += txtUm.charAt(i);
       document.querySelector(".home_banner--texto-dois").innerHTML += txtDois.charAt(i);

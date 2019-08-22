@@ -47,3 +47,80 @@
   background-color: rgba(255, 255, 255, 0) !important;
   background-image: none !important;
 }
+.top-links-container_mobile .links li{
+  float: none;
+  display: block;
+  margin-bottom: calc(var(--espaco) / 2);
+}
+.top-links-container_mobile .links li:last-child{
+  margin-bottom: 0;
+}
+.top-links-container_mobile .links li a{
+  line-height: 1.2em;
+  font-size: 18px;
+}
+.top-links-container_mobile .links{
+  padding: var(--espaco);
+  margin: var(--espaco);
+  background-color: var(--cor_principal);
+  border-radius: var(--borda);
+  box-shadow: var(--sombra);
+  position: fixed;
+  top: 40px;
+  right: 0;
+}
+.top-links-container_mobile--x,
+.top-links-container_mobile .links{
+  display: none;
+}
+.header-switch{
+  z-index: 0;
+}
+@media (max-width: 620px){
+  .top-links-container,
+  .menu_carrinho--botao-texto{
+    display: none;
+  }
+  .top-links-container_mobile i{
+    color: var(--cor_principal);
+    font-size: 30px;
+    text-align: right;
+    margin: var(--espaco);
+    float: right;
+  }
+  .menu_principal{
+    clear: both;
+  }
+  .header .top-links ul{
+    display: none
+  }
+  .cabecalho_logo{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin: 0;
+  }
+  .cabecalho_logo img{
+    margin: 10px 20px;
+  }
+  .menu_principal--items{
+    float: right !important;
+  }
+  .botao_principal--medio{
+    clear: both;
+  }
+  .menu_carrinho--icone{
+    margin-right: 10px;
+  }
+}
+@media (min-width: 620px){
+  .top-links-container_mobile,
+  .menu_carrinho--icone{
+    display: none;
+  }
+}
+@media (min-width: 480px){
+  .quebra{
+    display: none;
+  }
+}

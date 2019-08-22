@@ -74,8 +74,8 @@
   }
 }
 @media (max-width: 960px){
-  .home_banner--texto{
-    text-align: center;
+  .home_banner .conteudo p{
+    text-align: center !important;
   }
   .home_banner--moto{
     padding: 20px;

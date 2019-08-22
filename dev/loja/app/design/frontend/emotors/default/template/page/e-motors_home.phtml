@@ -44,7 +44,21 @@
   chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <?php echo $this->getChildHtml('after_body_start') ?>
-
+  <div class="home_banner">
+  	<div class="conteudo">
+  		<div class="home_banner--moto">
+  			<img src="/media/emotors/home/banner/home_banner--moto.png" alt="Moto">
+  		</div>
+  		<p class="home_banner--texto">
+  			<span class="home_banner--texto-um"></span>
+  			<br/>
+  			<span class="home_banner--texto-dois"></span>
+  		</p>
+  		<div class="home_banner--botao">
+  			<a href="#"></a>
+  		</div>
+  </div>
+  </div>
   <div class="wrapper">
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="home page">
@@ -113,4 +127,7 @@
   </div>
   <?php echo $this->getAbsoluteFooter() ?>
 </body>
+<script type="text/javascript">
+  document.querySelector(".home_banner").addEventListener("load", typeWriter());
+</script>
 </html>

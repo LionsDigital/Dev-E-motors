@@ -56,10 +56,21 @@ if (empty($menu_position)) $menu_position = 1;
 								<div class="top-links"><?php echo $this->getChildHtml('topLinks'); ?></div>
 								<div class="clear"></div>
 							</div>
+							<div class="top-links-container_mobile">
+								<a class="top-links-container_mobile--abrir" href="#" onclick="abrirMenu()">
+									<i class="fas fa-bars"></i>
+								</a>
+								<a class="top-links-container_mobile--x" href="#" onclick="fecharMenu()">
+									<i class="fas fa-times"></i>
+								</a>
+								<div class="top-links"><?php echo $this->getChildHtml('topLinks'); ?></div>
+								<div class="clear"></div>
+							</div>
 							<div class="menu_principal">
 								<div class="menu_principal--items">
 									<a href="/loja" class="menu_principal--item">Home</a>
 									<a href="/loja/sobre" class="menu_principal--item">A Marca</a>
+									<br class="quebra"/>
 									<a href="/loja/catalog/category/view/id/3" class="menu_principal--item">Loja</a>
 									<a href="/loja/suporte" class="menu_principal--item">Suporte</a>
 								</div>
@@ -78,35 +89,3 @@ if (empty($menu_position)) $menu_position = 1;
 	</div>
 <?php echo $this->getChildHtml('topContainer'); ?>
 <?//php echo $this->getChildHtml('athlete_slideshow'); ?>
-<div class="home_banner">
-	<div class="conteudo">
-		<div class="home_banner--moto">
-			<img src="/media/emotors/home/banner/home_banner--moto.png" alt="Moto">
-		</div>
-		<p class="home_banner--texto">
-			<span class="home_banner--texto-um"></span>
-			<br/>
-			<span class="home_banner--texto-dois"></span>
-		</p>
-		<div class="home_banner--botao">
-			<a href="#"></a>
-		</div>
-</div>
-</div>
-<script type="text/javascript">
-	let i = 0;
-	let txtUm = 'Melhor opção';
-	let txtDois = 'em mobilidade';
-	let txtBt = 'Conheça a marca';
-	let speed = 10;
-
-	document.querySelector(".home_banner").addEventListener("load", typeWriter());
-
-	function typeWriter() {
-				document.querySelector(".home_banner--texto-um").innerHTML += txtUm.charAt(i);
-				document.querySelector(".home_banner--texto-dois").innerHTML += txtDois.charAt(i);
-				document.querySelector(".home_banner--botao a").innerHTML += txtBt.charAt(i);
-				i++;
-				setTimeout(typeWriter, speed);
-	}
-</script>

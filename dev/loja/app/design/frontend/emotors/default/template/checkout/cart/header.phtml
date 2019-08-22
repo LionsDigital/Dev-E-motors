@@ -11,7 +11,7 @@ $_cartQty = $this->getSummaryCount(); if ( is_null($_cartQty) ) $_cartQty = 0;
 <div class="header-switch botao_principal--medio">
 
 	<a class="header-switch-trigger summary icon-<?php echo $athleteHelper->getCfg('header/search_icon', 'athlete_appearance'); ?>" href="<?php echo $this->getUrl('checkout/cart') ?>">
-		<?php echo '<span>'.$this->__('My Cart') . '</span><span class="qty">' . $_cartQty . '</span>'; ?>
+		<?php echo '<span class="menu_carrinho--botao-texto">'.$this->__('My Cart') . '</span><span class="menu_carrinho--icone"><i class="fas fa-shopping-cart"></i></span><span class="qty">' . $_cartQty . '</span>'; ?>
 	</a>
 
 	<div class="header-dropdown">
