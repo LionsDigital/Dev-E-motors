@@ -51,7 +51,6 @@
 			<action method="addCss"><stylesheet helper="athlete/data/getThemeCss" /></action>
 			<action ifconfig="athlete_appearance/custom/override_css" method="addItem"><type>skin_css</type><name>css/override.css</name></action>
 			<action method="addItem"><type>js</type><name>olegnax/html5shiv.js</name><params/><if>lt IE 9</if></action>
-			<action method="addJs"><script>olegnax/jquery-1.11.0.min.js</script></action>
 			<action method="addJs"><script>olegnax/jquery-migrate-1.2.1.min.js</script></action>
 			<action method="addJs"><script>olegnax/jquery.noconflict.js</script></action>
 			<action method="addJs"><script>olegnax/jquery.easing.js</script></action>
@@ -89,7 +88,9 @@
 				<!--Home Banner-->
 					<action method="addCss"><stylesheet>css/componentes/home_banner/home_banner.css</stylesheet></action>
 					<action method="addJs"><script>emotors/componentes/home_banner/home_banner.js</script></action>
-					<action method="addJs"><script>emotors/componentes/header.js</script></action>
+				<!--Home Slider-->
+				<action method="addCss"><stylesheet>css/componentes/home_slider/home_slider.css</stylesheet></action>
+				<action method="addJs"><script>emotors/componentes/home_slider/home_slider.js</script></action>
 		</reference>
 
 
