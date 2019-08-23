@@ -10,152 +10,39 @@
 
 <body>
 	<div class="home_slider">
-		<div class="container">
-			<div class="home_slider--botoes">
-				<a href="#" class="s-prev">Prev</a>
-				<a href="#" class="s-next">Next</a>
-			</div>
-			<div class="single">
-				<ul>
-					<li>
-						<div class="single-box">
-							<img src="imagens/moto_amarela--dois.jpg" alt="#">
-						</div>
-					</li>
-					<li>
-						<div class="single-box">
-							<img src="imagens/moto_amarela.jpg" alt="#">
-						</div>
-					</li>
-					<li>
-						<div class="single-box">
-							<img src="imagens/moto_branca.png" alt="#">
-						</div>
-					</li>
-				</ul>
-			</div>
-			<br>
-			<div class="sumir">
-				<h1>Vertical Single Slider</h1>
-				<a href class="sv-prev">Prev</a>
-				<a href class="sv-next">Next</a>
-				<div class="single-vertical">
-					<ul>
-						<li>
-							<div class="single-box">1</div>
-						</li>
-						<li>
-							<div class="single-box" style="background-color: #666">2</div>
-						</li>
-						<li>
-							<div class="single-box" style="background-color: #e20404">3</div>
-						</li>
-						<li>
-							<div class="single-box" style="background-color: #1f8e8e">4</div>
-						</li>
-						<li>
-							<div class="single-box" style="background-color: #e2e200">5</div>
-						</li>
-						<li>
-							<div class="single-box" style="background-color: #e200d1">6</div>
-						</li>
-						<li>
-							<div class="single-box" style="background-color: #07803a">7</div>
-						</li>
-						<li>
-							<div class="single-box" style="background-color: #606011">8</div>
-						</li>
-					</ul>
+		<h2>
+			Lorem ipsum
+		</h2>
+		<h3>
+			Lorem ipsum dolor sit amet.
+		</h3>
+		<div class="conteudo">
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<img src="imagens/img_01.jpg" alt="#" style="width:100%">
 				</div>
-				<h1>Horizontal Carousel</h1>
-				<a href="#" class="prev">Prev</a>
-				<a href="#" class="next">Next</a>
-				<br>
-				<br>
-				<div class="slider">
-					<ul>
-						<li>
-							<div class="box">1</div>
-						</li>
-						<li>
-							<div class="box">2</div>
-						</li>
-						<li>
-							<div class="box">3</div>
-						</li>
-						<li>
-							<div class="box">4</div>
-						</li>
-						<li>
-							<div class="box">5</div>
-						</li>
-						<li>
-							<div class="box">6</div>
-						</li>
-						<li>
-							<div class="box">7</div>
-						</li>
-						<li>
-							<div class="box">8</div>
-						</li>
-					</ul>
+				<div class="mySlides fade">
+					<img src="imagens/img_02.jpg" alt="#" style="width:100%">
 				</div>
-				<h1>Vertical Carousel</h1>
-				<a href="#" class="v-prev">Prev</a>
-				<a href="#" class="v-next">Next</a>
-				<br>
-				<br>
-				<div class="vertical-slider">
-					<ul>
-						<li>
-							<div class="box-vertical">1</div>
-						</li>
-						<li>
-							<div class="box-vertical">2</div>
-						</li>
-						<li>
-							<div class="box-vertical">3</div>
-						</li>
-						<li>
-							<div class="box-vertical">4</div>
-						</li>
-						<li>
-							<div class="box-vertical">5</div>
-						</li>
-						<li>
-							<div class="box-vertical">6</div>
-						</li>
-					</ul>
+				<div class="mySlides fade">
+					<img src="imagens/img_03.jpg" alt="#" style="width:100%">
 				</div>
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 			</div>
+		</div>
+		<div class="bt">
+			<a href="#">
+				<p>Veja mais</p>
+			</a>
+		</div>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
 		</div>
 	</div>
 	<script src="js/main.js"></script>
-	<script>
-		var slider = new Slider('.slider', {
-		      visibles: 4,
-		      controlNext: '.next',
-		      controlPrev: '.prev'
-		    });
-
-		    var verticalSlider = new Slider('.vertical-slider', {
-		      direction: 'vertical',
-		      visibles: 3,
-		      controlNext: '.v-next',
-		      controlPrev: '.v-prev'
-		    })
-
-		    var single = new Slider('.single', {
-		      controlNext: '.s-next',
-		      controlPrev: '.s-prev'
-		    });
-
-		    var singleVertical = Slider('.single-vertical', {
-		      controlNext: '.sv-next',
-		      controlPrev: '.sv-prev',
-		      direction: 'vertical'
-		    });
-	</script>
 </body>
 
 </html>

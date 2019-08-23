@@ -1,109 +1,139 @@
-.container {
-	width: 1000px;
-	margin: 100px auto;
-	font-family: sans-serif;
+* {
+	box-sizing: border-box
 }
-.slider {
-	position: relative;
-	overflow: hidden;
-	border: 1px dashed blue;
-	margin-bottom: 100px;
+body {
+	font-family: Verdana, sans-serif;
+	margin: 0
 }
-.slider ul {
-	list-style: outside none;
-	padding: 0;
-	margin: 0;
-	width: 10000%;
-	position: relative;
-	top: 0;
-	right: 0;
-	transition: all 0.6s ease;
+.mySlides {
+	display: none
 }
-.slider li {
-	float: left;
+img {
+	vertical-align: middle;
 }
-.box {
-	width: 200px;
-	height: 200px;
-	background-color: #888;
-	color: #fff;
-	text-align: center;
-	line-height: 200px;
-	font-size: 32px;
-}
-.vertical-slider {
-	width: 300px;
-	height: 400px;
-	border: 1px solid orange;
-	position: relative;
-	overflow: hidden;
-}
-.vertical-slider ul {
-	list-style: outside none;
-	padding: 0;
-	margin: 0;
-	position: relative;
-	top: 0;
-	right: 0;
-	transition: all 0.6s ease;
-}
-.box-vertical {
+/* Slideshow container */
+.slideshow-container {
 	width: 100%;
-	height: 100px;
-	line-height: 100px;
-	text-align: center;
-	background-color: #b786ef;
-	color: #fff;
-	text-align: center;
-	font-size: 28px;
-}
-.single,
-.single-vertical {
-	width: 500px;
-	height: 300px;
-	margin: 0 auto;
 	position: relative;
-	overflow: hidden;
-	margin-bottom: 100px;
+	margin: auto;
 }
-.single ul,
-.single-vertical ul {
-	list-style: outside none;
-	width: 10000%;
-	position: relative;
-	top: 0;
-	right: 0;
-	transition: all 0.6s ease;
-	padding: 0;
-	margin: 0;
-}
-.single li {
-	float: left;
-}
-.single-box {
-	background-color: #22c3bc;
-	width: 500px;
-	height: 300px;
-	text-align: center;
-	line-height: 300px;
-	font-size: 50px;
-	color: #fff;
-}
-.sumir {
-	display: none;
-}
-/*Novo CSS*/
-.container,
-.single{
-	margin: 0 auto !important;
-}
-.single img{
-	height: 100%;
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
 	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
 }
-.single-box{
-	background-color: #fff;
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
 }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+	background-color: #717171;
+}
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+	from {
+		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
+}
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.prev,
+	.next,
+	.text {
+		font-size: 11px
+	}
+}
+/*New Code*/
 .home_slider{
-	background-color: #23212c;
+	background: #1e1c29;
+	padding: 40px 0 20px 0;
+}
+.home_slider h2,
+.home_slider h3{
+	text-align: center;
+	color: #fff;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0 20px;
+}
+.home_slider h2{
+	text-transform: uppercase;
+	font-size: 30px;
+}
+.home_slider h3{
+	font-size: 24px;
+}
+.slideshow-container img{
+	width: calc(100% - 40px);
+	padding: 0 20px;
+}
+.bt{
+	margin: 10px auto;
+	max-width: 280px;
+	text-align: center;
+}
+.bt a,
+.bt p{
+	text-decoration: none;
+}
+.bt p{
+	padding: 10px 15px;
+	background: #00cd5b;
+	border-radius: 8px;
+	line-height: 1.2em;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #fff;
+}
+@media (min-width: 700px){
+	.conteudo{
+		max-width: 700px;
+		margin: 0 auto;
+	}
 }
