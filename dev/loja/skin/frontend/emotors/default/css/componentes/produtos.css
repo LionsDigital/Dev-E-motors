@@ -51,9 +51,13 @@
   }
   .home .products-grid .item .link_principal{
     margin: 0 !important;
-    float: none !important;
     text-align: center !important;
   }
+}
+@media (max-width: 480px){
+  .home .products-grid .item .link_principal{
+  float: none !important;
+}
   .home .products-grid .item .link_principal button{
     font-size: 12px !important;
   }
