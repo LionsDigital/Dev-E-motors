@@ -1,0 +1,50 @@
+h2 {
+  font-weight: 100;
+}
+
+.nav-top-link {
+  font-weight: 100;
+}
+
+center {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+span {
+  font-weight: 400;
+}
+
+.header-nav.header-nav-main.nav.nav-right.nav-divided {
+  font-size: 20px;
+}
+
+.absolute-footer.light.medium-text-center.text-center {
+  border-top-width: 1px;
+  border-top-color: #EEE;
+  border-top-style: solid;
+}
+
+strong {
+  color: #BDB170;
+}
+
+.widget-title {
+  color: #ffffff;
+}
+
+.is-divider {
+  background-color: #bdb170;
+}
+
+a {
+  color: #454545;
+}
+
+.box-text-inner {
+  color: #666666;
+}
+
+h4 {
+  color: #2b2b2b;
+}

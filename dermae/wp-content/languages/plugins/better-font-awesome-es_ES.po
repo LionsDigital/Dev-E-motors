@@ -1,0 +1,148 @@
+# Translation of Plugins - Better Font Awesome - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Better Font Awesome - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-04-17 12:57:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Better Font Awesome - Stable (latest release)\n"
+
+#. Author URI of the plugin/theme
+msgid "mickeyskay@gmail.com"
+msgstr "mickeyskay@gmail.com"
+
+#. Author of the plugin/theme
+msgid "Mickey Kay"
+msgstr "Mickey Kay"
+
+#. Description of the plugin/theme
+msgid "The ultimate Font Awesome icon plugin for WordPress."
+msgstr "El plugin de iconos Font Awesome definitivo para WordPress."
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/better-font-awesome"
+msgstr "http://wordpress.org/plugins/better-font-awesome"
+
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1310
+msgid "Solution"
+msgstr "Solución"
+
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1306
+msgid "<b>Don't worry! Better Font Awesome will still render using the included fallback version:</b> "
+msgstr "<b>¡No te preocupes! Better Font Awesome seguirá funcionando usando la versión de retrollamada incluida:</b>"
+
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1296
+msgid "The attempt to fetch the remote Font Awesome stylesheet failed with the following error: %s %s The embedded fallback Font Awesome will be used instead (version: %s)."
+msgstr "El intento de recuperar la hoja de estilos remota de Font Awesome ha fallado con el siguiente error: %s %s Se usará en su lugar la retrollamada incrustada de Font Awesome (versión: %s)."
+
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1294
+msgid "Remote CSS Error"
+msgstr "Error de CSS remoto"
+
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1284
+msgid "The attempt to reach the jsDelivr API server failed with the following error: %s"
+msgstr "El intento de llegar al servidor de la API de jsDelivr falló con el siguiente error: %s"
+
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1282
+msgid "API Error"
+msgstr "Error de API"
+
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1256
+msgid "Insert Icon"
+msgstr "Insertar icono"
+
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:524
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:590
+msgid "The jsDelivr API servers appear to be temporarily unavailable."
+msgstr "Parece que los servidores de la API de jsDelivr no están disponibles temporalmente."
+
+#: better-font-awesome.php:614
+msgid ""
+"<h3>Usage</h3>\n"
+"                     <b>Font Awesome version 4.x +</b>&nbsp;&nbsp;&nbsp;<small><a href=\"http://fontawesome.io/examples/\">See all available options &raquo;</a></small><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee\"></i> <code>[icon name=\"coffee\"]</code> or <code>&lt;i class=\"fa-coffee\"&gt;&lt;/i&gt;</code><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee icon-2x fa-2x\"></i> <code>[icon name=\"coffee\" class=\"fa-2x\"]</code> or <code>&lt;i class=\"fa-coffee fa-2x\"&gt;&lt;/i&gt;</code><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee icon-2x fa-2x icon-rotate-90 fa-rotate-90\"></i> <code>[icon name=\"coffee\" class=\"fa-2x fa-rotate-90\"]</code> or <code>&lt;i class=\"fa-coffee fa-2x fa-rotate-90\"&gt;&lt;/i&gt;</code><br /><br /><br />\n"
+"                     <b>Font Awesome version 3.x</b>&nbsp;&nbsp;&nbsp;<small><a href=\"http://fontawesome.io/3.2.1/examples/\">See all available options &raquo;</a></small><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee\"></i> <code>[icon name=\"coffee\"]</code> or <code>&lt;i class=\"icon icon-coffee\"&gt;&lt;/i&gt;</code><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee icon-2x fa-2x\"></i> <code>[icon name=\"coffee\" class=\"icon-2x\"]</code> or <code>&lt;i class=\"icon icon-coffee icon-2x\"&gt;&lt;/i&gt;</code><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee icon-2x fa-2x icon-rotate-90 fa-rotate-90\"></i> <code>[icon name=\"coffee\" class=\"icon-2x icon-rotate-90\"]</code> or <code>&lt;i class=\"icon icon-coffee icon-2x icon-rotate-90\"&gt;&lt;/i&gt;</code>"
+msgstr ""
+"<h3>Uso</h3>\n"
+"                     <b>Font Awesome version 4.x +</b>&nbsp;&nbsp;&nbsp;<small><a href=\"http://fontawesome.io/examples/\">Ver todas las opciones disponibles &raquo;</a></small><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee\"></i> <code>[icon name=\"coffee\"]</code> or <code>&lt;i class=\"fa-coffee\"&gt;&lt;/i&gt;</code><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee icon-2x fa-2x\"></i> <code>[icon name=\"coffee\" class=\"fa-2x\"]</code> or <code>&lt;i class=\"fa-coffee fa-2x\"&gt;&lt;/i&gt;</code><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee icon-2x fa-2x icon-rotate-90 fa-rotate-90\"></i> <code>[icon name=\"coffee\" class=\"fa-2x fa-rotate-90\"]</code> or <code>&lt;i class=\"fa-coffee fa-2x fa-rotate-90\"&gt;&lt;/i&gt;</code><br /><br /><br />\n"
+"                     <b>Font Awesome version 3.x</b>&nbsp;&nbsp;&nbsp;<small><a href=\"http://fontawesome.io/3.2.1/examples/\">Ver todas las opciones disponibles &raquo;</a></small><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee\"></i> <code>[icon name=\"coffee\"]</code> or <code>&lt;i class=\"icon icon-coffee\"&gt;&lt;/i&gt;</code><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee icon-2x fa-2x\"></i> <code>[icon name=\"coffee\" class=\"icon-2x\"]</code> or <code>&lt;i class=\"icon icon-coffee icon-2x\"&gt;&lt;/i&gt;</code><br /><br />\n"
+"                     <i class=\"icon-coffee fa fa-coffee icon-2x fa-2x icon-rotate-90 fa-rotate-90\"></i> <code>[icon name=\"coffee\" class=\"icon-2x icon-rotate-90\"]</code> or <code>&lt;i class=\"icon icon-coffee icon-2x icon-rotate-90\"&gt;&lt;/i&gt;</code>"
+
+#: better-font-awesome.php:567
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1312
+msgid "This may be the result of a temporary server or connectivity issue which will resolve shortly. However if the problem persists please file a support ticket on the %splugin forum%s, citing the errors listed above. "
+msgstr "Esto podría ser a causa de un problema temporal de servidor o conectividad que se resolverá pronto. No obstante, si el problema persiste, por favor, envía un ticket de soporte en el %sforo del plugin%s, citando los errores listados arriba."
+
+#: better-font-awesome.php:560
+msgid "Font Awesome will still render using version: %s"
+msgstr "Font Awesome se seguirá mostrando usando la versión: %s"
+
+#: better-font-awesome.php:553
+msgid "Version selection is currently unavailable. The attempt to reach the jsDelivr API server failed with the following error: %s"
+msgstr "La selección de versión no está disponible actualmente. El intento de llegar al servidor de la API de jsDelivr falló con el siguiente error: %s"
+
+#: better-font-awesome.php:493 better-font-awesome.php:519
+msgid "Always Latest"
+msgstr "Siempre lo último"
+
+#: better-font-awesome.php:420
+msgid "Hide the default admin warnings that are shown when API and CDN errors occur."
+msgstr "Oculta las advertencias de administración por defecto que se muestran cuando ocurren errores de la API o la CDN."
+
+#: better-font-awesome.php:414
+msgid "Hide admin notices"
+msgstr "Ocultar avisos de administración"
+
+#: better-font-awesome.php:408
+msgid "Attempt to remove Font Awesome CSS and shortcodes added by other plugins and themes."
+msgstr "Intento de eliminar el CSS y shortcodes de Font Awesome por otros plugins y temas."
+
+#: better-font-awesome.php:402
+msgid "Remove existing Font Awesome"
+msgstr "Eliminar Font Awesome existente"
+
+#: better-font-awesome.php:396
+msgid "Whether to include the minified version of the CSS (checked), or the unminified version (unchecked)."
+msgstr "Ya incluyas la versión minimizada del CSS (seleccionado) o la versión sin minimizar (sin seleccionar)."
+
+#: better-font-awesome.php:390
+msgid "Use minified CSS"
+msgstr "Usar CSS minimizado"
+
+#: better-font-awesome.php:381
+msgid "Version"
+msgstr "Versión"
+
+#: better-font-awesome.php:350
+msgid "Save Settings"
+msgstr "Guardar ajustes"
+
+#: better-font-awesome.php:238
+msgid "Back to the plugins page &rarr;"
+msgstr "Volver a la página de plugins &rarr;"
+
+#: better-font-awesome.php:237
+msgid "It appears that Better Font Awesome is missing it's <a href=\"https://github.com/MickeyKay/better-font-awesome-library\" target=\"_blank\">core library</a>, which typically occurs when cloning the Git repository and failing to run <code>composer install</code>. Please refer to the plugin's <a href=\"https://github.com/MickeyKay/better-font-awesome\" target=\"_blank\">installation instructions</a> for details on how to properly install Better Font Awesome via Git. If you installed from within WordPress, or via the wordpress.org repo, then chances are the install failed and you can try again. If the issue persists, please create a new topic on the plugin's <a href=\"http://wordpress.org/support/plugin/better-font-awesome\" target=\"_blank\">support forum</a> or file an issue on the <a href=\"https://github.com/MickeyKay/better-font-awesome/issues\" target=\"_blank\">Github repo</a>."
+msgstr "Parece que a Better Font Awesome le falta su <a href=\"https://github.com/MickeyKay/better-font-awesome-library\" target=\"_blank\">biblioteca principal</a>, lo que ocurre típicamente cuando se clona el repositorio Git y no se ejecuta <code>composer install</code>. Por favor, consulta las <a href=\"https://github.com/MickeyKay/better-font-awesome\" target=\"_blank\">instrucciones de instalación</a> del plugin para obtener detalles sobre cómo instalar correctamente Better Font Awesome a través de Git. Si lo instalaste desde WordPress, o a través del repositorio de wordpress.org, es probable que la instalación haya fallado y puedas intentarlo de nuevo. Si el problema persiste, por favor crea un nuevo debate en el <a href=\"http://wordpress.org/support/plugin/better-font-awesome\" target=\"_blank\">foro de soporte</a> o envía un aviso de problemas al <a href=\"https://github.com/MickeyKay/better-font-awesome/issues\" target=\"_blank\">repositorio en Github</a>."
+
+#. #-#-#-#-#  better-font-awesome-code.pot (Better Font Awesome 2.0.0-beta) 
+#. #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: better-font-awesome.php:186 better-font-awesome.php:236
+#: vendor/mickey-kay/better-font-awesome-library/better-font-awesome-library.php:1276
+msgid "Better Font Awesome"
+msgstr "Better Font Awesome"

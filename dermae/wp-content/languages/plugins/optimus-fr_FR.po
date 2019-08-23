@@ -1,0 +1,240 @@
+# Translation of Plugins - Optimus &#8211; WordPress Image Optimizer - Development (trunk) in French (France)
+# This file is distributed under the same license as the Plugins - Optimus &#8211; WordPress Image Optimizer - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-05-18 10:04:41+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Optimus &#8211; WordPress Image Optimizer - Development (trunk)\n"
+
+#: inc/optimus_settings.class.php:148
+msgid "Keep image metadata"
+msgstr "Garder les métadonnées des images"
+
+#: inc/optimus_settings.class.php:215
+msgid "Manual optimization"
+msgstr "Optimisation manuelle"
+
+#: inc/optimus_settings.class.php:130
+msgid "Ignore original images"
+msgstr "Ignorer les images originales"
+
+#: inc/optimus_request.class.php:74
+msgid "Not found"
+msgstr "Non trouvé"
+
+#: inc/optimus_management.class.php:137
+msgid "Optimus found <strong>%d images</strong> in your WordPress media library that can be optimized."
+msgstr "Optimus a trouvé <strong>%d images</strong> dans votre bibliothèque de médias WordPress qui peuvent être optimisée."
+
+#: inc/optimus_settings.class.php:166
+msgid "WebP files"
+msgstr "Fichiers WebP"
+
+#: inc/optimus_settings.class.php:197
+msgid "HTTPS connection"
+msgstr "Connexion HTTPS"
+
+#: inc/optimus_settings.class.php:203
+msgid "Transfer images using TLS encryption"
+msgstr "Transférer les images en utilisant le cryptage TLS"
+
+#. Plugin Name of the plugin/theme
+msgid "Optimus"
+msgstr "Optimus"
+
+#. Plugin URI of the plugin/theme
+msgid "https://optimus.io"
+msgstr "https://optimus.io"
+
+#. Author of the plugin/theme
+msgid "KeyCDN"
+msgstr "KeyCDN"
+
+#. Author URI of the plugin/theme
+msgid "https://www.keycdn.com"
+msgstr "https://www.keycdn.com"
+
+#: inc/optimus_settings.class.php:221
+msgid "No optimization of images during the upload process"
+msgstr "Aucun optimisation des images pendant le processus de mise en ligne"
+
+#: inc/optimus_settings.class.php:172
+msgid "Creation of WebP files"
+msgstr "Création des fichiers WebP"
+
+#: inc/optimus_settings.class.php:136
+msgid "No optimization of original images"
+msgstr "Aucune optimisation des images originales"
+
+#: inc/optimus_settings.class.php:154
+msgid "No deletion of image metadata"
+msgstr "Aucune suppression des métadonnées des images"
+
+#: inc/optimus_settings.class.php:122
+msgid "The size limit of the free version of Optimus is <strong>100 KB</strong>. Do you want to compress larger images? Get a license for <a href=\"https://optimus.io\" target=\"_blank\">Optimus HQ</a>."
+msgstr "La limite du taille de la version gratuite d’Optimus est de<strong>100 KB</strong>. Voulez-vous compresser des images plus grandes ? Obtenez une licence pour <a href=\"https://optimus.io\" target=\"_blank\">Optimus HQ</a>."
+
+#: inc/optimus_settings.class.php:207
+msgid "Only <a href=\"https://optimus.io\" target=\"_blank\">Optimus HQ</a>. Communication with the Optimus server is conducted through an HTTPS connection. Slightly slows down the optimization process."
+msgstr "Uniquement avec <a href=\"https://optimus.io\" target=\"_blank\">Optimus HQ</a>. La communication avec le serveur d&rsquo;Optimus utilise une connexion HTTPS. Cela ralentit légèrement le processus d&rsquo;optimisation."
+
+#: inc/optimus_settings.class.php:176
+msgid "Only <a href=\"https://optimus.io\" target=\"_blank\">Optimus HQ</a>. It is recommended to use the <a href=\"https://wordpress.org/plugins/cache-enabler/\">Cache Enabler plugin</a> to integrate the WebP images. [<a href=\"https://optimus.keycdn.com/support/optimus-settings/#convert-to-webp\" target=\"_blank\">Details</a>]"
+msgstr "Uniquement avec <a href=\"https://optimus.io\" target=\"_blank\">Optimus HQ</a>. Nous recommandons d’utiliser <a href=\"https://wordpress.org/plugins/cache-enabler/\">l’extension Cache Enabler</a> pour intégrer les images WebP. [<a href=\"https://optimus.keycdn.com/support/optimus-settings/#convert-to-webp\" target=\"_blank\">Détails</a>]"
+
+#: inc/optimus_settings.class.php:118
+msgid "In addition to the original image, Optimus compresses the registered image sizes in WordPress. [<a href=\"https://optimus.keycdn.com/support/optimus-settings/#compression-thumbnail-images\" target=\"_blank\">Details</a>]"
+msgstr "En plus de l’image originale, Optimus comprime toutes tailles d’images enregistrées dans WordPress. [<a href=\"https://optimus.keycdn.com/support/optimus-settings/#compression-thumbnail-images\" target=\"_blank\">Détails</a>]"
+
+#: inc/optimus_settings.class.php:158
+msgid "Only <a href=\"https://optimus.io\" target=\"_blank\">Optimus HQ</a>. Active option keeps EXIF-, copyright and photo creation information in images. Size reduction is less significant. [<a href=\"https://optimus.keycdn.com/support/optimus-settings/#remove-metadata\" target=\"_blank\">Details</a>]"
+msgstr "Uniquement avec <a href=\"https://optimus.io\" target=\"_blank\">Optimus HQ</a>. L&rsquo;activation de l’option permet de préserver les données EXIF-, droit d’auteur et les informations concernant la création des images. La réduction de la taille des images est moins importante. [<a href=\"https://optimus.keycdn.com/support/optimus-settings/#remove-metadata\" target=\"_blank\">Détails</a>]."
+
+#: inc/optimus_settings.class.php:225
+msgid "This setting prevents the automatic optimization during the upload process. Images need to be optimized via the Media Library later on. [<a href=\"https://optimus.keycdn.com/support/image-bulk-optimization/\" target=\"_blank\">Details</a>]"
+msgstr "Ce réglage empêche l’optimisation automatique pendant le processus de mise en ligne. Les images doivent être optimisées via la bibliothèque de médias par la suite. [<a href=\"https://optimus.keycdn.com/support/image-bulk-optimization/\" target=\"_blank\">Détails</a>]."
+
+#. Description of the plugin/theme
+msgid "Smart compression and optimization of uploaded images in WordPress. Automatic, reliable, effective."
+msgstr "Compression lossless et optimisation des images téleversées dans WordPress. Automatique, fiable, efficace."
+
+#: inc/optimus_settings.class.php:140
+msgid "Optimus only compresses preview images (Thumbnails). Original images uploaded to WordPress are not affected. [<a href=\"https://optimus.keycdn.com/support/optimus-settings/#optimization-original-images\" target=\"_blank\">Details</a>]"
+msgstr "Optimus ne compresse que les images de prévisualisation (miniatures). Les images originales en ligne sur WordPress ne sont pas altérées. [<a href=\"https://optimus.keycdn.com/support/optimus-settings/#optimization-original-images\" target=\"_blank\">Détails</a>]"
+
+#: inc/optimus_management.class.php:148
+msgid "Completed"
+msgstr "Termin&eacute;es"
+
+#: inc/optimus_request.class.php:43
+msgid "Invalid request"
+msgstr "Demande non-valable !"
+
+#: inc/optimus_settings.class.php:110
+msgid "Image sizes"
+msgstr "Tailles des images"
+
+#: inc/optimus_management.class.php:54 inc/optimus_management.class.php:141
+msgid "Optimize all images"
+msgstr "Optimiser toutes les images"
+
+#: inc/optimus_request.class.php:59
+msgid "Metadata missing"
+msgstr "Métadonnées manquantes"
+
+#: inc/optimus_request.class.php:190
+msgid "Format not supported"
+msgstr "Format non pris en charge"
+
+#: inc/optimus_request.class.php:202 inc/optimus_request.class.php:421
+msgid "Mime type not supported"
+msgstr "Mime type non pris en charge"
+
+#: inc/optimus_request.class.php:416
+msgid "File empty"
+msgstr "Fichier vide"
+
+#: inc/optimus_settings.class.php:96
+msgid "Optimus Settings"
+msgstr "Réglages d&rsquo;Optimus"
+
+#: inc/optimus_request.class.php:440
+msgid "Write operation failed"
+msgstr "L&rsquo;opération d&rsquo;écriture a échouée"
+
+#: inc/optimus_management.class.php:146
+msgid "Note: Do not close this tab during the optimization process."
+msgstr "Note&nbsp;: Ne fermez pas cet onglet pendant processus d’optimisation."
+
+#: inc/optimus_request.class.php:51
+msgid "Permission missing (upload_files)"
+msgstr "Permission manquante (upload_files)"
+
+#: inc/optimus_management.class.php:53 inc/optimus_management.class.php:129
+msgid "Optimus Bulk Optimizer"
+msgstr "Optimisation en masse d’Optimus"
+
+#: inc/optimus_management.class.php:145
+msgid "It might take a while until all images are optimized. This depends on the amount and size of the images."
+msgstr "L’optimisation de toutes les images pourrait prendre un certain temps. Cela dépend de la quantité et la taille des images."
+
+#: inc/optimus_management.class.php:134
+msgid "It is recommended to run the bulk image optimization with an Optimus HQ activated version due to the size limitation of the free version."
+msgstr "Il est recommandé d&rsquo;exécuter l&rsquo;optimisation des images en masse avec un version d&rsquo;Optimus HQ activée en raison de la limitation de la taille de la version gratuite."
+
+#: inc/optimus_management.class.php:131
+msgid "The Optimus bulk optimizer compresses all images that have not yet been compressed in your WordPress media library."
+msgstr "L’optimisation en masse d’Optimus compresse toutes les images qui n’ont pas encore été compressées dans votre bibliothèque de médias WordPress."
+
+#: inc/optimus_hq.class.php:369
+msgid "<p><strong>Optimus HQ license key</strong> has expired. Get a new Optimus HQ license key on <a href=\"https://optimus.io/en/\" target=\"_blank\">optimus.io</a>. Thank you!"
+msgstr "<p><strong>La clé de licence d&rsquo;Optimus HQ</strong> a expirée. Obtenez une nouvelle clé de licence pour Optimus HQ sur <a href=\"https://optimus.io/en/\" target=\"_blank\">optimus.io</a>. Merci !"
+
+#: inc/optimus_hq.class.php:364
+msgid "<p><strong>Optimus</strong> is free of charge, the functionality is limited to the essential features.</p><p><strong>Optimus HQ</strong> (Premium) on the other hand can handle several image formats, compress larger files and connects through HTTPS. <span class=\"no-break\">More details on <a href=\"https://optimus.io\" target=\"_blank\">optimus.io</a></span><br /><br /><em>This information is displayed for 60 seconds and will not appear again.</em></p>"
+msgstr "<p><strong>Optimus</strong> est gratuit, ses fonctionnalités sont limitées à l’essentielle.</p><p><strong>Optimus HQ</strong> (Premium) par contre peut gérer plusieurs formats d’images, compresser des fichiers plus volumineux et se connecter via HTTPS. <span class=\"no-break\">Plus de détails sur <a href=\"https://optimus.io\" target=\"_blank\">optimus.io</a></span><br /><br /><em>Cette information est affichée pendant 60 secondes et n’apparaitra plus à nouveau.</em></p>"
+
+#: inc/optimus_hq.class.php:359
+msgid "<p>Thank you for using <strong>Optimus HQ</strong>. Follow us on <a href=\"https://twitter.com/optimusHQ\" target=\"_blank\">Twitter</a> to get the latest news and updates.</p>"
+msgstr "<p>Merci d’utiliser <strong>Optimus HQ</strong>. Suivez-nous sur <a href=\"https://twitter.com/optimusHQ\" target=\"_blank\">Twitter</a> pour tout savoir de notre actualité et de nos mises à jour.</p>"
+
+#: inc/optimus_hq.class.php:246
+msgid "Cancel"
+msgstr "Annuler"
+
+#: inc/optimus.class.php:378
+msgid "Optimizing"
+msgstr "Optimisation en-cours"
+
+#: inc/optimus.class.php:381
+msgid "Waiting"
+msgstr "En attente"
+
+#: inc/optimus_hq.class.php:245
+msgid "Activate"
+msgstr "Activée"
+
+#: inc/optimus.class.php:240
+msgid "Activate Optimus HQ"
+msgstr "Activer Optimus HQ"
+
+#: inc/optimus.class.php:380
+msgid "Internal error"
+msgstr "Erreur interne"
+
+#: inc/optimus.class.php:377
+msgid "Optimize images"
+msgstr "Optimiser les images"
+
+#: inc/optimus.class.php:376
+msgid "All images have been optimized."
+msgstr "Toutes les images ont été optimisées."
+
+#: inc/optimus.class.php:240
+msgid "Enter a different Optimus HQ license key"
+msgstr "Saisissez une clé de licence différente pour Optimus HQ"
+
+#: inc/optimus.class.php:251
+msgid "Optimus HQ expiry date: %s"
+msgstr "Optimus HQ date d&rsquo;expiration: %s"
+
+#: inc/optimus.class.php:307
+msgid "Optimus is optimized for WordPress %s. Please disable the plugin or upgrade your WordPress installation (recommended)."
+msgstr "Optimus est optimisé pour WordPress %s. Veuillez désactiver l&rsquo;extension ou mettre à niveau votre installation de WordPress (recommandé)."
+
+#: inc/optimus.class.php:379
+msgid "optimized"
+msgstr "optimisée"
+
+#: inc/optimus.class.php:320
+msgid "Optimus requires the <a href=\"%s\" target=\"_blank\">cURL-Library</a>. Please contact your hosting provider to get cURL installed."
+msgstr "Optimus nécessite la <a href=\"%s\" target=\"_blank\">librairie cURL</a>. Veuillez contacter votre hébergeur pour faire installer cURL."
+
+#: inc/optimus.class.php:198
+msgid "Settings"
+msgstr "Réglages"

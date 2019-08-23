@@ -93,6 +93,8 @@
 				<!--Home Slider-->
 					<action method="addCss"><stylesheet>css/componentes/home_slider/home_slider.css</stylesheet></action>
 					<action method="addJs"><script>emotors/componentes/home_slider/home_slider.js</script></action>
+				<!--Home Destaque-->
+					<action method="addCss"><stylesheet>css/componentes/home_destaques.css</stylesheet></action>
 		</reference>
 
 

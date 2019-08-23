@@ -1,0 +1,66 @@
+.home_destaques .conteudo{
+  max-width: calc(1400px - 20px);
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.home_destaques--itens{
+  background: #fff url("/media/emotors/imgs/home_destaques--rua.jpg") no-repeat center center;
+}
+.home_destaques--itens{
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: auto;
+}
+.home_destaques--moto{
+  grid-column: 2;
+  grid-row: 1;
+}
+.home_destaques--moto img{
+  width: 100%;
+}
+.home_destaques--item{
+  align-self: center;
+  grid-column: 1;
+}
+.home_destaques--item:first-child,
+.home_destaques--item:nth-child(2){
+  justify-self: end;
+}
+.home_destaques--item:nth-child(2){
+  align-self: start;
+}
+.home_destaques--item:nth-child(3){
+  align-self: end;
+}
+.home_destaques--item:first-child{
+  grid-row: 1;
+}
+.home_destaques--item:nth-child(2){
+  grid-row: 2;
+}
+.home_destaques--item:nth-child(3){
+  grid-row: 3;
+}
+.home_destaques--item:last-child{
+  grid-row: 4;
+}
+@media (min-width: 800px){
+  .home_destaques .linha{
+    display: grid;
+    grid-template-columns: calc(50% - 20px) calc(50% - 20px);
+  }
+}
+@media (max-width: 800px){
+  .home_destaques--item img{
+    margin: 20px;
+  }
+  .home_destaques--moto{
+    display: none;
+  }
+}
+@media (max-width: 420px){
+  .home_destaques--item img{
+    width: calc(100% - 40px);
+  }
+}
