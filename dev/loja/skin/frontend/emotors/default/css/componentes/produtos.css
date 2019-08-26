@@ -42,7 +42,8 @@
   margin-top: var(--espaco);
 }
 @media (max-width: 800px) {
-  .nossos-produtos .products-grid li{
+  .nossos-produtos .products-grid li,
+  .todos_produtos .products-grid li{
     width: calc(calc(100% / 1) - var(--espaco) * 4) !important;
   }
   .products-grid .item .botao_principal--medio,

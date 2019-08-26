@@ -87,3 +87,8 @@ input.input-text,
 .customer-account-forgotpassword .page{
   background: #000 url("/media/emotors/imgs/bg-um.jpg") no-repeat top left !important;
 }
+@media (max-width: 480px) {
+  .formulario{
+    margin-top: 200px;
+  }
+}

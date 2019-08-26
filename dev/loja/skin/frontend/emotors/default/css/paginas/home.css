@@ -89,3 +89,6 @@ a:hover{
 .home .products-grid .item{
   margin: calc(var(--espaco) * 2) !important;
 }
+.formas-de-pagamento{
+  display: none;
+}

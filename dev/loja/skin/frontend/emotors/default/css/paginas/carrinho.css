@@ -84,3 +84,11 @@
 .header-dropdown{
   min-width: 180px !important;
 }
+@media (max-width: 1000px){
+  .e-motors_sidebar--esquerda{
+    display: none;
+  }
+  .conteudo_principal{
+    width: calc(100% - var(--espaco)) !important;
+  }
+}
