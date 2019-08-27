@@ -79,14 +79,11 @@
   min-width: 180px !important;
 }
 @media (max-width: 1000px){
-  .e-motors_sidebar--esquerda{
-    display: none;
-  }
   .conteudo_principal{
     width: calc(100% - var(--espaco)) !important;
   }
 }
-@media (min-width: 1000px) {  
+@media (min-width: 1000px) {
   .carrinho_sidebar--direita{
     max-width: calc(30% - var(--espaco)) !important;
     margin: 0 !important;

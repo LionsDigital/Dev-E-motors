@@ -1,0 +1,62 @@
+.ultimos-pedidos_panel--titulo th{
+  background-color: rgba(255, 255, 255 , 0) !important;
+  padding: calc(var(--espaco) / 2) var(--espaco) !important;
+  border-right: 1px solid var(--cor_principal) !important;
+  border-left: 0 !important;
+}
+.ultimos-pedidos_panel--titulo th:last-child,
+.ultimos-pedidos_panel--titulo th:nth-last-child(2){
+  border-right: 0 !important;
+}
+.data-table a{
+  color: var(--cor_principal) !important;
+}
+.block.block-reorder{
+  display: none;
+}
+@media (max-width: 1000px){
+  .menu-vertical{
+    display: none;
+  }
+  .e-motors_sidebar--esquerda{
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 1001px){
+  .menu-vertical_mobile{
+    display: none;
+  }
+}
+.menu-vertical_mobile{
+  border: 1px solid var(--cor_principal);
+  border-radius: var(--borda);
+  padding: calc(var(--espaco) / 2) 0;
+}
+.menu-vertical_mobile h2{
+  font-size: 18px !important;
+}
+.menu-vertical_mobile--icone-um{
+  margin-left: calc(var(--espaco) / 2);
+}
+.menu-vertical_mobile ul{
+  display: none;
+  padding-top: var(--espaco);
+  margin: var(--espaco);
+  margin-top: calc(var(--espaco) / 2);
+  border-top: 1px solid var(--cor_principal);
+}
+.menu-vertical_mobile ul li{
+  line-height: 50px !important;
+  text-align: center !important;
+}
+.menu-vertical_mobile--icone-dois{
+  display: none;
+}
+.menu-m-conta ul,
+.menu-m-conta .menu-vertical_mobile--icone-dois{
+  display: block !important;
+}
+.menu-m-conta .menu-vertical_mobile--icone-um{
+  display: none !important;
+}
