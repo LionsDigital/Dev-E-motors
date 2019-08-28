@@ -63,3 +63,15 @@
     font-size: 12px !important;
   }
 }
+.product-hover,
+.price-box{
+  width: 100% !important;
+  text-align: center !important;
+}
+.price-box{
+  font-size: 28px !important;
+  color: var(--cor_preto) !important;
+}
+.product-shop .price-box{
+  text-align: left !important;
+}

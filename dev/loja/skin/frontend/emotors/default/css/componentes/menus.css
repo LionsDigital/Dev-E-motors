@@ -29,3 +29,19 @@
   width: 1em;
   margin-left: -1em;
 }
+.menu-vertical li:last-child,
+.menu-vertical_mobile li:last-child,
+.menu-vertical li:nth-last-child(2),
+.menu-vertical_mobile li:nth-last-child(2),
+.menu-vertical li:nth-last-child(3),
+.menu-vertical_mobile li:nth-last-child(3),
+.menu-vertical li:nth-last-child(4),
+.menu-vertical_mobile li:nth-last-child(4),
+.menu-vertical li:nth-last-child(5),
+.menu-vertical_mobile li:nth-last-child(5),
+.menu-vertical li:nth-last-child(6),
+.menu-vertical_mobile li:nth-last-child(6),
+.menu-vertical li:nth-last-child(7),
+.menu-vertical_mobile li:nth-last-child(7){
+  display: none !important;
+}

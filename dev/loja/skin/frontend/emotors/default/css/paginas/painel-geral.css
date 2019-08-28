@@ -60,3 +60,10 @@
 .menu-m-conta .menu-vertical_mobile--icone-um{
   display: none !important;
 }
+@media (max-width: 950px){
+  .customer-address-index .col2-set .col-2,
+  .customer-address-index .col2-set .col-1{
+    float: none !important;
+    width: 100% !important;
+  }
+}

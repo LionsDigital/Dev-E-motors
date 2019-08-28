@@ -92,3 +92,23 @@ a:hover{
 .formas-de-pagamento{
   display: none;
 }
+.recado_top p{
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: calc(var(--espaco) / 2) 0 !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  color: #fff !important;
+}
+.recado_top{
+  background-color: var(--cor_principal) !important;
+  min-height: 56px !important;
+}
+@media (min-width: 820px){
+  .recado_top p{
+    max-width: 50% !important;
+    width: 50% !important;
+    float: left !important;
+  }
+}
