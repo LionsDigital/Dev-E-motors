@@ -107,15 +107,24 @@
   .catalog-category-view .e-motors_sidebar--esquerda{
     display: none;
   }
-}
-@media (max-width: 480px){
-  .catalog-category-view .product-hover h2{
+  .product-hover h2{
     font-size: 24px !important;
   }
-  .catalog-category-view .price-box{
+  .price-box{
     font-size: 18px !important;
   }
-  .catalog-category-view .page-title h1{
+}
+@media (max-width: 480px){
+  h1{
     font-size: 36px !important;
+  }
+  .customer-account-index h2{
+    font-size: 24px !important;
+  }
+  .catalog-product-view .product-hover h2{
+    font-size: 18px !important;
+  }
+  .catalog-product-view .price-box{
+    font-size: 12px !important;
   }
 }
