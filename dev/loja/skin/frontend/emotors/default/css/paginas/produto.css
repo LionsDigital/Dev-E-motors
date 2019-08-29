@@ -89,6 +89,13 @@
 .product-tabs-container h2.tab-heading:hover{
   background-color: var(--cor_preto);
 }
+.product-shop h1{
+  text-align: left !important;
+}
+#product_tabs_tags_tabbed,
+#product_acc_tags_tabbed{
+  display: none !important;
+}
 @media (min-width: 800px) {
   .produto_foto{
     float: left;

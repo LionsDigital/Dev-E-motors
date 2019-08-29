@@ -14,7 +14,6 @@
 .footer_coluna a,
 .footer_coluna h3{
   color: var(--cor_branco) !important;
-  text-align: center !important;
   text-transform: uppercase !important;
   line-height: 1.8em !important;
 }
@@ -27,9 +26,23 @@
   padding: var(--espaco) !important;
   color: var(--cor_branco);
 }
+@media (max-width: 980px){
+  .footer_coluna{
+    width: calc(100% / 2 - var(--espaco)) !important;
+  }
+}
 @media (max-width: 580px) {
   .footer_coluna{
     float: none;
     width: calc(100% - var(--espaco)) !important;
+    border-top: 1px solid var(--cor_principal);
+    padding: var(--espaco) 0;
+  }
+  .footer_coluna:last-child{
+    border: none;
+    padding: 0;
+  }
+  .footer_coluna .botao_principal--medio{
+    float: none;
   }
 }

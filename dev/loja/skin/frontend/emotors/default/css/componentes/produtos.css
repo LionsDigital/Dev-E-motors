@@ -57,10 +57,19 @@
 }
 @media (max-width: 480px){
   .home .products-grid .item .link_principal{
-  float: none !important;
-}
+    float: none !important;
+  }
   .home .products-grid .item .link_principal button{
     font-size: 12px !important;
+  }
+  .products-grid .botao_principal,
+  .products-grid .botao_principal--medio{
+    float: none !important;
+    width: 100% !important;
+    display: block;
+    margin: 0 !important;
+    padding: 10px 0 !important;
+    text-align: center !important;
   }
 }
 .product-hover,
