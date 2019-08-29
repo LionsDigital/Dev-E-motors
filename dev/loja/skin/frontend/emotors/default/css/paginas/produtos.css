@@ -103,3 +103,19 @@
     width: calc(100% - var(--espaco));
   }
 }
+@media (max-width: 1000px){
+  .catalog-category-view .e-motors_sidebar--esquerda{
+    display: none;
+  }
+}
+@media (max-width: 480px){
+  .catalog-category-view .product-hover h2{
+    font-size: 24px !important;
+  }
+  .catalog-category-view .price-box{
+    font-size: 18px !important;
+  }
+  .catalog-category-view .page-title h1{
+    font-size: 36px !important;
+  }
+}
