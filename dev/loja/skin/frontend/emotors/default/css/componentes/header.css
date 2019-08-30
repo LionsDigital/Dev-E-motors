@@ -76,6 +76,11 @@
 .header-switch{
   z-index: 0;
 }
+.customer-account-login .recado_top.linha,
+.customer-account-create .recado_top.linha,
+.customer-account-forgotpassword .recado_top.linha{
+  display: none !important;
+}
 @media (max-width: 620px){
   .top-links-container,
   .menu_carrinho--botao-texto{
