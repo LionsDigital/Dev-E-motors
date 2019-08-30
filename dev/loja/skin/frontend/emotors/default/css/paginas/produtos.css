@@ -77,6 +77,9 @@
 .sale-label.label-bottom-left{
   display: none;
 }
+.filtro_mobile{
+  margin: var(--espaco) 0;
+}
 @media (max-width: 890px){
   .products-grid .item{
     width: calc(calc(100% / 2) - var(--espaco) * 2) !important;
@@ -103,12 +106,15 @@
     width: calc(100% - var(--espaco));
   }
 }
+.product-hover h2{
+  font-size: 24px !important;
+}
+div#filtro_mobile li{
+  display: block !important;
+}
 @media (max-width: 1000px){
   .catalog-category-view .e-motors_sidebar--esquerda{
     display: none;
-  }
-  .product-hover h2{
-    font-size: 24px !important;
   }
   .price-box{
     font-size: 18px !important;
@@ -126,5 +132,10 @@
   }
   .catalog-product-view .price-box{
     font-size: 12px !important;
+  }
+}
+@media(min-width: 1000px){
+  .filtro_mobile{
+    display: none;
   }
 }

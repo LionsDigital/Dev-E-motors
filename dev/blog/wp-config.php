@@ -82,7 +82,7 @@ $table_prefix = 'em_';
  *
  * @link https://codex.wordpress.org/pt-br:Depura%C3%A7%C3%A3o_no_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* Isto é tudo, pode parar de editar! :) */
 
@@ -92,3 +92,5 @@ if ( !defined('ABSPATH') )
 
 /** Configura as variáveis e arquivos do WordPress. */
 require_once(ABSPATH . 'wp-settings.php');
+
+define('FS_METHOD', 'direct');

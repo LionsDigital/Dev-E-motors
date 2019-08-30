@@ -11,8 +11,8 @@
       <p>Ir para a loja >></p>
     </a>
     <br/>
-    <a href="/home_destaque">
-      <p>Ir para os destaques da home >></p>
+    <a href="/blog">
+      <p>Ir para oo blog >></p>
     </a>
   </body>
 </html>
