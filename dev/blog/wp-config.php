@@ -50,14 +50,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'tfA}-lG7]XPG^Y*nn}7xvdAU[~%}W5v&oO3N}^j1E;w^T j$}LFlSpC?,Go4n!mT' );
-define( 'SECURE_AUTH_KEY',  'D0?Z-(Kz7pn+&dBP=~C<WWCG1ZNY22+M=P <Xtx._f-452JfnR_/V7R!LXZ>*;t$' );
-define( 'LOGGED_IN_KEY',    'WGHQvmRh2@)?IvC@3&@!(x#0>y3MKH3C9/gz.D+|;GG Y*#x~:,%hB11(1$3[X4;' );
-define( 'NONCE_KEY',        'O$1x.<twUi&vpSvV1h>WH(W4Db7;K;w~)}hD#`oJ:+d$A_m~UR>/V/vVXYQU{v{f' );
-define( 'AUTH_SALT',        'Yv}NXIzUsog`}a8b)KQK|l)R[J*%3pD~2EvwB-*OmNkFp>8Fl6dJP<U+]z=5!-YH' );
-define( 'SECURE_AUTH_SALT', 'nQvWqJesb6aZ~_M.IT3Ra;qyscA!:rklk[e/m~%,`;FmF.-;~FQhyJd*Y5y8 [O;' );
-define( 'LOGGED_IN_SALT',   '4`2ZW3$xm(P9hj6U^Vwp6TUd3;,pfGd/Gh4_r3My0Kc0>DDJEfaM(*E>,{:aL?@~' );
-define( 'NONCE_SALT',       'yC<l7;S1sSHHjBje/LMu1hg><VrV|~` sP}C+x= bR#HN<RT^doUE67<xhidn(^N' );
+define( 'AUTH_KEY',         '-&D#|T#R4Om/+|Ulc8S4dJ8%Dw>X1_-,IG3&7tK6W;z+l|Z)5Y3l7}5}(H8Qj;Cy' );
+define( 'SECURE_AUTH_KEY',  'd]7o*m?z9{hT8~N`p5;d+O<Y}{.C|6<1+g*Dyil9WEdQ(kie=FcLpYuecDW+7y_T' );
+define( 'LOGGED_IN_KEY',    '<ZZh(ZN$n2&XX[<V{,)-!)M2pAL1go94`*Ox_DoIio03(DUvn9,~CIA5^Mdt{<Aj' );
+define( 'NONCE_KEY',        'nm7~`JFb,%>A/3n;ZC+vju&M~q*rn@ CqKg=r;}@S0=%ugzs0V9ch^S2Hc7&k%e&' );
+define( 'AUTH_SALT',        'hIeA{/9&wb$1Aiob:JOO0zHK7= aFb:;faH^-WU$0~ch:?IuF %Ydb|l)9,c~d_+' );
+define( 'SECURE_AUTH_SALT', 'Ka$=C.CiB*%^hcHAkuOkVJiQ$oa--u;*6uzsC&Pn[]TCl~G;04x:wS,^*8>Nc fL' );
+define( 'LOGGED_IN_SALT',   '.P~|o-yZXnyG5NObg~@-JX=Y*Qx14/{`_y)ST;j,5N,BIrx_XPU,MgP(+}w@W;$!' );
+define( 'NONCE_SALT',       'dr@7rgmq3}ue%?%/Z]V$J$J=:PfX@7<{1u6s-`*lJ,t7p8.GKSa,`UswJ|0F0;=g' );
 
 /**#@-*/
 
@@ -82,7 +82,7 @@ $table_prefix = 'em_';
  *
  * @link https://codex.wordpress.org/pt-br:Depura%C3%A7%C3%A3o_no_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* Isto é tudo, pode parar de editar! :) */
 
@@ -92,7 +92,3 @@ if ( !defined('ABSPATH') )
 
 /** Configura as variáveis e arquivos do WordPress. */
 require_once(ABSPATH . 'wp-settings.php');
-
-define('FS_METHOD', 'direct');
-
-define( 'UPLOADS', 'wp-content/uploads' );
