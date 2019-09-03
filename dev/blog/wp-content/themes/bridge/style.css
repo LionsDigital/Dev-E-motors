@@ -13,7 +13,9 @@ License URI: licence/GPL.txt
 CSS changes can be made in files in the /css/ folder. This is a placeholder file required by WordPress, so do not delete it.
 
 */
-
+body{
+	font-family: 'Montserrat', sans-serif;
+}
 .header_top_bottom_holder .q_logo img{
 	max-height:100px;
 	margin: 35px auto;
@@ -38,15 +40,152 @@ CSS changes can be made in files in the /css/ folder. This is a placeholder file
   background-color: #00cd5b !important;
   min-height: 44px !important;
 }
+.menu_top .conteudo{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.menu_top ul{
+  float: right;
+  margin: 0;
+}
+.menu_top{
+  min-height: 27px;
+}
+.menu_top li{
+  list-style: none;
+  float: left;
+  margin: 0 20px;
+}
+.menu_top a{
+  text-decoration: none;
+  color:#fff;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.display_none{
+	display: none;
+}
+.sidebar h5{
+	background-color: #00cd5b !important;
+	border-radius: 8px !important;
+	font-family: 'Montserrat', sans-serif !important;
+	margin-bottom: 0px !important;
+}
+#categories-3,
+#categories-2{
+	border: 1px solid #00cd5b;
+	border-radius: 8px !important;
+	border-top: 0;
+}
+#categories-3 ul,
+#categories-2 ul{
+	padding: 20px !important;
+}
+#media_image-3 h5,
+#media_image-4 h5{
+	border-radius: 8px 8px 0 0 !important;
+}
+/*Posts*/
+.post_title .category{
+	text-align: right !important;
+}
+.category a,
+.category span{
+	text-decoration: none !important;
+}
+.post_title .separator.small.center{
+	display: none !important;
+}
+.post_title h2{
+	text-align: left !important;
+	margin-bottom: 20px !important;
+}
+.post_title h2 a{
+	font-family: 'Montserrat', sans-serif !important;
+}
+.post_meta .three_columns{
+	display: grid !important;
+	grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3) !important;
+}
+.three_columns .column1,
+.three_columns .column2,
+.three_columns .column3{
+	grid-row: 1;
+	align-self: center !important;
+	justify-self: center !important;
+}
+.three_columns .column1{
+	grid-column: 1;
+}
+.three_columns .column2{
+	grid-column: 3;
+}
+.three_columns .column3{
+	grid-column: 2;
+}
+.qbutton.small{
+	background-color: #00cd5b !important;
+	border: 0;
+	border-radius: 8px !important;
+	color: #fff !important;
+}
+.pagination ul li span, .pagination ul li a:hover{
+	border-color: #00cd5b !important;
+}
+.blog_single.blog_holder{
+	margin-top: 40px !important;
+}
+.blog_single.blog_holder p{
+	text-align: justify !important;
+	font-family: 'Montserrat', sans-serif !important;
+}
+.post_text h2,
+.post_text .post_info{
+	font-family: 'Montserrat', sans-serif !important;
+}
+.post_text h2 span,
+.post_text .post_info,
+.post_text .post_info a{
+	color: #00cd5b !important;
+}
+.post_text .post_info,
+.post_text .post_info a{
+	text-decoration: none !important;
+}
+.post_text .post_info a:hover{
+	color: #000 !important;
+}
+.widget.qode_latest_posts_widget{
+	margin-top: 40px !important;
+	border: 1px solid #00cd5b !important;
+	border-radius: 8px !important;
+	border-top: 0 !important;
+}
+.widget.qode_latest_posts_widget h5{
+	margin-bottom: 20px;
+}
+.latest_post_holder.image_in_box{
+	padding: 20px;
+}
+.latest_post_holder.image_in_box li h3{
+	font-size: 14px !important;
+	max-width: 150px !important;
+}
+#submit_comment{
+	border-color: #00cd5b !important;
+}
+#submit_comment:hover{
+	background-color: #00cd5b !important;
+}
 @media (min-width: 1200px){
-  .recado_top p{
-    max-width: calc(100% / 3) !important;
-    width: calc(100% / 3) !important;
-    float: left !important;
-  }
+	.recado_top p{
+		max-width: calc(100% / 3) !important;
+		width: calc(100% / 3) !important;
+		float: left !important;
+	}
 }
 @media (max-width: 480px){
-  .recado_top p{
-    font-size: 16px !important;
-  }
+	.recado_top p{
+		font-size: 16px !important;
+	}
 }

@@ -10,7 +10,7 @@
         </div>
         <div class="column2">
             <div class="column_inner">
-                <a itemprop="url" href="<?php the_permalink(); ?>" class="qbutton small"><?php esc_html_e('Continue Reading','bridge'); ?></a>
+                <a itemprop="url" href="<?php the_permalink(); ?>" class="qbutton small"><?php esc_html_e('Ler mais','bridge'); ?></a>
             </div>
         </div>
         <div class="column3">
