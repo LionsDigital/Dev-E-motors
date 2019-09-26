@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Clearsale_Base>
+            <version>1.0.0</version>
+        </Clearsale_Base>
+    </modules>
+    <global>
+        <models>
+            <clearsale_base>
+                <class>Clearsale_Base_Model</class>
+            </clearsale_base>
+        </models>
+        <helpers>
+            <clearsale_base>
+                <class>Clearsale_Base_Helper</class>
+            </clearsale_base>
+        </helpers>
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Clearsale_Base>
+                    <files>
+                        <default>Clearsale_Base.csv</default>
+                    </files>
+                </Clearsale_Base>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <clearsale_setting_base>
+            <clearsale_settings>
+                <default_taxvat_field>taxvat</default_taxvat_field>
+            </clearsale_settings>
+            <clearsale_mapping_address>
+                <clearsale_mapping_address_street>street1</clearsale_mapping_address_street>
+                <clearsale_mapping_address_number>street2</clearsale_mapping_address_number>
+                <clearsale_mapping_address_complemento>street3</clearsale_mapping_address_complemento>
+                <clearsale_mapping_adress_neighborhood>street4</clearsale_mapping_adress_neighborhood>
+            </clearsale_mapping_address>
+        </clearsale_setting_base>
+    </default>
+</config>

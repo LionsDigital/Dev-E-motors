@@ -1,0 +1,6 @@
+<?php
+
+class Clearsale_Total_Model_Api_Request_Payment_Boleto extends Clearsale_Total_Model_Api_Request_Payment_Standard implements JsonSerializable
+{
+
+}

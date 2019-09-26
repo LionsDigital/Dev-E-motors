@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <clearsale_setting_profiler translate="title" module="profiler">
+                                        <title>Mapper Section</title>
+                                        <sort_order>0</sort_order>
+                                    </clearsale_setting_profiler>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

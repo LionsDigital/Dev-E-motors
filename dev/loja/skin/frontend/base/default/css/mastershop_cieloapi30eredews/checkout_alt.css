@@ -1,0 +1,29 @@
+.mastershop_cieloapi30eredews_numero .input-box
+{
+	position:relative;
+}
+
+.mastershop_cieloapi30eredews_numero .bandeiras
+{
+	position:absolute;
+	display:inline-block;
+	top:3px;
+	left:1px;
+}
+
+.mastershop_cieloapi30eredews_numero .bandeiras input
+{
+	display:none;
+}
+
+.mastershop_cieloapi30eredews_numero .bandeiras label
+{
+	display:inline-block;
+	padding:0;
+	margin:0;
+}
+
+.mastershop_cieloapi30eredews_numero .com-bandeira
+{
+	padding-left: 45px;
+}

@@ -1,0 +1,54 @@
+.mastershop_cieloapi30eredews_parcelas
+{
+	display:table;
+	width:100%;
+	border-spacing:0px;
+	border-collapse:collapse;
+}
+
+.mastershop_cieloapi30eredews_parcelas .linha
+{
+	display:table-row;
+	border-bottom:1px solid #e6e6e6;
+}
+
+.mastershop_cieloapi30eredews_parcelas .linha.alternada
+{
+	/*background:#f2f2f2;*/
+}
+
+.mastershop_cieloapi30eredews_parcelas .linha div
+{
+	display:table-cell;
+	padding:10px;
+}
+
+.mastershop_cieloapi30eredews_parcelas .titulos div
+{
+	background:#f4f4f4;
+	text-transform:uppercase;
+}
+
+.mastershop_cieloapi30eredews_parcelas .parcelas
+{
+}
+
+.mastershop_cieloapi30eredews_parcelas .valor
+{
+}
+
+.mastershop_cieloapi30eredews_parcelas .juros
+{
+}
+
+.mastershop_cieloapi30eredews_parcelas .desconto
+{
+}
+
+.mastershop_cieloapi30eredews_parcelas .semjuros
+{
+}
+
+.mastershop_cieloapi30eredews_parcelas .total
+{
+}

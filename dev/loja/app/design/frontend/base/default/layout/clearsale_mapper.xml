@@ -1,0 +1,117 @@
+<layout version="0.1.0">
+    <default>
+        <reference name="before_body_end">
+            <block type="core/template" name="page.before_body_end.clearSaleMapper"
+                   as="clearsaleMapper" template="page/html/before_body_end/clear_sale_mapper.phtml"/>
+        </reference>
+    </default>
+    <cms_index_index>
+        <reference name="head">
+            <block type="core/text" name="metadescription">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<meta name="cs:page" content="home"/>]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </cms_index_index>
+
+    <catalog_product_view>
+        <reference name="head">
+            <block type="core/template" name="page.head.clearsaleMapper"
+                   as="clearsaleMapper" template="page/html/catalog_product_view/clear_sale_mapper.phtml"/>
+        </reference>
+    </catalog_product_view>
+
+    <catalog_category_view>
+        <reference name="head">
+            <block type="core/text" name="metadescription">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<meta name="cs:page" content="category"/>]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </catalog_category_view>
+
+    <checkout_cart_index>
+        <reference name="head">
+            <block type="core/text" name="metadescription">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<meta name="cs:page" content="cart"/>]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </checkout_cart_index>
+
+    <checkout_onepage_index>
+        <reference name="head">
+            <block type="core/text" name="metadescription">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<meta name="cs:page" content="checkout"/>]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </checkout_onepage_index>
+
+    <customer_account_create>
+        <reference name="head">
+            <block type="core/text" name="metadescription">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<meta name="cs:page" content="create-account"/>]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </customer_account_create>
+
+    <customer_account_edit>
+        <reference name="head">
+            <block type="core/text" name="metadescription">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<meta name="cs:page" content="edit-account"/>]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </customer_account_edit>
+
+    <customer_account_forgotpassword>
+        <reference name="head">
+            <block type="core/text" name="metadescription">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<meta name="cs:page" content="password-reset"/>]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </customer_account_forgotpassword>
+
+    <catalogsearch_result_index>
+        <reference name="head">
+            <block type="core/template" name="page.before_body_end.clearsaleMapper"
+                   as="clearsaleMapper" template="page/html/catalogsearch_result_index/clear_sale_mapper.phtml"/>
+        </reference>
+    </catalogsearch_result_index>
+
+    <checkout_onepage_success>
+        <reference name="head">
+            <block type="core/text" name="metadescription">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<meta name="cs:page" content="purchase-confirmation"/>]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </checkout_onepage_success>
+</layout>

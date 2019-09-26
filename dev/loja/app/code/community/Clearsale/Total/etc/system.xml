@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <clearsale_setting_total translate="label" module="clearsale_total">
+            <label>Total</label>
+            <tab>clearsale</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>20</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <clearsale_settings_total translate="label">
+                    <label>Settings</label>
+                    <sort_order>690</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <production_api_url translate="label">
+                            <label>URL Api Production</label>
+                            <comment>Integration url ClearSale production</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </production_api_url>
+
+                        <staging_api_url translate="label">
+                            <label>URL Api Staging</label>
+                            <comment>Integration Cod ClearSale Staging</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </staging_api_url>
+
+                        <sendorderedited translate="label">
+                            <label>Enviar pedido editado</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Enviar pedidos editados que ficam com -1. Ex. 100000019-1]]></comment>
+                        </sendorderedited>
+
+                        <payment_methods translate="label">
+                            <label>Formas de Pagamento</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>clearsale_total/source_payment</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Escolha a forma de pagamento ativa que poderá enviar dados a ClearSale.]]></comment>
+                        </payment_methods>
+
+                        <auto_cancel_enabled translate="label">
+                            <label>Auto cancel</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Automatically cancel the order when payment is denied by ClearSale]]></comment>
+                        </auto_cancel_enabled>
+
+                        <review_status_code translate="label">
+                            <label>Order status at review</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>clearsale_total/source_orderStatus</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Use this status when order is waiting ClearSale's response]]></comment>
+                        </review_status_code>
+                        <order_status_after_approved translate="label">
+                            <label>Order status after approved</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>clearsale_total/source_orderStatus</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Status when order is approved on Clearsale]]></comment>
+                        </order_status_after_approved>
+                        <order_status_after_canceled translate="label">
+                            <label>Order status after canceled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>clearsale_total/source_orderStatus</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Status when order is canceled on ClearSale]]></comment>
+                        </order_status_after_canceled>
+                        <order_status_approved_manually translate="label">
+                            <label>Order status Approved Manually</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>clearsale_total/source_orderStatus</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Status when order is approved mannually]]></comment>
+                        </order_status_approved_manually>
+                        <cron_frequency translate="label">
+                            <label>Cron Frequency</label>
+                            <comment><![CDATA[Cron format * * * * *]]></comment>
+                            <backend_model>clearsale_total/source_cron</backend_model>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cron_frequency>
+                        <number_orders_queue_process translate="label">
+                            <label><![CDATA[Numero de pedidos enviados por vez a cada execução]]></label>
+                            <comment><![CDATA[Ex.: 100 - A cada execução será processado uma fila de até 100 pedidos por vez.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </number_orders_queue_process>
+                        <accessToken translate="label">
+                            <label>Token</label>
+                            <comment><![CDATA[Token gerado automaticamente, quando é processado alguma fila de pedidos para clearsale.]]></comment>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </accessToken>
+                        <expirationDate translate="label">
+                            <label>Expiration Date</label>
+                            <comment><![CDATA[Expirationdate gerado automaticamente, quando é processado alguma fila de pedidos para clearsale.]]></comment>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </expirationDate>
+                    </fields>
+                </clearsale_settings_total>
+            </groups>
+        </clearsale_setting_total>
+    </sections>
+</config>
