@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<checkout_cart_index>
+		<reference name="checkout.cart">
+			<block type="mastershop_cieloapi30/parcelas_carrinho" name="parcelas_carrinho"/>
+		</reference>
+	</checkout_cart_index>
+</layout>

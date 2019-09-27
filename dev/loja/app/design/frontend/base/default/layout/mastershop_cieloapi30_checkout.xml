@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='utf-8'?>
+<layout version="0.1.0">
+	<checkout_onepage_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout" ifconfig="payment/mastershopcieloapi30/formulario_alternativo">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout_alt.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_mask">
+				<type>js</type>
+				<name>mastershop_cieloapi30/prototype.maskedinput.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_checkout">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscheckout"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_checkout_skin">
+				<type>skin_js</type>
+				<name>js/mastershop_cieloapi30/checkout.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cpfcnpj">
+				<type>js</type>
+				<name>mastershop_cieloapi30/cpfcnpj.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cc">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscc"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cc_skin">
+				<type>skin_js</type>
+				<name>js/mastershop_cieloapi30/cc.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_eventsimulate">
+				<type>js</type>
+				<name>mastershop_cieloapi30/event.simulate.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_maskmoney" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/vanilla-masker.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_valorparcelas" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/multi.js</name>
+			</action>
+		</reference>
+		<reference name="before_body_end">
+			<block type="page/html_head" name="mastershop_cieloapi30_scripts_rodape" template="mastershop_cieloapi30/html/scripts_rodape.phtml">
+				<action method="addItem" mastershop_cieloapi30_xml="js_opcheckout" ifconfig="payment/mastershopcieloapi30/erro_limpar">
+					<type>skin_js</type>
+					<name>js/mastershop_cieloapi30/opcheckout.js</name>
+				</action>
+			</block>
+		</reference>
+	</checkout_onepage_index>
+	<onestepcheckout_index_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout" ifconfig="payment/mastershopcieloapi30/formulario_alternativo">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout_alt.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_mask">
+				<type>js</type>
+				<name>mastershop_cieloapi30/prototype.maskedinput.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_checkout">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscheckout"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cpfcnpj">
+				<type>js</type>
+				<name>mastershop_cieloapi30/cpfcnpj.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cc">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscc"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_eventsimulate">
+				<type>js</type>
+				<name>mastershop_cieloapi30/event.simulate.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_maskmoney" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/vanilla-masker.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_valorparcelas" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/multi.js</name>
+			</action>
+		</reference>
+		<reference name="before_body_end">
+			<block type="page/html_head" name="mastershop_cieloapi30_scripts_rodape" template="mastershop_cieloapi30/html/scripts_rodape.phtml">
+				<action method="addItem" mastershop_cieloapi30_xml="js_opcheckout" ifconfig="payment/mastershopcieloapi30/erro_limpar">
+					<type>skin_js</type>
+					<name>js/mastershop_cieloapi30/opcheckout.js</name>
+				</action>
+			</block>
+		</reference>
+	</onestepcheckout_index_index>
+	<idecheckoutvm_index_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout" ifconfig="payment/mastershopcieloapi30/formulario_alternativo">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout_alt.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_mask">
+				<type>js</type>
+				<name>mastershop_cieloapi30/prototype.maskedinput.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_checkout">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscheckout"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cpfcnpj">
+				<type>js</type>
+				<name>mastershop_cieloapi30/cpfcnpj.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cc">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscc"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_eventsimulate">
+				<type>js</type>
+				<name>mastershop_cieloapi30/event.simulate.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_maskmoney" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/vanilla-masker.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_valorparcelas" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/multi.js</name>
+			</action>
+		</reference>
+		<reference name="before_body_end">
+			<block type="page/html_head" name="mastershop_cieloapi30_scripts_rodape" template="mastershop_cieloapi30/html/scripts_rodape.phtml">
+				<action method="addItem" mastershop_cieloapi30_xml="js_opcheckout" ifconfig="payment/mastershopcieloapi30/erro_limpar">
+					<type>skin_js</type>
+					<name>js/mastershop_cieloapi30/opcheckout.js</name>
+				</action>
+			</block>
+		</reference>
+	</idecheckoutvm_index_index>
+	<firecheckout_index_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout" ifconfig="payment/mastershopcieloapi30/formulario_alternativo">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout_alt.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_mask">
+				<type>js</type>
+				<name>mastershop_cieloapi30/prototype.maskedinput.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_checkout">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscheckout"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cpfcnpj">
+				<type>js</type>
+				<name>mastershop_cieloapi30/cpfcnpj.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cc">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscc"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_eventsimulate">
+				<type>js</type>
+				<name>mastershop_cieloapi30/event.simulate.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_maskmoney" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/vanilla-masker.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_valorparcelas" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/multi.js</name>
+			</action>
+		</reference>
+		<reference name="before_body_end">
+			<block type="page/html_head" name="mastershop_cieloapi30_scripts_rodape" template="mastershop_cieloapi30/html/scripts_rodape.phtml">
+				<action method="addItem" mastershop_cieloapi30_xml="js_opcheckout" ifconfig="payment/mastershopcieloapi30/erro_limpar">
+					<type>skin_js</type>
+					<name>js/mastershop_cieloapi30/opcheckout.js</name>
+				</action>
+			</block>
+		</reference>
+	</firecheckout_index_index>
+	<onepage_index_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout" ifconfig="payment/mastershopcieloapi30/formulario_alternativo">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout_alt.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_mask">
+				<type>js</type>
+				<name>mastershop_cieloapi30/prototype.maskedinput.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_checkout">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscheckout"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cpfcnpj">
+				<type>js</type>
+				<name>mastershop_cieloapi30/cpfcnpj.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cc">
+				<type>js</type>
+				<name helper="mastershop_cieloapi30/ifconfig/jscc"/>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_eventsimulate">
+				<type>js</type>
+				<name>mastershop_cieloapi30/event.simulate.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_maskmoney" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/vanilla-masker.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_valorparcelas" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/multi.js</name>
+			</action>
+		</reference>
+		<reference name="before_body_end">
+			<block type="page/html_head" name="mastershop_cieloapi30_scripts_rodape" template="mastershop_cieloapi30/html/scripts_rodape.phtml">
+				<action method="addItem" mastershop_cieloapi30_xml="js_opcheckout" ifconfig="payment/mastershopcieloapi30/erro_limpar">
+					<type>skin_js</type>
+					<name>js/mastershop_cieloapi30/opcheckout.js</name>
+				</action>
+			</block>
+		</reference>
+	</onepage_index_index>
+	<sales_order_view>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</sales_order_view>
+	<sales_order_print>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</sales_order_print>
+	<checkout_onepage_success translate="label">
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_boleto">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/boleto.css</name>
+			</action>
+		</reference>
+		<block type="mastershop_cieloapi30/checkout_boleto" name="mastershop_cieloapi30_boleto"/>
+		<reference name="checkout.success">
+			<action method="append" ifconfig="payment/mastershopcieloapi30/api30_boleto_checkout">
+				<block>mastershop_cieloapi30_boleto</block>
+			</action>
+		</reference>
+	</checkout_onepage_success>
+</layout>

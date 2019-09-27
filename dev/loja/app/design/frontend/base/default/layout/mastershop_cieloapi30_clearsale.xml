@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="before_body_end">
+			<block type="mastershop_cieloapi30/clearsale_mapper" name="mastershop_cieloapi30_clearsale_mapper" ifconfig="payment/mastershopcieloapi30/clearsale_habilitar"/>
+		</reference>
+	</default>
+	<!--fingerprint em páginas de checkout/onestepcheckout-->
+	<!--<checkout_cart_index>
+		<reference name="before_body_end">
+			<block type="mastershop_cieloapi30/clearsale_fingerprint" name="mastershop_cieloapi30_clearsale_fingerprint" ifconfig="payment/mastershopcieloapi30/clearsale_habilitar"/>
+		</reference>
+	</checkout_cart_index>-->
+	<checkout_onepage_index>
+		<reference name="before_body_end">
+			<block type="mastershop_cieloapi30/clearsale_fingerprint" name="mastershop_cieloapi30_clearsale_fingerprint" ifconfig="payment/mastershopcieloapi30/clearsale_habilitar"/>
+		</reference>
+	</checkout_onepage_index>
+	<onestepcheckout_index_index>
+		<reference name="before_body_end">
+			<block type="mastershop_cieloapi30/clearsale_fingerprint" name="mastershop_cieloapi30_clearsale_fingerprint" ifconfig="payment/mastershopcieloapi30/clearsale_habilitar"/>
+		</reference>
+	</onestepcheckout_index_index>
+	<idecheckoutvm_index_index>
+		<reference name="before_body_end">
+			<block type="mastershop_cieloapi30/clearsale_fingerprint" name="mastershop_cieloapi30_clearsale_fingerprint" ifconfig="payment/mastershopcieloapi30/clearsale_habilitar"/>
+		</reference>
+	</idecheckoutvm_index_index>
+	<firecheckout_index_index>
+		<reference name="before_body_end">
+			<block type="mastershop_cieloapi30/clearsale_fingerprint" name="mastershop_cieloapi30_clearsale_fingerprint" ifconfig="payment/mastershopcieloapi30/clearsale_habilitar"/>
+		</reference>
+	</firecheckout_index_index>
+	<onepage_index_index>
+		<reference name="before_body_end">
+			<block type="mastershop_cieloapi30/clearsale_fingerprint" name="mastershop_cieloapi30_clearsale_fingerprint" ifconfig="payment/mastershopcieloapi30/clearsale_habilitar"/>
+		</reference>
+	</onepage_index_index>
+</layout>

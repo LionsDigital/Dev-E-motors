@@ -1,0 +1,372 @@
+<?php
+	$codigoPagamento = $this->getMethodCode();
+	$bandeiras = $this->recuperarBandeiras();
+	$qtdMaxCartoes = $this->recuperarQtd();
+	$qtdSelecionada = $this->getInfoData('cc_qtd') ? $this->getInfoData('cc_qtd') : 1;
+	$cartoesSalvos = $this->recuperarCartoesSalvos();
+	$helper = $this->helper('mastershop_cieloapi30');
+	$checkoutPersonalizado = (strcasecmp($this->getRequest()->getControllerModule(), 'Mage_Checkout') != 0);
+
+	if ($this->verificarCompraNacional())
+	{
+		$parcelas = $this->recuperarParcelas($qtdSelecionada);
+		$parcelasMax = end($parcelas);
+	}
+	else
+	{
+		$parcelas = false;
+		$parcelasMax = false;
+	}
+?>
+<script>
+	mastershop_cieloapi30_qtdMaxCartoes = <?php echo $qtdMaxCartoes; ?>;
+	mastershop_cieloapi30_compraNacional = <?php echo (int) $this->verificarCompraNacional(); ?>;
+	mastershop_cieloapi30_validacaoCc = <?php echo $this->recuperarValidacaoJS(); ?>;
+	mastershop_cieloapi30_selecaoCc = <?php echo $this->recuperarValidacaoJS(true); ?>;
+	<?php if ($qtdMaxCartoes > 1): ?>
+		mastershop_cieloapi30_parcelas = <?php echo $this->recuperarParcelasQtd(); ?>;
+		mastershop_cieloapi30_parcelasSel = <?php echo $this->recuperarParcelasSelecionadasJs(); ?>;
+		<?php if ($this->verificarValorPorCartao()): ?>
+			mastershop_cieloapi30_configMoeda = <?php echo $this->recuperarConfiguracoesMoedaJs(); ?>;
+			mastershop_cieloapi30_multiTotal = <?php echo $this->recuperarTotalCompra(); ?>;
+			mastershop_cieloapi30_parcelasUrl = "<?php echo $this->getUrl('mastershop_cieloapi30/parcelas'); ?>";
+		<?php endif; ?>
+	<?php endif; ?>
+</script>
+<ul class="form-list mastershop_cieloapi30" id="payment_form_<?php echo $codigoPagamento ?>" style="display:none;">
+	<li>
+		<p class="required"><?php echo $helper->__('* Required Fields') ?></p>
+	</li>
+	<?php
+		if ($qtdMaxCartoes > 1)
+		{
+	?>
+		<li class="mastershop_cieloapi30_qtdsel">
+			<label class="required"><em>*</em><?php echo $helper->__('Quantidade de Cartões para o Pagamento') ?></label>
+			<div class="input-box">
+				<div class="lista">
+				<?php
+					for ($qtdCartoes = 1; $qtdCartoes <= $qtdMaxCartoes; ++$qtdCartoes)
+					{
+				?>
+					<div class="lista-item">
+						<label for="<?php echo $codigoPagamento ?>_cc_qtd_<?php echo $qtdCartoes; ?>" class="label">
+							<img alt="<?php echo Mage::helper('core')->quoteEscape($helper->__('Pagar Utilizando %d', $qtdCartoes)) ?>" title="<?php echo Mage::helper('core')->quoteEscape($helper->__('Pagar Utilizando %d', $qtdCartoes)) ?>" src="<?php echo $this->recuperarQtdImagem($qtdCartoes, $qtdCartoes == $qtdSelecionada); ?>"/>
+							<div>
+								<?php
+									if ($qtdCartoes == 1 && $this->aceitaDebito($bandeiras))
+									{
+										echo $helper->__('1 ou débito');
+									}
+									else
+									{
+										if ($qtdCartoes == 1)
+										{
+											echo $helper->__('1 cartão');
+										}
+										else
+										{
+											echo $helper->__('%d cartões', $qtdCartoes);
+										}
+									}
+								?>
+							</div>
+						</label>
+						<input type="radio" id="<?php echo $codigoPagamento ?>_cc_qtd_<?php echo $qtdCartoes; ?>" name="payment[cc_qtd]" class="input-radio validate-one-required-by-name selecao" title="<?php echo Mage::helper('core')->quoteEscape($helper->__('Pagar Utilizando %d', $qtdCartoes)) ?>"<?php if ($qtdSelecionada == $qtdCartoes): ?> checked="checked"<?php endif; ?> onclick="mastershop_cieloapi30_atualizarQtdCartoes(<?php echo $qtdCartoes; ?>)" value="<?php echo $qtdCartoes; ?>"  />
+					</div>
+				<?php
+					}
+				?>
+				</div>
+			</div>
+		</li>
+	<?php
+		}
+		else
+		{
+	?>
+		<input type="hidden" name="payment[cc_qtd]" value="1" />
+	<?php
+		}
+
+		for ($numCartao = 1; $numCartao <= $qtdMaxCartoes; ++$numCartao)
+		{
+	?>
+		<?php
+			if ($qtdMaxCartoes > 1)
+			{
+		?>
+			<li class="mastershop_cieloapi30_qtd mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+				<div class="input-box">
+					<h2 class="mastershop_cieloapi30_pagamento_qtd_titulo"><?php echo $helper->__('Cartão #%d', $numCartao); ?></h2>
+				</div>
+			</li>
+		<?php
+			}
+		?>
+
+		<?php
+			if ($cartoesSalvos)
+			{
+				$cartaoSalvoChave = $this->getInfoData('cc_' . $numCartao . '_salvo');
+		?>
+			<li class="mastershop_cieloapi30_salvos mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>">
+				<label><?php echo $helper->__('Pagar Com') ?></label>
+				<div class="input-box">
+					<div class="lista">
+						<div class="lista-item<?php if ($cartaoSalvoChave == ''): ?> selecao<?php endif; ?> ch-novo">
+							<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_salvo_novo" class="label">
+								<img src="<?php echo $this->recuperarBandeiraImagem('novo', $cartaoSalvoChave == ''); ?>" bandeira="novo"/>
+								<div>
+									<?php echo $helper->__('Novo Cartão'); ?>
+								</div>
+								<?php
+									if ($parcelasMax)
+									{
+								?>
+									<div class="parcelasmax">
+										<?php echo $parcelasMax['texto']; ?>
+									</div>
+								<?php
+									}
+								?>
+							</label>
+							<input type="radio" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_salvo_novo" name="payment[cc_<?php echo $numCartao; ?>_salvo]" class="input-radio validate-one-required-by-name selecao"<?php if ($cartaoSalvoChave == ''): ?> checked="checked"<?php endif; ?> onclick="mastershop_cieloapi30_atualizarCartaoSalvo(<?php echo $numCartao; ?>, '', '')" value="" />
+						</div>
+						<?php
+							foreach ($cartoesSalvos as &$cartaoSalvo)
+							{
+						?>
+							<div class="lista-item<?php if ($cartaoSalvo['chave'] == $cartaoSalvoChave): ?> selecao<?php endif; ?> ch<?php echo $cartaoSalvo['chave']; ?>">
+								<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_salvo_<?php echo $cartaoSalvo['chave']; ?>" class="label">
+									<img src="<?php echo $this->recuperarBandeiraImagem($cartaoSalvo['bandeira'], $cartaoSalvo['chave'] == $cartaoSalvoChave); ?>"  bandeira="<?php echo $cartaoSalvo['bandeira']; ?>"/>
+									<div>
+										<?php echo $this->__('Cartão terminado em %s', substr($cartaoSalvo['numero'], -4)); ?>
+									</div>
+									<?php
+										if ($parcelasMax)
+										{
+									?>
+										<div class="<?php if ($cartaoSalvo['bandeira'] == 'discover'): ?>avista<?php else: ?>parcelasmax<?php endif; ?>">
+											<?php
+												if ($cartaoSalvo['bandeira'] == 'discover')
+												{
+													echo reset($parcelas)['texto'];
+												}
+												else
+												{
+													echo $parcelasMax['texto'];
+												}
+											?>
+										</div>
+									<?php
+										}
+									?>
+								</label>
+								<input type="radio" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_salvo_<?php echo $cartaoSalvo['chave']; ?>" name="payment[cc_<?php echo $numCartao; ?>_salvo]" class="input-radio validate-one-required-by-name selecao"<?php if ($cartaoSalvo['chave'] == $cartaoSalvoChave): ?> checked="checked"<?php endif; ?> onclick="mastershop_cieloapi30_atualizarCartaoSalvo(<?php echo $numCartao; ?>, '<?php echo $cartaoSalvo['bandeira']; ?>', '<?php echo $cartaoSalvo['chave']; ?>')" value="<?php echo $cartaoSalvo['chave']; ?>" />
+							</div>
+						<?php
+							}
+						?>
+					</div>
+				</div>
+			</li>
+		<?php
+			}
+		?>
+
+		<li class="mastershop_cieloapi30_bandeira mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+			<label class="required"><em>*</em><?php echo $helper->__('Bandeira do Cartão/Serviço') ?></label>
+			<div class="input-box">
+				<?php
+					$bandeiraSelecionada = (!isset($cartaoSalvoChave) || !$cartaoSalvoChave ? $this->getInfoData('cc_' . $numCartao . '_bandeira') : '');
+					$bandeiraTipo = $this->recuperarTipoBandeira($bandeiraSelecionada);
+					$bandeiraCartao = ($bandeiraTipo == 'c' || $bandeiraTipo == 'd');
+					$tiposAdicionados = [];
+
+					foreach ($bandeiras as $bandeiraCodigo => &$bandeira)
+					{
+						if (!in_array($bandeira['tipo'], $tiposAdicionados))
+						{
+							if (!empty($tiposAdicionados))
+							{
+				?>
+						</div><!--/lista-->
+					<?php
+							}
+					?>
+						<div class="bandeira titulo<?php if ($bandeira['tipo'] == 'd'): ?> debito<?php elseif ($bandeira['tipo'] == 'c'): ?> credito<?php else: ?> externo<?php endif; ?>">
+							<?php
+								switch ($bandeira['tipo'])
+								{
+									case 'c':
+										echo $helper->__('Cartão de Crédito');
+									break;
+
+									case 'd':
+										echo $helper->__('Cartão de Débito');
+									break;
+
+									case 'b':
+										echo $helper->__('Boleto Bancário');
+									break;
+
+									case 't':
+										echo $helper->__('Débito Online');
+									break;
+								}
+							?>
+						</div>
+
+						<div class="lista">
+					<?php
+							$tiposAdicionados[] = $bandeira['tipo'];
+						}
+					?>
+
+					<div class="lista-item bandeira<?php if ($bandeira['tipo'] == 'd'): ?> debito<?php elseif ($bandeira['tipo'] == 'c'): ?> credito<?php else: ?> externo<?php endif; ?>">
+						<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_bandeira_<?php echo $bandeiraCodigo; ?>" class="label">
+							<img alt="<?php echo Mage::helper('core')->quoteEscape($bandeira['nome']); ?>" title="<?php echo Mage::helper('core')->quoteEscape($bandeira['nome']) ?>" src="<?php echo $this->recuperarBandeiraImagem($bandeiraCodigo, $bandeiraCodigo == $bandeiraSelecionada); ?>"/>
+						</label>
+						<input type="radio" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_bandeira_<?php echo $bandeiraCodigo; ?>" name="payment[cc_<?php echo $numCartao; ?>_bandeira]" class="input-radio validate-one-required-by-name selecao" title="<?php echo Mage::helper('core')->quoteEscape($bandeira['nome']) ?>"<?php if ($bandeiraSelecionada == $bandeiraCodigo): ?> checked="checked"<?php endif; ?> onclick="mastershop_cieloapi30_atualizarBandeira(<?php echo $numCartao; ?>, '<?php echo $bandeiraCodigo; ?>', '<?php echo $bandeira['tipo']; ?>', <?php echo ($bandeira['podeSalvar'] ? 'true' : 'false'); ?>)" value="<?php echo $bandeiraCodigo; ?>" />
+					</div>
+				<?php
+					}
+				?>
+				</div><!--/lista-->
+			</div>
+		</li>
+		<li>
+			<div class="lista">
+				<div class="lista-item mastershop_cieloapi30_bandeira_debito mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+					*<?php echo $helper->__('Seu navegador será redirecionado para o site do banco emissor do cartão ou site da bandeira do cartão após a finalização da compra, para efetuar a autenticação do portador do cartão.'); ?>
+				</div>
+				<div class="lista-item mastershop_cieloapi30_bandeira_externo tipo_t mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+					<?php echo $helper->__('Seu navegador será redirecionado para o site do banco após a finalização da compra.'); ?>
+				</div>
+				<div class="lista-item mastershop_cieloapi30_bandeira_externo tipo_b mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+					<?php echo $helper->__('O boleto será disponibilizado para impressão após a finalização da compra.'); ?>
+				</div>
+			</div>
+		</li>
+		<li class="mastershop_cieloapi30_numero mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+			<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_numero" class="required"><em>*</em><?php echo $helper->__('Número do Cartão') ?></label>
+			<div class="input-box">
+				<input type="tel" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_numero" name="payment[cc_<?php echo $numCartao; ?>_numero]" title="<?php echo Mage::helper('core')->quoteEscape($helper->__('Número do Cartão')) ?>" class="input-text required-entry validar_cartao" value="" onkeyup="mastershop_cieloapi30_selecionarBandeira(this, <?php echo $numCartao; ?>)" onblur="mastershop_cieloapi30_selecionarBandeira(this, <?php echo $numCartao; ?>)" onpaste="mastershop_cieloapi30_selecionarBandeira(this, <?php echo $numCartao; ?>)" />
+				<script>
+					new MaskedInput('#<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_numero', '9999 9999 9999 99?99 999', {placeholder:' '});
+				</script>
+			</div>
+			<div class="input-box mastershop_cieloapi30_salvar" style="display:none">
+				<label>
+					<input type="checkbox" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_salvar" name="payment[cc_<?php echo $numCartao; ?>_salvar]" value="1" checked="checked" />
+					<?php echo $helper->__('Salvar dados para compras futuras'); ?>
+				</label>
+			</div>
+		</li>
+		<li class="mastershop_cieloapi30_nome mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+			<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_nome" class="required"><em>*</em><?php echo $helper->__('Nome Impresso no Cartão') ?></label>
+			<div class="input-box">
+				<input type="text" title="<?php echo Mage::helper('core')->quoteEscape($helper->__('Nome Impresso no Cartão')) ?>" class="input-text required-entry" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_nome" name="payment[cc_<?php echo $numCartao; ?>_nome]" value="<?php echo $this->escapeHtml((!isset($cartaoSalvoChave) || !$cartaoSalvoChave ? $this->getInfoData('cc_' . $numCartao . '_nome') : '')) ?>" />
+			</div>
+		</li>
+		<?php if ($this->verificarCompraNacional() && $this->verificarUsarCampoDocumento()): ?>
+		<li class="mastershop_cieloapi30_documento mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+			<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_documento" class="required"><em>*</em><?php echo $helper->__('CPF/CNPJ do Dono do Cartão') ?></label>
+			<div class="input-box">
+				<input type="tel" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" title="<?php echo Mage::helper('core')->quoteEscape($helper->__('CPF/CNPJ do Dono do Cartão')) ?>" class="input-text required-entry" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_documento" name="payment[cc_<?php echo $numCartao; ?>_documento]" onkeyup="mastershop_cieloapi30_atualizarCpfCnpj(this)" value="<?php echo $this->escapeHtml((!isset($cartaoSalvoChave) || !$cartaoSalvoChave ? $this->recuperarDocumento($numCartao) : '')) ?>" />
+			</div>
+		</li>
+		<?php endif; ?>
+		<li id="<?php echo $codigoPagamento ?>_cc_type_exp_div" class="mastershop_cieloapi30_expiracao mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+			<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_expiracao" class="required"><em>*</em><?php echo $helper->__('Data de Expiração') ?></label>
+			<div class="input-box">
+				<div class="v-fix">
+					<select id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_expiracao" name="payment[cc_<?php echo $numCartao; ?>_expiracao_mes]" class="month validar_expiracao required-entry">
+					<?php
+						$mes_expiracao = (!isset($cartaoSalvoChave) || !$cartaoSalvoChave ? $this->getInfoData('cc_' . $numCartao . '_expiracao_mes') : '');
+						foreach ($this->getCcMonths() as $mesNumero => $mesNome)
+						{
+					?>
+						<option value="<?php echo $mesNumero ? $mesNumero : '' ?>"<?php if ($mesNumero == $mes_expiracao): ?> selected="selected"<?php endif ?>><?php echo $mesNome ?></option>
+					<?php
+						}
+					?>
+					</select>
+				</div>
+				<div class="v-fix">
+					<select id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_expiracao_ano" name="payment[cc_<?php echo $numCartao; ?>_expiracao_ano]" class="year required-entry">
+					<?php
+						$ano_expiracao = (!isset($cartaoSalvoChave) || !$cartaoSalvoChave ? $this->getInfoData('cc_' . $numCartao . '_expiracao_ano') : '');
+						foreach ($this->getCcYears() as $anoNumero => $anoNome)
+						{
+					?>
+						<option value="<?php echo $anoNumero ? $anoNumero : '' ?>"<?php if ($anoNumero == $ano_expiracao): ?> selected="selected"<?php endif ?>><?php echo $anoNome ?></option>
+					<?php
+						}
+					?>
+					</select>
+				</div>
+			</div>
+		</li>
+		<li id="<?php echo $codigoPagamento ?>_cc_type_cvv_div" class="mastershop_cieloapi30_verificacao mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+			<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_verificacao" class="required"><em>*</em><?php echo $helper->__('Número de Verificação do Cartão') ?></label>
+			<div class="input-box">
+				<div class="v-fix">
+					<input type="tel" pattern="\d{3,4}" title="<?php echo Mage::helper('core')->quoteEscape($helper->__('Número de Verificação do Cartão')) ?>" class="input-text cvv required-entry" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_verificacao" name="payment[cc_<?php echo $numCartao; ?>_verificacao]" value="" />
+				</div>
+				<a href="#" class="cvv-what-is-this"><?php echo $helper->__('O que é isto?') ?></a>
+			</div>
+		</li>
+		<?php if ($this->verificarValorPorCartao()): ?>
+		<li id="<?php echo $codigoPagamento ?>_cc_valor_div" class="mastershop_cieloapi30_valor mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+			<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_valor" class="required"><em>*</em><?php echo $helper->__('Valor a Cobrar Neste Cartão') ?></label>
+			<div class="input-box">
+				<input type="tel" pattern="<?php echo $this->recuperarConfiguracoesMoedasValidacao(); ?>" title="<?php echo Mage::helper('core')->quoteEscape($helper->__('Valor a Cobrar Neste Cartão')) ?>" class="input-text required-entry validar_valor_cartao validar_valor_cartao_minimo" id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_valor" name="payment[cc_<?php echo $numCartao; ?>_valor]" value="<?php echo $this->recuperarTotalFormatado(); ?>" valor_minimo="<?php echo $this->recuperarValorMinimo(); ?>" />
+				<div class="total">
+					<?php echo $helper->__('Do Total:'); ?> <strong><?php echo $this->recuperarTotalFormatado(); ?></strong>
+				</div>
+
+				<script>
+					VMasker(document.querySelector('#<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_valor')).maskMoney(mastershop_cieloapi30_configMoeda);
+					$('<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_valor').addEventListener('blur', mastershop_cieloapi30_atualizarValor);
+				</script>
+			</div>
+		</li>
+		<?php endif; ?>
+		<?php if ($this->verificarCompraNacional()): ?>
+		<li id="<?php echo $codigoPagamento ?>_cc_parcelas_div" class="mastershop_cieloapi30_parcelas mastershop_cieloapi30_cartao_<?php echo $numCartao; ?>" style="display:none">
+			<label for="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_parcelas" class="required"><em>*</em><?php echo $helper->__('Parcelamento') ?></label>
+			<div class="input-box">
+				<select id="<?php echo $codigoPagamento ?>_cc_<?php echo $numCartao; ?>_parcelas" name="payment[cc_<?php echo $numCartao; ?>_parcelas]" class="required-entry" onchange="mastershop_cieloapi30_salvarParcelas(this, <?php echo $numCartao; ?>)">
+				<option value="">&nbsp;</option>
+				<?php
+					$parcelaSelecionada = ($checkoutPersonalizado ? 0 : $this->recuperarParcelasSelecionadas($numCartao));
+
+					foreach ($parcelas as &$dadosParcela)
+					{
+				?>
+                    <option value="<?php echo $dadosParcela['parcelas']; ?>"<?php if ($dadosParcela['parcelas'] == $parcelaSelecionada): ?> selected="selected"<?php endif; ?>><?php echo $dadosParcela['texto']; ?></option>
+				<?php
+					}
+				?>
+				</select>
+			</div>
+		</li>
+		<?php endif; ?>
+	<?php
+		}
+	?>
+</ul>
+
+<script>
+	mastershop_cieloapi30_inicializarCampos();
+
+	//Formatar documentos para dados de formulários salvos
+	$$('.mastershop_cieloapi30_documento input').each(
+		function (elemento)
+		{
+			mastershop_cieloapi30_atualizarCpfCnpj(elemento);
+		}
+	)
+</script>

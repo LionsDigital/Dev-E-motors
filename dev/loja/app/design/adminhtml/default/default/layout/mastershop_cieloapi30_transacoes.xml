@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<adminhtml_mastershopcieloapi30transacoesbackend_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_transacoes1">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/listagem_transacoes.css</name>
+			</action>
+		</reference>
+	</adminhtml_mastershopcieloapi30transacoesbackend_index>
+	<adminhtml_mastershopcieloapi30detalhesbackend_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_transacoes2">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/listagem_transacoes.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="css_highlight">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/highlight/xt256-mod.css</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_highlight">
+				<type>skin_js</type>
+				<name>js/mastershop_cieloapi30/highlight.js</name>
+			</action>
+		</reference>
+	</adminhtml_mastershopcieloapi30detalhesbackend_index>
+</layout>

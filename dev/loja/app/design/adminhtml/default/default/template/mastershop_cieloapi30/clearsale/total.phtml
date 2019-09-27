@@ -1,0 +1,26 @@
+<div>
+	<span class="<?php echo $this->recuperarCss(); ?>"><?php echo $this->recuperarTexto(); ?></span>
+</div>
+<div>
+	<?php echo $this->__('Score:'); ?> <span class="<?php echo $this->recuperarCssScore(); ?>"><?php echo $this->recuperarTextoScore(); ?></span>
+</div>
+<?php
+	$comentarios = $this->getComentarios();
+
+	if (is_array($comentarios) && !empty($comentarios))
+	{
+?>
+	<div>
+		<div><?php echo $this->__('Comentários de Analistas:'); ?></div>
+		<?php
+			foreach ($comentarios as $comentario)
+			{
+		?>
+			<p>- <?php echo $comentario; ?></p>
+		<?php
+			}
+		?>
+	</div>
+<?php
+	}
+?>

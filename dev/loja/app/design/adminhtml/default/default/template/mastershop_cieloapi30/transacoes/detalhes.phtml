@@ -1,0 +1,49 @@
+<div class="mastershop_cieloapi30_detalhes_detalhes">
+	<div class="linha">
+		<div class="campo"><?php echo $this->__('# Compra'); ?></div>
+		<div><?php if ($this->getData('order_id')): ?><a href="<?php echo $this->getUrl('adminhtml/sales_order/view', ['order_id' => $this->getData('order_id')]); ?>"><?php endif; echo $this->recuperarNumeroCompra(); ?><?php if ($this->getData('order_id')): ?></a><?php endif; ?></div>
+		<div class="campo"><?php echo $this->__('Data/Hora da Transação'); ?></div>
+		<div><?php echo Mage::helper('core')->formatDate($this->getData('data_hora'), 'short', true); ?></div>
+	</div>
+	<div class="linha">
+		<div class="campo"><?php echo $this->__('Operadora'); ?></div>
+		<div><?php echo $this->recuperarOperadora(); ?></div>
+		<div class="campo"><?php echo $this->__('Operação'); ?></div>
+		<div><span class="mastershop_cieloapi30_operacao mastershop_cieloapi30_operacao_<?php echo $this->getData('operacao'); ?>"><?php echo $this->recuperarOperacao(); ?></span></div>
+	</div>
+	<div class="linha">
+		<div class="campo"><?php echo $this->__('Comprovante de Vendas'); ?></div>
+		<div><?php echo $this->getData('cv'); ?></div>
+		<div class="campo"><?php echo $this->__('Número de Autorização'); ?></div>
+		<div><?php echo $this->getData('autorizacao'); ?></div>
+	</div>
+	<div class="linha">
+		<div class="campo"><?php echo $this->__('ID da Transação'); ?></div>
+		<div><?php echo $this->getData('id_txn'); ?></div>
+		<div class="campo">&nbsp;</div>
+		<div>&nbsp;</div>
+	</div>
+</div>
+
+<div class="mastershop_cieloapi30_detalhes_xml">
+	<div class="mastershop_cieloapi30_detalhes_pedido">
+		<h3><?php echo $this->__('Pedido'); ?></h3>
+<pre>
+<code class="<?php echo $this->recuperarPedidoTipo(); ?>">
+<?php echo $this->recuperarPedido(); ?>
+</code>
+</pre>
+	</div>
+	<div class="mastershop_cieloapi30_detalhes_resultado">
+		<h3><?php echo $this->__('Resultado'); ?></h3>
+<pre>
+<code class="<?php echo $this->recuperarResultadoTipo(); ?>">
+<?php echo $this->recuperarResultado(); ?>
+</code>
+</pre>
+	</div>
+</div>
+
+<script>
+	hljs.initHighlightingOnLoad();
+</script>

@@ -1,0 +1,5 @@
+<div class="mastershop_cieloapi30_operadora">
+	<?php if ($this->getData('operadora_imagem')): ?>
+		<img src="<?php echo $this->getData('operadora_imagem'); ?>" border="0" title="<?php echo $this->getData('operadora_nome'); ?>" />
+	<?php else: echo $this->getData('operadora_nome'); endif; ?>
+</div>

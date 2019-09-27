@@ -1,0 +1,521 @@
+1 cartão,1 card
+1 ou débito,1 or debit
+1-3,1-3
+1-4,1-4
+1-10,1-10
+1-12,1-12
+"*Caso este status persista após 30 minutos, será necessário cancelar esta venda*","*In case this status persists after 30 minutes, it will be necessary to cancel this order*"
+"*somente na API online, necessário devolver valor manualmente*","*only at the online API, it is necessary to manually refund the amount*"
+"<div style=""padding: 5px; border: 1px solid #dcdcdc; margin-bottom: 20px; background: #e8e8e8""><strong>Configurações para o gateway API 3.0 da Cielo.</strong><br /><br /><font color=""#ff0000""><strong>ATENÇÃO: </strong></font>antes de utilizar este método de pagamento, é necessário filiar-se à empresa Cielo (<a href=""http://www.cielo.com.br/"" target=""_blank"">www.cielo.com.br</a>).<br /><strong>Também será necessário adquirir um certificado de segurança SSL.</strong></div>","<div style=""padding: 5px; border: 1px solid #dcdcdc; margin-bottom: 20px; background: #e8e8e8""><strong>Settings for the Cielo's gateway API 3.0.</strong><br /><br /><font color=""#ff0000""><strong>WARNING: </strong></font>before using this payment method, it is necessary to join Cielo (<a href=""http://www.cielo.com.br/"" target=""_blank"">www.cielo.com.br</a>).<br /><strong>A SSL security certificate will also be needed.</strong></div>"
+"[AMA] PENDENTE, aguardando revisão por analista.","[AMA] PENDING, waiting for analyst review."
+"[APA] APROVADO, automaticamente por regras de aprovação automática.","[APA] APPROVED, automatically by automatic approval rules."
+"[APM] APROVADO, manualmente, por analista.","[APM] APPROVED, manually, by an analyst."
+"[APP] APROVADO, por regras estabelecidas pela loja ou ClearSale","[APP] APPROVED, by rules established by the store or by ClearSale"
+"[CAN] Pedido cancelado pela loja.","[CAN] Order cancelled by the store."
+"[FRD] FRAUDE CONFIRMADA, por contato com administradora de cartão ou titular do cartão.","[FRD] CONFIRMED FRAUD, by contacting card issuer or the card owner."
+"[NVO] PENDENTE, pedido novo.","[NVO] PENDING, new order."
+"[RPA] REPROVADO, automaticamente por regras.","[RPA] NOT APPROVED, automatically by rules."
+"[RPM] REPROVADO, sem suspeita de fraude, por falta de contato com o cliente ou política restritiva (CPF, etc).","[RPM] NOT APPROVED, without fraud suspicion, by not contacting the customer or by restrictive policy (documents, etc)."
+"[RPP] REPROVADO, por regras estabelecidas pela loja ou ClearSale.","[RPP] NOT APPROVED, by rules established by the store or by ClearSale."
+"[SUS] REPROVADO, suspenso manualmente por suspeita de fraude através de contato com o cliente ou base ClearSale.","[SUS] NOT APPROVED, manually suspended by fraud suspicion through contact with the customer or by ClearSale database."
+"Aguarde, carregando...","Wait, loading..."
+"Cancelamento não efetuado, banco emissor não localizou a transação original","Cancellation not completed, issuer bank did not find the original transaction"
+"Cancelamento não efetuado, não foi localizada a transação original","Cancellation not completed, original transaction not found"
+"Cancelamento não efetuado, saldo disponível para cancelamento insuficiente.","Cancellation not completed, insufficient funds."
+"Cartão bloqueado, por favor entre em contato com a central de atendimento do cartão.","Blocked card, please contact your card issuer."
+"Cartão cancelado, por favor entre em contato com a central de atendimento do cartão.","canceled card, please contact your card issuer."
+"Cartão inadimplente, por favor entre em contato com a central de atendimento do cartão.","Overdue card, please contact your card issuer."
+"Cartão não pode ser processado, banco emissor indisponível.","Card can not be processed, issuer is unavailable."
+"CEP coincide, CPF e Endereço não coincidem.","Postcode matched, CPF and Address did not match."
+"CEP e CPF coincidem, Endereço não coincide.","Postcode and CPF matched, Address did not match."
+"CEP e Endereço coincidem, CPF não coincide.","Postcode and Address matched, CPF did not match."
+"Chave de acesso da loja virtual, senha para MerchantID","Access key for the virtual store, password for MerchantID"
+"CPF coincide, CEP e Endereço não coincidem.","CPF matched, Postcode and Address did not match."
+"Código de identificação da empresa no sistema ClearSale. Caso não tenha recebido seu código, solicite para integracao@clear.sale","Identification code for the company within the ClearSale system. If you did not receive your code, request it to integracao@clear.sale"
+"Código para script mapeador. Caso não tenha recebido seu código, solicite para integracao@clear.sale","Code for mapper script. If you did not receive your code, request it to integracao@clear.sale"
+"Define a origem dos dados de CPF/CNPJ. Pode ser utilizado o campo padrão do Magento (Tax/Vat) das informações de cobrança, ou um campo específico no formulário de dados do cartão.","Defines the origin for the customer tax/vat number. Default billing information tax/vat field can be used, or a custom field inside the card data form."
+"Define as opções de parcelamento que aparecerão na lista de parcelas.<br />Por exemplo: 1,3,6,9 irá mostrar as opções:<br /><br />À Vista<br />3x<br />6x<br />9x","Defines the installments quantities which will be shown on the installments list.<br />For example: 1,3,6,9 will show the following options:<br /><br />À Vista<br />3x<br />6x<br />9x"
+"Define o período de tempo em minutos utilizado para controlar o número de tentativas falhadas, definidas no campo 'Tentativas Falhadas'. Mínimo de 1 e máximo de 1440 (24 horas).","Defines the time period in minutes used to control the failed attempts, defined on the field 'Failed Attempts'. Minimum of 1 and maximum of 1440 (24 hours)."
+"Define se este método de pagamento será utilizado em modo de testes, podendo ser utilizados cartões inexistentes e sem autorizar/capturar valores nos cartões existentes","Defines whether this payment method will be used for testing mode, allowing the use of non-existing cards and not authorizing/capturing amounts on existing cards"
+"Define se os campos com dados do cartão (número, nome, validade, etc) serão apagados caso algum erro ocorra com a transação. Esta é uma norma dos padrões PCI e algumas operadoras podem solicitar este comportamento durante o processo de homologação. Quando for utilizado um módulo onestepcheckout customizado, pode ser necessário desabilitar esta funcionalidade caso os erros com transações não estejam sendo exibidos para o cliente ou o módulo onestepcheckout não esteja funcionando corretamente.","Defines whether card fields (number, owner, expiration, etc) will be cleared when any errors occurs within a transaction. This is a PCI standard and some operators will ask this behavior during the homologation process. When using a custom onestepcheckout module, it may be necessary to disable this option if transaction errors are not being shown or the onestepcheckout module is not working correctly."
+"Define se os campos de endereço (rua, número, complemento, bairro) serão especificados conforme configuração da loja/tema ou se o módulo tentará identificar os campos automaticamente.","Defines whether the address fields (street, number, complement, district) will be specified depending on the store/theme configuration or the module will try to identify them automatically."
+"Define se os dados enviados serão somente os básicos necessários para a transação (simples) ou se conterá dados adicionais do cliente (completo), como endereço de cobrança e endereço de entrega. Para transações utilizando o serviço antifraude, o tipo de envio será sempre completo, independentemente desta configuração.","Defines whether the transaction data sent will include only the basic data necessary for the transaction (simple) or it will contain additional customer data (complete), like billing and shipping information. For transactions using the anti-fraud service, data sent will always be complete, independently of this setting."
+"Define taxa de desconto percentual personalizada para cada quantidade de parcelas até a quantidade de parcelas definida no campo 'Aplicar Taxa de Desconto à Parcela quando Quantidade de Parcelas for Igual ou Menor'. Quando um valor não for personalizado para uma certa quantidade de parcelas, o valor padrão definido no campo 'Taxa de Desconto da Parcela ao Mês (%)' será utilizado.","Defines a custom discount percentage amount for each installment quantity up to the quantity defined on the field 'Apply Discount Amount to Installments when Installments Quantity is Equal or Less Than'. When an amount is not customised for a determined quantity, the amound defined on the field 'Installment Discount Amount Per Month (%)' will be used instead."
+"Define taxa de juros percentual personalizada para cada quantidade de parcelas até a quantidade de parcelas definida no campo 'Aplicar Taxa de Juros à Parcela quando Quantidade de Parcelas for Igual ou Maior'. Quando um valor não for personalizado para uma certa quantidade de parcelas, o valor padrão definido no campo 'Taxa de Juros da Parcela ao Mês (%)' será utilizado.","Defines a custom interests percentage amount for each installment quantity up to the quantity defined on the field 'Apply Interests Amount to Installments when Installments Quantity is Equal or Greater Than'. When an amount is not customised for a determined quantity, the amound defined on the field 'Installment Interests Amount per Month (%)' will be used instead."
+"Em minutos, 1-1440 (24 horas)","In minutes, 1-1440 (24 hours)"
+"Endereço coincide, CEP e CPF não coincidem.","Address matched, Postcode and CPF did not match."
+"Endereço e CEP coincidem, CPF não coincide.","Address and Postcode matched, CPF did not match."
+"Formato: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX<br />Para modo de testes, <a href=""https://cadastrosandbox.cieloecommerce.cielo.com.br/"" target=""_blank"">realize seu cadastro no sandbox Cielo.</a>","Format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX<br />For testing mode, <a href=""https://cadastrosandbox.cieloecommerce.cielo.com.br/"" target=""_blank"">please subscribe to Cielo sandbox.</a>"
+"Habilita o controle de tentativas de pagamento com falha, para evitar bloqueios no serviço da operadora.","Enables the control of failed payment attempts, to avoid blocking of services by the card operator."
+"Mostra a quantidade de desconto por padrão junto com as informações de parcelamento, na exibição de parcelas na página de produtos ou na seleção de parcelas durante a finalização da compra.<br /><br /><strong>Exemplos:</strong><br /><small>Mostrar: 2x de R$ 10,00 com 1% de desconto - Total R$ 20,00<br />Não Mostrar: 2x de R$ 10,00 - Total R$ 20,00</small>","Shows the discount amount by default together with the installments information, when showing the installments options on the products pages or while selecting the installments at checkout.<br /><br /><strong>Examples:</strong><br /><small>Show: 2x of R$ 10,00 with 1% of discount - Total R$ 20,00<br />Don't Show: 2x of R$ 10,00 - Total R$ 20,00</small>"
+"Mostra a quantidade de juros por padrão junto com as informações de parcelamento, na exibição de parcelas na página de produtos ou na seleção de parcelas durante a finalização da compra.<br /><br /><strong>Exemplos:</strong><br /><small>Mostrar: 2x de R$ 10,00 com 1% de juros a.m. - Total R$ 20,00<br />Não Mostrar: 2x de R$ 10,00 - Total R$ 20,00</small>","Shows the interests amount by default together with the installments information, when showing the installments options on the products pages or while selecting the installments at checkout.<br /><br /><strong>Examples:</strong><br /><small>Show: 2x of R$ 10,00 with 1% of interests per month - Total R$ 20,00<br />Don't Show: 2x of R$ 10,00 - Total R$ 20,00</small>"
+"Nenhum campo coincide (Endereço, CEP, CPF).","No field matched (Address, Postcode, CPF)."
+"Não foi possível confirmar a autenticação do cartão de crédito/débito/transferência online. Se você finalizou a autenticação, por favor entre em contato para verificar o status de sua compra!","Could not confirm the credit/debit card/online debit authentication. If you completed the authentication, please contact us to check the order status!"
+"Oferecer a opção de salvar cartões de crédito para seleção rápida em compras futuras. Somente alguns dados serão salvos localmente, os dados como número e código de segurança serão salvos pela operadora, que retornará um token para que o cartão possa ser utilizado.","Offer the option to save credit cards for fast use on future orders. Only some fields are saved locally, the card number and verification code will be saved by the operator, which will return a card token so the card can be used."
+"Permite que o comprador especifique o valor a ser cobrado em cada cartão, no caso de ser escolhido mais de um cartão para o pagamento","Allows buyer to specify the value to be charged per each card, if more than one card was chosen for the payment"
+"Por favor preencha corretamente o nome igual ao impresso no cartão #%d, sem acentos ou caracteres especiais!","Please enter the name exactly as printed on the card #%d, without accents or special characters!"
+"Por favor preencha corretamente o nome igual ao impresso no cartão, sem acentos ou caracteres especiais!","Please enter the name exactly as printed on the card, without accents or special characters!"
+"Prazo em dias para cálculo da data de vencimento dos boletos bancários, a partir da data da compra.","Deadline in days for the expiration of the bank titles, from the order date."
+"quando ambos desconto e juros para parcelamento forem especificados, a quantidade de parcelas para aplicação do desconto deve ser menor que a quantidade de parcelas para aplicação de juros.","when both discount and interests are specified, the installments quantity for applying discounts should be less than the installments quantity for applying interests."
+"Quando possível, redirecionar o comprador para o site do emissor do banco do cartão para fazer a autenticação por senha. Dependente do banco emissor e somente disponível para bandeiras Visa e MasterCard. Não disponível para compras feitas com mais de um cartão.","Whenever possible, redirect the customer to the issuer bank website to authenticate the owner with password. Depends on the bank issuer and only available for card brands Visa and MasterCard. Not available to orders using more than one card."
+"Seu navegador será redirecionado para o site do banco emissor do cartão ou site da bandeira do cartão após a finalização da compra, para efetuar a autenticação do portador do cartão.","Your web browser will be redirected to the card bank issuer website or to the card brand website after the order is placed, so the card owner can be authenticated."
+"Somente letras, números e espaços, máximo de 13 caracteres.","Only letters, numbers and spaces, maximum of 13 characters."
+"Todos os campos coincidem (Endereço, CEP, CPF).","All fields matched (Address, Postcode, CPF)."
+"Transação autenticada, portador verificado.","Authenticated transacion, card owner confirmed."
+"Transação autorizada, aguardando captura do valor (criação de fatura)","Authorized transaction, awaiting capture of the amount (invoice creation)"
+"Transação inválida, dados do cartão incorretos.","Invalid transaction, incorrect card data."
+"Transação não aprovada, limite excedido/sem saldo.","Transaction not approved, exceeded limit/no funds."
+"Transação não aprovada, por favor entre em contato com a central de atendimento do cartão.","Transaction not approved, please contact your card issuer."
+"Transação não autorizada, a senha está vencida.","Transaction not authorized, expired password."
+"Transação não autorizada, autenticação não foi realizada.","Transaction not authorized, authentication not completed."
+"Transação não autorizada, banco emissor temporariamente indisponível.","Transaction not authorized, issuer bank temporarily unavailable."
+"Transação não autorizada, cartão bloqueado para compras hoje.","Transaction not authorized, card blocked for orders today."
+"Transação não autorizada, cartão bloqueado primeiro uso.","Transaction not authorized, card blocked for first use."
+"Transação não autorizada, cartão inválido.","Transaction not authorized, invalid card."
+"Transação não autorizada, conta corrente inexistente.","Transaction not authorized, non-existing account."
+"Transação não autorizada, dados inválidos.","Transaction not authorized, invalid data."
+"Transação não autorizada, divergência na data de transação/pagamento.","Transaction not authorized, divergence on transaction/payment date."
+"Transação não autorizada, erro no banco emissor.","Transaction not authorized, issuer bank error."
+"Transação não autorizada, excedida a quantidade de transações para o cartão.","Transaction not authorized, exceeded transaction limit for the card."
+"Transação não autorizada, falha na validação dos dados.","Transaction not authorized, data validation failed."
+"Transação não autorizada, limite diário excedido.","Transaction not authorized, exceeded daily limit."
+"Transação não autorizada, limite excedido/sem saldo.","Transaction not authorized, exceeded limit/no funds."
+"Transação não autorizada, suspeita de fraude.","Transaction not authorized, fraud suspect."
+"Transação não autorizada, tempo de comunicação excedido.","Transaction not authorized, timeout."
+"Transação não autorizada, valor abaixo do mínimo exigido pelo banco emissor.","Transaction not authorized, amount below the minimum required by the issuer bank."
+"Transação não autorizada, violação de regra - Possível erro no cadastro.","Transaction not authorized, rule violation - possible membership error."
+"Transação não autorizada, violação de segurança.","Transaction not authorized, security violation."
+"Transação não permitida, cartão de crédito sendo usado com débito. Use a função crédito.","Transaction not allowed, credit card being used as debit. Use the credit function."
+"Transação não permitida, cartão de débito sendo usado com crédito. Use a função débito.","Transaction not allowed, debit card being used as credit. Use the debit function."
+"Transação não permitida, código da operação inválido.","Transaction not allowed, invalid operation code."
+"Transação não permitida, falha da operação.","Transaction not allowed, operation failed."
+"Transação não permitida, falha na validação dos dados.","Transaction not allowed, data validation failed."
+"Transação não permitida, opção de pagamento inválida.","Transaction not allowed, invalid payment option."
+"Transação não permitida, selecionada a opção incorreta.","Transaction not allowed, incorrect option selected."
+"Transação não permitida, valor da operação inválido.","Transaction not allowed, invalid operation value."
+"Transação não permitida, valor da parcela inferior ao mínimo permitido.","Transaction not allowed, installment value below the allowed value.."
+"Transação referida, por favor entre em contato com a central de atendimento do cartão.","Referred transaction, please contact your card issuer."
+"Título exibido na fatura do portador do cartão (soft-descriptor). Disponível para bandeiras Visa e MasterCard, dependente de disponibilidade do serviço e da operadora de cartões.","Title displayed on the card bill (soft-descriptor). Available for card brands Visa and MasterCard, depending on the service availability and on the card operator."
+"Usar o serviço adicional antifraude da Cielo para validar as informações de cobrança contra as informações do cartão de crédito.<br /><font color='#ff0000'>Atenção: este serviço pode ter custos adicionais, consulte a Cielo!</font>","Whether to use the additional anti-fraud service from Cielo to validate billing information against the card information.<br /><font color='#ff0000'>Warning: this service can be separately charged, contact Cielo for more information!</font>"
+"Utilizar apenas números, separar com vírgulas. Ex: 1,3,6,9","Use only numbers, separete with commas. Example: 1,3,6,9"
+"Utilizar formulário de dados alternativo, onde a bandeira do número de cartão digitado aparece automaticamente no campo do número do cartão. Válido apenas para cartões de crédito (desabilita o uso de cartões de débito).","Use an alternative data form, where the card brand for the card number specified will be automatically shown on the card number field. Valid only for credit cards (disables the use of debit cards)."
+# Compra,# Order
+% de Desconto,% of Discount
+% de Juros Ao Mês,% of Interests per Month
+%d cartões,%d cards
+%d compras tiveram o método de pagamento atualizado para a nova versão do módulo.,%d orders had their payment method updated to the new module version.
+%dx de R$ %s - Total R$ %s,%dx of R$ %s - Total R$ %s
+%dx de R$ %s com %s%% de desconto - Total R$ %s,%dx of R$ %s with %s%% of discount - Total R$ %s
+%dx de R$ %s com %s%% de juros a.m. - Total R$ %s,%dx of R$ %s with %s%% of interests per month - Total R$ %s
+%dx de R$ %s com desconto de %s%%,%dx of R$ %s with discount of %s%%
+%dx de R$ %s sem juros,%dx of R$ %s without interests
+%dx de R$ %s,%dx of R$ %s
+%s000000%s%s,%s000000%s%s
+%s000000000000%s,%s000000000000%s
+%s00000000%s,%s00000000%s
+%s - Expired since %s,%s - Expired since %s
+%s - Valid until %s,%s - Valid until %s
+(cartão #%d), (card #%d)
+* Required Fields,* Required Fields
+A autenticação do cartão de crédito/débito/transferência online está em andamento. Por favor tente novamente em alguns instantes!,The credit/debit card/online debit authentication is in process. Please try again in a few moments!
+A autenticação do cartão de crédito/débito/transferência online não foi concluída.,The credit/debit card/online debit authentication was not completed.
+a bandeira '%s' não pode ser atribuída a mais de uma operadora de cartão.,the card brand '%s' can not be assigned to more than one card operator.
+A data de validade do cartão #%d não é válida!,The card #%d expiration date is not valid!
+A data de validade do cartão não é válida!,The card expiration date is not valid!
+a quantidade de parcelas %d foi preenchida mais de uma vez. Os registros duplicados foram removidos da listagem.,the installments quantity %d was specified more than one time. Duplicated records were removed from the list.
+A quantidade de parcelas selecionada não é válida!,The selected installments quantity is not valid!
+A quantidade de parcelas selecionada para o cartão #%d não é válida!,The selected installments quantity for card #%d is not valid!
+A quantidade máxima de produtos configurada (%d) para a ativação do método de pagamento foi ultrapassada (%d).,The maximum defined products quantity (%d) for the activation of the payment method was exceeded (%d).
+A quantidade mínima de produtos configurada (%d) para a ativação do método de pagamento não foi atingida (%d).,The minimum defined products quantity (%d) for the activation of the payment method was not reached (%d).
+A transação com cartão de crédito/débito/transferência online foi cancelada.,The credit/debit card/online debit transaction was canceled.
+A transação com cartão de crédito/débito/transferência online não foi autorizada.,The credit/debit card/online debit transaction was not authorized.
+Acesso incorreto à plataforma de pagamentos. Por favor verifique se as credenciais de acesso foram definidas corretamente conforme o modo de testes/produção.,Incorrect access to the payment gateway. Please check the access credentials according to the testing/production mode.
+Acesso incorreto à plataforma de pagamentos. Por favor verifique se as credenciais de acesso foram definidas corretamente.,Incorrect access to the payment gateway. Please check the access credentials.
+Adicionar coluna com o resultado da análise antifraude diretamente na tabela de listagem de pedidos.,Add a column to the sales grid with the result of anti-fraud analysis.
+Adicionar,Add
+Administradora de Cartões,Card Issuer
+Aguardando autenticação e pagamento via página externa,Awaiting authentication and payment in external page
+American Express,American Express
+Antifraud,Antifraud
+Análise Antifraude,Antifraud analysis
+Aperte CTRL + Click para selecionar mais de um status!,Press CTRL + Click to select more than one status!
+Aperte CTRL + Click para selecionar mais de uma bandeira!,Press CTRL + Click to select more than one card brand!
+Aplicar a taxa de desconto para cada parcela somente quando o cliente selecionar uma quantidade de parcelas igual ou menor que este número,Apply the specified discount amount to each installment only when the customer selects an installment quantity equal or less than this number
+Aplicar a taxa de juros para cada parcela somente quando o cliente selecionar uma quantidade de parcelas igual ou maior que este número,Apply the specified interests amount to each installment only when the customer selects an installment quantity equal or greater than this number
+Aplicar Taxa de Desconto Ao,Apply Discount Amount To
+Aplicar Taxa de Desconto à Parcela quando Quantidade de Parcelas for Igual ou Menor,Apply Discount Amount to Installments when Installments Quantity is Equal or Less Than
+Aplicar Taxa de Juros Ao,Apply Interests Amount To
+Aplicar Taxa de Juros à Parcela quando Quantidade de Parcelas for Igual ou Maior,Apply Interests Amount to Installments when Installments Quantity is Equal or Greater Than
+Arquivo temporariamente indisponível.,File temporarily unavailable.
+Atualização de Status,Status Update
+Aura,Aura
+Autenticar Cartões de Crédito,Authenticate Credit Cards
+Autorizar e Capturar,Authorize and Capture
+Autorização cancelada (antes da confirmação da transação),Authorization canceled (before the transaction confirmation)
+Autorização com AVS,Authorization with AVS
+Autorização e Captura,Authorization and Capture
+Autorização,Authorization
+Ação de Pagamento,Payment Action
+Banco do Brasil,Banco do Brasil
+Banco emissor indisponível.,Issuer bank unavailable.
+Banco Emissor para Boletos Bancários,Issuer Bank for Bank Titles (Boletos Bancários)
+Banco não pertence à rede ou cartão corporativo.,Bank does not belong to the network or corporate card.
+Bandeira do Cartão/Serviço,Card Brand/Service
+Bandeiras de cartões disponíveis durante a finalização da compra,Card brands available during checkout
+Bandeiras de Cartões Permitidas,Allowed Card Brands
+Boleto Bancário,Bank Title (Boleto Bancário)
+Boleto Pago,Bank Title Paid
+Bradesco,Bradesco
+Campo de CPF/CNPJ,Tax/Vat Field
+Cancelamento Automático,Automatic Cancellation
+Cancelamento de Autorização,Authorization Cancellation
+Cancelar Pedido Automaticamente,Cancel Order Automatically
+Cancelar/estornar o pedido automaticamente se a análise antifraude retornar resultado negativo conforme status definidos no campo 'Status para Cancelamento Automático'.,Cancel/refund order automatically when the antifraud analysis results negatively according to one of the status defined in the field 'Status for Automatic Cancellation'.
+Captura,Capture
+Cartão #%d,Card #%d
+Cartão bloqueado por perda.,Card blocked for loss.
+Cartão bloqueado por roubo.,Card blocked for theft.
+Cartão com dígito de controle inválido.,Card with invalid control digit.
+Cartão de Crédito,Credit Card
+Cartão de Débito,Debit Card
+Cartão de Testes / Bandeira Desconhecida,Card for Tests / Unknown Card Brand
+Cartão excedeu o limite para parcelamento.,Card exceeded limit for installments.
+Cartão expirado.,Expired card.
+Cartão inadimplente.,Overdue card.
+Cartão inválido.,Invalid card.
+Cartão poupança inválido.,Invalid poupança card.
+Cartão restrito para uso doméstico.,Card restricted for domestic use.
+Cartão terminado em %s,Card number ending with %s
+Cartão vencido.,Expired card.
+Cartões de Crédito e Débito/Boleto/Débito Online,Credit and Debit Cards/Bank Titles/Online Debit
+Cedente para Boletos Bancários,Bank Titles (Boletos Bancários) Issuer
+Charge Back,Charge Back
+Cielo (API 3.0),Cielo (API 3.0)
+ClearSale Start,ClearSale Start
+ClearSale Total / Total Garantido,ClearSale Total / Total Guaranteed
+Com Registro,Registered
+Comentários de Analistas:,Analysts Comments:
+Completo,Complete
+Comprovante de Vendas (NSU): %s,Sales Receipt (NSU): %s
+Comprovante de Vendas,Sales Receipt
+Confirmação de Pagamento,Payment Confirmation
+Consulta de status indicou pagamento cancelado (%s). A compra será cancelada automaticamente.,Status query indicated canceled payment (%s). The order will be automatically canceled.
+Consulta de Transação,Transaction Query
+CPF/CNPJ do Cedente,Issuer CPF/CNPJ
+CPF/CNPJ do Dono do Cartão,CPF/CNPJ of the Card Owner
+Credz,Credz
+Criada solicitação de autenticação de cartão de crédito/débito.,Created credit/debit card authentication request.
+Criada solicitação de autenticação de débito online.,Created online debit authentication request.
+Criada solicitação de emissão de boleto bancário.,Created bank title (boleto bancário) issue request.
+CV / Autorização / TID,SR / Authorization / TID
+Código da Empresa,Company Code
+Código de acesso da empresa/pessoa ao sistema da Cielo,Membership access code assigned by Cielo
+Código de Integração ClearSale Start,ClearSale Start Integration Code
+Código de segurança incorreto.,Incorrect security code.
+Código de segurança inválido.,Invalid security code.
+Código do App Mapeador,Mapper App Code
+Data de expiração incorreta.,Incorrect expiration date.
+Data de Expiração,Expiration Date
+Data/Hora da Transação,Transaction Date/Time
+Data/Hora,Date/Time
+Define a ação final de pagamento:<br /><br /><strong>Somente Autorizar</strong> irá tentar autorizar a transação de cartão de crédito. O administrador da loja então pode capturar o valor no admin do Magento (ao criar uma fatura) ou no painel de administração da operadora. Transações não capturadas podem ser automaticamente canceladas após determinado número de dias (dependendo da operadora).<br /><br /><strong>Autorizar e Capturar</strong> irá completar a compra e cobrar o valor no cartão de crédito imediatamente.,Defines the final payment action:<br /><br /><strong>Authorize Only</strong> will try to authorize the card transaction. The store admin will be able to capture the amount by creating an invoice on the Magento administration or directly on the administration panel of the card operator. Transactions not captured after determined number of days (depending on the operator) can be automatically canceled.<br /><br /><strong>Authorize and Capture</strong> will complete the order and extract the amount from the card immediately.
+Define a mensagem de erro que será exibida ao cliente quando ocorrerem erros com o módulo ou erros de comunicação com o gateway de pagamento,Defines the default error message which will be shown to the customer when a module or a gateway communication error occurs
+Define a posição na qual este método de pagamento será exibido se houverem outros métodos de pagamento disponíveis,Defines the position this payment module will be shown when there are other payment methods available
+Define a quantidade máxima de cartões que podem ser usados em uma mesma compra,Defines the maximum card quantity that can be used for the same order
+Define a quantidade máxima de parcelas que o cliente pode escolher para o pagamento conforme o valor total da compra,Defines the maximum installments quantity a customer can choose for the payment depending on the order grand total
+Define a quantidade máxima de parcelas que o cliente pode escolher para o pagamento,Defines the maximum installments quantity a customer can choose for the payment
+Define a quantidade máxima de produtos em uma compra para que este método de pagamento continue disponível,Defines the maximum products quantity in an order to keep this payment method available
+Define a quantidade mínima de produtos em uma compra para que este método de pagamento esteja disponível,Defines the minimum products quantity in an order to make this payment method available
+Define a versão do certificado SSL utilizado para transações http,Defines the SSL certificate version to be used for http transactions
+Define como deve ser feito o parcelamento. Consulte a operadora da plataforma de pagamentos para verificar os juros incidentes para o parcelamento no modo 'Administradora de Cartões'.,Defines how the installment plan should be made. Please consult the card operator to check interests inciding on the 'Card Issuer' mode.
+Define o número de tentivas que um cliente pode tentar refazer um pagamento que falhou anteriormente com o mesmo número de cartão de crédito. Mínimo de 1 e máximo de 10.,Defines the number of attempts a customer can make using the same card number previously failed. Minimum of 1 and maximum of 10.
+Define o status de uma nova compra realizada com este método de pagamento,Defines the status for new orders using this payment method
+Define o valor mínimo por cartão para que as opções de divisão do valor em mais de um cartão sejam ativadas,Defines the minimum amount for each card for the multiple card payment to be activated
+Define o valor mínimo que cada parcela deverá conter. Este valor afetará o campo 'Máximo de Parcelas' definido.,Defines the minimum amount for each installment. This amount will affect the defined value for the field 'Maximum Installments'.
+Define o valor total máximo de uma compra para que este método de pagamento continue disponível,Defines the maximum order amount to keep this payment method available
+Define o valor total mínimo de uma compra para que este método de pagamento esteja disponível,Defines the minimum order amount to make this payment method available
+Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for boleto bancário.,Defines any discount percentage amount to be applied when the selected payment method is bank title (boleto bancário).
+Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for cartão de débito.,Defines any discount percentage amount to be applied when the selected payment method is debit card.
+Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for débito/transferência online (ex: débito via Bradesco ou Banco do Brasil).,Defines any discount percentage amount to be applied when the selected payment method is online debit/transfer.
+Define qualquer taxa de desconto percentual a ser subtraída do valor mensal da parcela.,Defines any percentage discount amount to be subtracted from the monthly installment amount.
+Define qualquer taxa de juros percentual a ser adicionada ao valor mensal da parcela.,Defines any percentage interests amount to be added to the monthly installment amount.
+Define se erros ocorridos com o módulo ou erros de comunicação com o gateway de pagamento serão exibidos diretamente ao cliente. Problemas relacionados ao cartão de crédito/débito sempre serão exibidos.,Defines whether module or gateway communication errors will be show directly to the customer. Errors related to the card will always be shown.
+Define se o cadastro de pedidos via ClearSale será ativado para novas compras.,Defines if the registration of orders at ClearSale will be available for new orders.
+Definir Desconto por Parcela,Specify Discount Per Installment
+Definir Juros por Parcela,Specify Interests Per Installment
+Desconto do Boleto Bancário,Discount for Bank Title (Boleto Bancário)
+Desconto do Cartão de Crédito #%d,Discount for Credit Card #%d
+Desconto do Cartão de Crédito,Discount for Credit Card
+Desconto do Cartão de Débito,Discount for Debit Card
+Desconto do Débito/Transferência Online,Discount for Online Debit/Transfer
+Desconto no Cartão de Crédito #2,Discount for Credit Card #2
+Desconto no Cartão de Crédito #3,Discount for Credit Card #3
+Desconto no Cartão de Crédito,Discount for Credit Card
+Descrição na Fatura do Cartão,Description on the Card Bill
+Detalhes da Transação,Transaction Details
+Diners Club,Diners Club
+Discover,Discover
+Do Total:,Do Total:
+Documento de identificação do cedente para impressão nos boletos bancários.,Identification document of the issuer to be printed on the bank titles (boletos bancários).
+Débito Online (Banco do Brasil),Online Debit (Banco do Brasil)
+Débito Online (Bradesco),Online Debit (Bradesco)
+Débito Online,Online Debit
+Elo,Elo
+Em dias,In days
+Emissor temporariamente fora de operação.,Issuer temporarily out-of-order.
+Encaminhado para autenticação,Forwarded to authentication
+Endereço de localização da empresa cedente para impressão nos boletos bancários.,Address for the issuer company to be printed on the bank titles (boletos bancários).
+Endereço do Cedente,Issuer Address
+Envia o e-mail de confirmação de pagamento (fatura) automaticamente ao capturar transações com cartões ou ao confirmar o pagamento de outros métodos de pagamento.,Automatically sends the payment confirmation (invoice) e-mail after capturing card transactions or after confirming the payment for other payment methods.
+Enviar E-Mail de Confirmação de Pagamento,Enviar E-Mail de Confirmação de Pagamento
+Erro de formato.,Format error.
+Erro desconhecido.,Unknown Error.
+Erro do sistema de pagamentos: URL de autenticação indefinido. Por favor tente novamente em alguns instantes!,Payments system error: undefined authentication URL. Please try again in a few moments!
+Erro na transação.,Transaction error.
+Erro no controle de senhas.,Password control error.
+Erro(s) do sistema de pagamentos:%s%s%s%sPor favor tente novamente em alguns instantes!,Payments system error(s):%s%s%s%sPlease try again in a few moments!
+Especificar Campos de Endereço,Specify Address Fields
+Estabelecimento inválido.,Invalid membership.
+Estabelecimento,Store
+Estorno,Refund
+Exibir Boleto ao Finalizar Compra,Show Bank Title on Order Success Page
+Exibir Erros,Show Errors
+Exibir o boleto bancário automaticamente na página de sucesso após a finalização da compra,Automatically show the bank title (boleto bancário) on the order success page
+Exibir Resultado na Tabela de Pedidos,Show Result on Sales Grid
+Falha na validação dos dados.,Data validation failed.
+Falha no processamento.,Processing failed.
+Faturar o pedido automaticamente se a análise antifraude retornar resultado positivo conforme status definidos no campo 'Status para Faturamento Automático'.,Invoice order automatically when the antifraud analysis results positively according to one of the status defined in the field 'Status for Automatic Invoicing'.
+Faturar Pedido Automaticamente,Invoice Order Automatically
+Filtrar Quantidades de Parcelas,Filter Installment Numbers
+Finalizar Pagamento &gt;&gt;,Checkout &gt;&gt;
+Formato: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX,Format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+greater than or equal to,greater than or equal to
+Habilitar Controle de Tentativas Falhadas,Enable Failed Payment Attempts Control
+Habilitar este método de pagamento para seus clientes,Enable this payment method for your customers
+Habilitar Integração ClearSale,Enable ClearSale Integration
+Habilitar,Enable
+Hiper,Hiper
+Hipercard,Hipercard
+ID da autorização: %s,Authorization ID: %s
+ID da Transação,Transaction ID
+ID da Transação: %s,Transaction ID: %s
+Identificador ECI ausente.,Missing ECI Identifier.
+Imprimir Boleto,Print Bank Title (Boleto)
+Instituição sem comunicação.,Institution without communication.
+Instruções a serem impressas com o boleto bancário.,Payment instructions printed on bank titles (boletos bancários).
+Instruções para Boletos Bancários,Instructions for Bank Titles (Boletos Bancários)
+Invalid license file.,Invalid license file.
+Invalid value for the field '%s' of the section/module '%s'! Please check the instructions of the field and try again.,Invalid value for the field '%s' of the section/module '%s'! Please check the instructions of the field and try again.
+Invalid value for the field '%s' of the section/module '%s': %s,Invalid value for the field '%s' of the section/module '%s': %s
+JCB,JCB
+Juros Compostos,Compound Interest
+Juros de Parcelamento do Cartão de Crédito #%d,Installment Interests for Credit Card #%d
+Juros de Parcelamento do Cartão de Crédito,Installment Interests for Credit Card
+Juros do Parcelamento no Cartão de Crédito #2,Installments Interests for Credit Card #2
+Juros do Parcelamento no Cartão de Crédito #3,Installments Interests for Credit Card #3
+Juros Simples,Simple Interest
+less than or equal to,less than or equal to
+License,License
+Limpar Campos de Cartão após Erros,Clear Card Fields on Error
+Listar Transações,List Transactions
+Load License,Load License
+Maestro (Débito),Maestro (Debit)
+MasterCard,MasterCard
+Mensagem de Erro Padrão,Default Error Message
+MerchantID,MerchantID
+MerchantKey,MerchantKey
+Modo de Cálculo dos Juros,Interests Calculation Mode
+Modo de Homologação,Homologation Mode
+Modo de Testes,Testing Mode
+Module Version,Module Version
+Mostrar Porcentagem de Desconto nas Parcelas,Show Discount Percentage on Installments
+Mostrar Porcentagem de Juros nas Parcelas,Show Interests Percentage on Installments
+Máximo de 450 caracteres,Maximum of 450 characters
+Máximo de Cartões,Maximum of Cards
+Máximo de Parcelas por Valor,Maximum of Installments per Total
+Máximo de Parcelas,Maximum of Installments
+Mínimo de R$ 5.00 - Utilizar apenas números e ponto para separar casas decimais!,Minimum of R$ 5.00 - Use only numbers and a dot to specify decimals!
+Nome da empresa cedente para impressão nos boletos bancários.,Name of the issuer company for bank titles (boletos bancários).
+Nome Impresso no Cartão,Name Printed on Card
+Novo Cartão,New Card
+Não foi possível autorizar a transação com cartão: %s - %s,Could not authorize the card transaction: %s - %s
+Não foi possível autorizar a transação com o cartão #%d: %s - %s,Could not authorize the card #%d transaction: %s - %s
+Não foi possível cancelar a transação autorizada com o cartão #%d: %s - %s,Could not cancel the authorized card #%d trasaction: %s - %s
+Não foi possível cancelar a transação autorizada com o cartão: %s - %s,Could not cancel the authorized card trasaction: %s - %s
+Não foi possível completar a transação com cartão: %s - %s,Could not complete the card transaction: %s - %s
+Não foi possível completar a transação com o cartão #%d: %s - %s,Could not complete the card #%d transaction: %s - %s
+Não foi possível confirmar a transação do cartão de crédito/débito/transferência online. Por favor entre em contato para verificar o status de sua compra!,Could not confirm the credit/debit card/online debit transaction. Please contact us to check the order status!
+Número de Autorização,Authorization Number
+Número de cartão inválido.,Invalid card number.
+Número de Verificação do Cartão,Card Verification Number
+Número do Cartão,Card Number
+Número inválido de parcelas.,Invalid installments number.
+O boleto será disponibilizado para impressão após a finalização da compra.,The bank title (boleto) will be available for printing after the order is placed.
+O cartão #%d selecionado não é válido!,The selected card #%d is not valid!
+O cartão selecionado não é válido!,The selected card is not valid!
+o mesmo campo de endereço não pode ser especificado para a mesma posição.,the same address field can not be specified for the same position.
+O número de verificação do cartão #%d não é válido!,The card #%d verification number is not valid!
+O número de verificação do cartão não é válido!,The card verification number is not valid!
+O número do cartão #%d não é válido!,The card #%d number is not valid!
+O número do cartão #%d é o mesmo número do cartão #%d!,The card #%d number is the same number of the card #%d!
+O número do cartão não é válido!,The card number is not valid!
+O número do CPF ou CNPJ do dono do cartão #%d não é válido!,The CPF or CNPJ number of the card #%d owner is not valid!
+O número do CPF ou CNPJ do dono do cartão não é válido!,The CPF or CNPJ number of the card owner is not valid!
+O pagamento com cartão de crédito/débito/transferência online foi cancelado. A compra será cancelada automaticamente.,The credit/debit card/online debit payment was canceled. The order will be automatically canceled.
+O pagamento com cartão de crédito/débito/transferência online não foi autenticado. A compra será cancelada automaticamente.,The credit/debit card/online debit payment was not authenticated. The order will be automatically canceled.
+O pagamento com cartão de crédito/débito/transferência online não foi autorizado. A compra será cancelada automaticamente.,The credit/debit card/online debit payment was not authorized. The order will be automatically canceled.
+O parcelamento só pode ser realizado por cartões emitidos no Brasil!,Installments can only be applied for cards issued in Brazil!
+O que é isto?,What is this?
+o valor da quantidade de parcelas deve ser entre 1 e %d para a linha %d. A linha foi removida da listagem.,the installments quantity must be between 1 and %d for the line %d. The line was removed from the list.
+o valor da quantidade de parcelas deve ser entre %d e 12 para a linha %d. A linha foi removida da listagem.,the installments quantity must be between %d and 12 for the line %d. The line was removed from the list.
+O valor máximo configurado (%f) para a ativação do método de pagamento foi ultrapassado (%f).,The maximum defined order amount (%f) for the activation of the payment method was exceeded (%f).
+O valor mínimo configurado (%f) para a ativação do método de pagamento não foi atingido (%f).,The minimum defined order amount (%f) for the activation of the payment method was not reached (%f).
+O valor mínimo para o cartão #%d não foi atingido!,The minimum value to be charged on card #%d was not reached!
+O valor mínimo para o cartão não foi atingido.,The minimum value for the card was not reached.
+o valor não pode ser maior que a quantidade de campos definida em Sistema > Configuração > Clientes > Configuração de Clientes > Opções de Nome e Endereço > Número de Linhas em um Endereço.,the value can not be greater than the fields quantity set on System > Configuration > Customer > Customer Configuration > Name and Address Options > Street Lines Number.
+o valor total %f foi preenchido mais de uma vez. Os registros duplicados foram removidos da listagem.,the total value %f was specified more than once. Duplicate records were removed from listing.
+Ocorreu um erro com a resposta da plataforma de pagamentos. Por favor tente novamente em alguns instantes!,A response error occurred with the payment gateway. Please try again in a few moments!
+Ocorreu um erro de conexão com a plataforma de pagamentos. Por favor tente novamente em alguns instantes!,A connection error occurred with the payment gateway. Please try again in a few moments!
+Ocorreu um erro de transação com a plataforma de pagamentos. Por favor tente novamente em alguns instantes!,A transaction error occurred with the payment gateway. Please try again in a few moments!
+Ocorreu uma falha no sistema de pagamentos. Por favor tente novamente em alguns instantes!,An error occurred with our payments system. Please try again in a few moments!
+Operadora,Operator
+Operação Desconhecida,Unknown Operation
+Operação,Operation
+Ordem de Exibição,Sort Order
+Os valores especificados para cada cartão não completam ou ultrapassam o valor total.,The values specified for each card does not reach or exceeds the grand total.
+Outras,Other
+Padrão,Default
+Pagamento confirmado.,Payment confirmed.
+Pagamento do boleto identificado. A fatura será criada automaticamente.,Bank title payment identified. The invoice will be automatically created.
+Pagamento Não Finalizado,Payment Not Finished
+Pagamento à Vista - 1x de R$ %s,Prompt Payment - 1x of R$ %s
+Pagamento à Vista com %s%% de acréscimo - 1x de R$ %s,Prompt Payment with %s%% of interests - 1x of R$ %s
+Pagamento à Vista com %s%% de desconto - 1x de R$ %s,Prompt Payment with %s%% of discount - 1x of R$ %s
+Pagamento à vista,Prompt payment
+Pagar Com,Pay With
+Pagar Utilizando %d,Pay Using %d
+Parcelado em %dx,%dx Installments
+Parcelamento no Cartão,Card Installments
+Parcelamento,Installments
+Parcelas,Installments
+Pedido de Transação,Transaction Request
+Pedido,Request
+Permitir Valor Diferente por Cartão,Allow Different Charged Value per Card
+Período para Tentivas Falhadas,Period for Failed Attempts
+Por favor selecione a bandeira do cartão #%d corretamente! A bandeira selecionada não corresponde ao número do cartão especificado.,Please select the correct card #%d brand! The selected card brand does not correspond to the specified card number.
+Por favor selecione a bandeira do cartão corretamente! A bandeira selecionada não corresponde ao número do cartão especificado.,Please select the correct card brand! The selected card brand does not correspond to the specified card number.
+Posição do Campo Bairro,District Field Position
+Posição do Campo Complemento,Complementary Address Field Position
+Posição do campo de endereço contendo o complemento. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.,Position of the address field containing complementary information. Must be within the range of street address fields set for the store.
+Posição do campo de endereço contendo o nome da rua. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.,Position of the address field containing the street name. Must be within the range of street address fields set for the store.
+Posição do campo de endereço contendo o nome do bairro. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.,Position of the address field containing the district name. Must be within the range of street address fields set for the store.
+Posição do campo de endereço contendo o número da localização. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.,Position of the address field containing the street number. Must be within the range of street address fields set for the store.
+Posição do Campo Número,Number Field Position
+Posição do Campo Rua,Street Field Position
+Prazo de Vencimento,Expiration Deadline
+Qtd. Máxima de Produtos,Maximum Products Qty.
+Qtd. Mínima de Produtos,Minimum Products Qty.
+Quantidade de Cartões para o Pagamento,Card Quantity Used for the Payment
+Quantidade de Parcelas,Installments Quantity
+Resultado Antifraude%s:,Anti-fraud%s Results:
+Resultado,Result
+Salvar Cartões de Crédito,Save Credit Cards
+Salvar dados para compras futuras,Save data for future orders
+Score:,Score:
+Sem Registro,Unregistered
+Senha bloqueada.,Blocked password.
+Senha incorreta.,Incorrect password.
+Serviço ClearSale,ClearSale Service
+Serviço contratado com a ClearSale.,Service contracted with ClearSale.
+Seu navegador será redirecionado para o site do banco após a finalização da compra.,Your web browser will be redirected to the bank website after the order is placed.
+Simples,Simple
+Sistema/comunicação indisponível.,System/communication unavailable.
+Somente Autorizar,Authorize Only
+SSL 1,SSL 1
+SSL 3,SSL 3
+Status de Novas Compras,New Order Status
+Status ECI:,ECI Status:
+Status para Cancelamento Automático,Status for Automatic Cancellation
+Status para Faturamento Automático,Status for Automatic Invoicing
+Status permitidos para o cancelamento automático do pedido.,Allowed statuses for automatically cancelling the order.
+Status permitidos para o faturamento automático do pedido.,Allowed statuses for automatically invoicing the order.
+Subtotal (Sem Frete),Subtotal (Without Shipping)
+Tabela PRICE (Padrão para Cartão de Crédito),PRICE Table (Default for Credit Card)
+Taxa de Desconto da Parcela ao Mês (%),Installment Discount Amount Per Month (%)
+Taxa de Desconto para Pagamento via Boleto Bancário (%),Discount Amount for Bank Title (Boleto Bancário) Payments (%)
+Taxa de Desconto para Pagamento via Débito (%),Discount Amount for Debit Payments (%)
+Taxa de Desconto para Pagamento via Débito/Transferência Online (%),Discount Amount for Online Debit/Transfer Payments (%)
+Taxa de Juros da Parcela ao Mês (%),Installment Interests Amount per Month (%)
+Tempo excedido na comunicação com o banco emissor.,Communication timeout with the issuer bank.
+Tentativa de autenticação (falhada/cancelada).,Authentication attempt (failed/canceled).
+Tentativas Falhadas,Failed Attempts
+The current domain url is not licensed.,The current domain url is not licensed.
+The license directory (%s) does not exists and could not be created. Please check the directory permissions!,The license directory (%s) does not exists and could not be created. Please check the directory permissions!
+The value for the field '%s' of the section/module '%s' must be filled with a minimum value of '0.01'. <br />You may also leave the field blank!,The value for the field '%s' of the section/module '%s' must be filled with a minimum value of '0.01'. <br />You may also leave the field blank!
+The value for the field '%s' of the section/module '%s' must be filled with a minimum value of '1'. <br />You may also leave the field blank!,The value for the field '%s' of the section/module '%s' must be filled with a minimum value of '1'. <br />You may also leave the field blank!
+The value for the field '%s' of the section/module '%s' must be filled with a value %s the value of the field '%s'.,The value for the field '%s' of the section/module '%s' must be filled with a value %s the value of the field '%s'.
+The value of the field '%s' of the section/module '%s' was automatically corrected to the field value specifications.,The value of the field '%s' of the section/module '%s' was automatically corrected to the field value specifications.
+Tipo de Boletos Bancários,Bank Title Type
+Tipo de emissão de boletos bancários pelo gateway: com registro junto ao banco ou sem registro.,Bank titles emission type: registered within the bank or not registered.
+Tipo de Envio de Dados,Data Submission Mode
+Tipo de Parcelamento,Installment Type
+TLS 1,TLS 1
+TLS 1.0,TLS 1.0
+TLS 1.1,TLS 1.1
+TLS 1.2,TLS 1.2
+Total Geral (Com Frete),Grand Total (With Shipping)
+Transação cancelada (valor estornado),Canceled Transaction (amount refunded)
+Transação com Autenticação,Authenticated Transaction
+Transação confirmada,Transaction confirmed
+Transação Inválida (Antifraude não contratado).,Invalid Transaction (Anti-fraud not hired).
+Transação negada.,Transaction denied.
+Transação não autenticada.,Transaction without authentication.
+Transação não autorizada. Entre em contato com a Central de Atendimento AmEx no telefone 08007285090.,Transaction not authorized. Please contact AmEx on phone 08007285090.
+Transação não autorizada.,Transaction not authorized.
+Transação não localizada.,Transaction not found.
+Transação não permitida para o cartão.,Transaction not allowed for the card.
+Transação não permitida. Indicador da operação inválido.,Transaction not allowed. Invalid operation indicator.
+Transação não permitida. Transação de crédito ou débito em uma operação que permite apenas Private Label.,Transaction not allowed. Credit or debit operation on an operation which allows only Private Label.
+Transação não permitida.,Transaction not allowed.
+Transações de Cartões de Crédito/Débito,Credit/Debit Card Transactions
+Título exibido para este método de pagamento na página de finalização da compra,Title shown for this payment method at checkout
+Título,Title
+Unknown license error.,Unknown license error.
+Unlicensed. Please upload your license file!,Unlicensed. Please upload your license file!
+Usar campo CPF/CNPJ no formulário do cartão,Use CPF/CNPJ field in the card data form
+Usar campo Tax/Vat das informações de cobrança,Use the billing information tax/vat field
+Usar Formulário Alternativo,Use Alternative Form
+Usar modo de homologação para testes ou produção após os testes serem concluídos e aprovados pela ClearSale.,Whether to use the homologation mode for tests or production after the tests are done and approved by ClearSale
+Usar Serviço Antifraude Cielo,Use Cielo's Anti-Fraud Service
+Use apenas números e ponto para separar casas decimais!,Use only numbers and a dot to specify decimals!
+Use apenas números!,Use only numbers!
+Utilizar apenas números e ponto para separar casas decimais (no caso das porcentagens)!,Use only numbers and a dot to specify decimals (when using percentages)!
+Utilizar apenas números e ponto para separar casas decimais (no caso dos valores totais)!,Use only numbers and a dot to specify decimals (when specifying grand total values)!
+Utilizar apenas números e ponto para separar casas decimais!,Use only numbers and a dot to specify decimals!
+Utilizar apenas números!,Use only numbers!
+Validação de Cartão,Card Validation
+Valor a Cobrar Neste Cartão,Value to be Charged on this Card
+Valor Até,Total Up To
+Valor Cobrado no Cartão (em moeda BRL),Amount Charged on Card (in BRL currency)
+Valor da transação inválido.,Invalid transaction value.
+Valor Máximo da Compra,Maximum Order Amount
+Valor Mínimo da Compra,Minimum Order Amount
+Valor Mínimo por Cartão,Minimum Amount per Card
+Valor Mínimo por Parcela,Minimum Amount per Installment
+Valor não especificado ou especificado valor inválido para o cartão #%d!,Value not specified or specified an invalid value to be charged on card #%d!
+Valor não permitido para essa transação.,Value not allowed for this transaction.
+Valor,Amount
+MasterShop - Cartões de Crédito/Débito/Boleto/Transferência Online - Cielo (API 3.0),MasterShop - Credit and Debit Cards/Bank Titles/Online Debit - Cielo (API 3.0)
+Versão SSL,SSL Version
+Visa Electron (Débito),Visa Electron (Debit)
+Visa,Visa
+Visualizar Detalhes da Transação,View Transaction Details
+Você atingiu o limite de tentativas de pagamento utilizando este cartão. Tente novamente mais tarde ou entre em contato com a central de atendimento de seu cartão para verificar quaisquer problemas.,You have reached the maximum payment attempts using this card. Please try again later or contact your card issuer to check about any problems.
+Você atingiu o limite de tentativas de pagamento utilizando o cartão #%d. Tente novamente mais tarde ou entre em contato com a central de atendimento do cartão #%d para verificar quaisquer problemas.,You have reached the maximum payment attempts using the card #%d. Please try again later or contact the card #%d issuer to check about any problems.
+Você atingiu o limite de tentativas de pagamento. Tente novamente mais tarde ou entre em contato com a central de atendimento de seu cartão para verificar quaisquer problemas.,You have reached the maximum payment attempts. Please try again later or contact your card issuer to check about any problems.
+XX%s-%s,XX%s-%s
+XXXX-%s,XXXX-%s
+XXXX-XXXX-XX%s-%s,XXXX-XXXX-XX%s-%s
+XXXX-XXXX-XXXX-%s,XXXX-XXXX-XXXX-%s
+XXXX-XXXX-XXXX-XXXX-%s,XXXX-XXXX-XXXX-XXXX-%s
+é necessário selecionar pelo menos uma bandeira de pelo menos uma operadora.,it is necessary to select at least one card brand from at least one operator.

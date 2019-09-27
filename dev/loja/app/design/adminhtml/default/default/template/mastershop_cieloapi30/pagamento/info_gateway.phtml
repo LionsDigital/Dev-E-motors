@@ -1,0 +1,229 @@
+<div class="mastershop_cieloapi30_info">
+	<div class="titulo">
+		<?php echo $this->recuperarTitulo(); ?>
+	</div>
+	<?php
+		$qtdCartoes = $this->recuperarQtdCartoes();
+
+		for ($numCartao = 1; $numCartao <= $qtdCartoes; ++$numCartao)
+		{
+			if ($this->verificarPagamentoBoleto($numCartao))
+			{
+	?>
+		<div class="boleto">
+			<div class="bandeira">
+				<?php echo $this->recuperarBandeira($numCartao); ?>
+			</div>
+			<div class="parcelas">
+				<?php echo $this->recuperarParcelas($numCartao); ?>
+			</div>
+			<div class="status">
+				<div class="autorizacao">
+					<div class="id_autorizacao"><?php echo $this->__('ID da autorização: %s', $this->recuperarIdAutorizacao($numCartao)); ?></div>
+				</div>
+				<div>&nbsp;</div>
+
+				<?php
+					if ($this->verificarCompraCancelada())
+					{
+				?>
+					<img src="<?php echo $this->recuperarBoletoImagem($numCartao, 'boleto'); ?>" border="0" />
+				<?php
+					}
+					else if ($this->verificarBoletoPago($numCartao))
+					{
+				?>
+					<img src="<?php echo $this->recuperarBoletoImagem($numCartao, 'pago'); ?>" border="0" /><br />
+					<?php echo $this->__('Boleto Pago'); ?>
+				<?php
+					}
+					else
+					{
+				?>
+					<a href="<?php echo $this->recuperarBoletoUrl($numCartao); ?>" target="_blank">
+						<img src="<?php echo $this->recuperarBoletoImagem($numCartao, 'imprimir'); ?>" border="0" /><br />
+						<?php echo $this->__('Imprimir Boleto'); ?>
+					</a>
+				<?php
+					}
+				?>
+			</div>
+		</div>
+
+	<?php
+			}
+			else
+			{
+	?>
+
+		<div class="cartao">
+			<?php
+				if ($qtdCartoes > 1)
+				{
+			?>
+				<div class="num_cartao">
+					<?php echo $this->__('Cartão #%d', $numCartao); ?>
+				</div>
+			<?php
+				}
+
+				if ($this->verificarMultiOperadora())
+				{
+			?>
+				<div class="operadora">
+					<?php echo $this->recuperarOperadora($numCartao); ?>
+				</div>
+			<?php
+				}
+			?>
+			<div class="bandeira">
+				<?php echo $this->recuperarBandeira($numCartao); ?>
+			</div>
+			<div class="numero">
+				<?php echo $this->recuperarCartao($numCartao); ?>
+			</div>
+			<div class="nome">
+				<?php echo $this->recuperarNome($numCartao); ?>
+			</div>
+			<div class="documento">
+				<?php echo $this->recuperarDocumento($numCartao); ?>
+			</div>
+			<div class="parcelas">
+				<?php echo $this->recuperarParcelas($numCartao); ?>
+			</div>
+			<?php
+				if ($this->validarTransacao() && $this->verificarPagamento())
+				{
+			?>
+				<div class="status">
+				<?php
+					if ($this->verificarCompraAutenticada($numCartao))
+					{
+				?>
+					<div class="autenticacao">
+						<div class="titulo"><?php echo $this->__('Transação com Autenticação'); ?></div>
+						<?php
+							if ($eci = $this->recuperarResultadoAutenticacao($numCartao))
+							{
+								echo $eci;
+							}
+						?>
+					</div>
+					<div>&nbsp;</div>
+				<?php
+					}
+
+					if ($this->verificarPagamentoPendente($numCartao))
+					{
+				?>
+					<div class="pendente">
+						<div class="msg medio"><?php echo $this->__('Aguardando autenticação e pagamento via página externa'); ?></div>
+						<div class="info erro"><?php echo $this->__('*Caso este status persista após 30 minutos, será necessário cancelar esta venda*'); ?></div>
+					</div>
+				<?php
+					}
+					else if ($this->verificarSomenteAutorizacao($numCartao))
+					{
+				?>
+					<div class="autorizacao">
+						<?php
+							if (!$this->verificarCancelamento($numCartao))
+							{
+						?>
+							<div class="msg medio"><?php echo $this->__('Transação autorizada, aguardando captura do valor (criação de fatura)'); ?></div>
+						<?php
+							}
+							else
+							{
+						?>
+							<div class="msg erro"><?php echo $this->__('Autorização cancelada (antes da confirmação da transação)'); ?></div>
+						<?php
+							}
+						?>
+
+						<div class="id_autorizacao"><?php echo $this->__('ID da autorização: %s', $this->recuperarIdAutorizacao($numCartao)); ?></div>
+						<?php
+							if ($avs = $this->recuperarResultadoAvs($numCartao))
+							{
+								echo $avs;
+							}
+						?>
+					</div>
+				<?php
+					}
+					else
+					{
+						$cv = $this->recuperarCv($numCartao);
+						$id_txn = $this->recuperarIdTxn($numCartao);
+				?>
+					<div class="final">
+						<?php
+							if ($this->verificarCancelamento($numCartao))
+							{
+						?>
+							<div class="msg erro"><?php echo $this->__('Transação cancelada (valor estornado)'); ?></div>
+							<?php
+								if ($this->verificarTransacaoDebito($numCartao) && stripos('mastershop_cieloapi30', 'cielo') !== false)
+								{
+							?>
+								<div class="msg medio"><?php echo $this->__('*somente na API online, necessário devolver valor manualmente*'); ?></div>
+						<?php
+								}
+							}
+							else
+							{
+						?>
+							<div class="msg ok"><?php echo $this->__('Transação confirmada'); ?></div>
+						<?php
+							}
+						?>
+						<?php if ($cv): ?>
+							<div class="cv">
+								<?php echo $this->__('Comprovante de Vendas (NSU): %s', $cv); ?>
+							</div>
+						<?php endif; if ($id_txn): ?>
+							<div class="id_txn">
+								<?php echo $this->__('ID da Transação: %s', $id_txn); ?>
+							</div>
+						<?php endif; ?>
+					</div>
+				<?php
+					}
+				?>
+				</div>
+				<?php
+					if ($this->exibirClearSaleStart($numCartao))
+					{
+				?>
+					<div class="mastershop_cieloapi30_info_clearsale">
+						<div class="titulo">
+							<?php echo $this->__('Análise Antifraude'); ?>
+						</div>
+						<iframe id="clearSaleStart-<?php echo $numCartao; ?>" src="https://www.clearsale.com.br/start/Entrada/EnviarPedido.aspx?codigointegracao=<?php echo $this->recuperarClearSaleCodigo(); ?>&PedidoID=<?php echo $this->recuperarClearSalePedido($numCartao, $qtdCartoes); ?>"></iframe>
+					</div>
+			<?php
+					}
+					else if ($this->exibirClearSaleTotal($numCartao))
+					{
+			?>
+					<div class="mastershop_cieloapi30_info_clearsale">
+						<div class="titulo">
+							<?php echo $this->__('Análise Antifraude'); ?>
+						</div>
+						<div class="status">
+							<?php echo $this->recuperarClearSaleTotal($numCartao, $qtdCartoes); ?>
+						</div>
+					</div>
+			<?php
+					}
+				}
+			?>
+		</div>
+	<?php
+			}
+		}
+	?>
+</div>
+
+<?php echo $this->getChildHtml()?>
+<div>&nbsp;</div>

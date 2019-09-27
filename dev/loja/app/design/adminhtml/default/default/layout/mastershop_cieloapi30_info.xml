@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<adminhtml_sales_order_view>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</adminhtml_sales_order_view>
+	<adminhtml_sales_order_create_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</adminhtml_sales_order_create_index>
+	<sales_order_print>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</sales_order_print>
+	<adminhtml_sales_order_invoice_new>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</adminhtml_sales_order_invoice_new>
+	<adminhtml_sales_order_invoice_view>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</adminhtml_sales_order_invoice_view>
+	<adminhtml_sales_order_creditmemo_new>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</adminhtml_sales_order_creditmemo_new>
+	<adminhtml_sales_order_creditmemo_view>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</adminhtml_sales_order_creditmemo_view>
+</layout>

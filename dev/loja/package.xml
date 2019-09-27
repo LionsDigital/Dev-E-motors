@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<vendor>MasterShop</vendor>
+	<name>MasterShop_CieloApi30</name>
+	<summary>Módulo para pagamentos via gateway API 3.0 da Cielo (versão multi-cartões)</summary>
+	<description/>
+	<version>1.8.1</version>
+	<channel>community</channel>
+	<stability>stable</stability>
+	<extends/>
+	<dependencies/>
+	<notes/>
+	<compatible/>
+	<date>2019-09-13</date>
+	<time>01-43-14</time>
+	<license uri="http://www.mastershop.ws/">Licença Comercial</license>
+	<authors>
+		<author>
+			<name>MasterShop.ws</name>
+			<user>MasterShopBR</user>
+			<email>mastershop@mastershop.ws</email>
+		</author>
+	</authors>
+	<contents>
+		<target name="magelocal">
+			<dir name="MasterShop">
+				<dir name="CieloApi30">
+					<dir name="Block">
+						<dir name="Adminhtml">
+							<file hash="262a085d2710e5c9fbff69c51b115458" name="Antifraude.php"/>
+							<dir name="Base">
+								<dir name="Catalog">
+									<dir name="Product">
+										<dir name="Attributes">
+											<file hash="d6b35812fb326ad1c945f6067e93f21f" name="Grid.php"/>
+											<dir name="Grid">
+												<file hash="b75615a87ee91f93e10d89d01c67fbc2" name="Renderer.php"/>
+											</dir>
+										</dir>
+									</dir>
+								</dir>
+								<dir name="Config">
+									<file hash="b2815b6f87a7561d77a07d338192abeb" name="Grid.php"/>
+								</dir>
+								<file hash="8b82492b3f862d07631ba1497668ab9a" name="Listagem.php"/>
+								<file hash="35fada74682ebe24cc90ec7813818a69" name="Separador.php"/>
+							</dir>
+							<dir name="Clearsale">
+								<file hash="3c2a47c772169eb40237ed47bacb76b1" name="Renderer.php"/>
+								<file hash="76d58c7d7b10240a0336065d22e70115" name="Total.php"/>
+							</dir>
+							<dir name="Config">
+								<file hash="8711b235472599f248465725909a6698" name="Parcelasdescontofiltrar.php"/>
+								<file hash="45c53bd31447f91ed3043516d3b286b6" name="Parcelasjurosfiltrar.php"/>
+								<file hash="78c67792a8bb910bd7c25385af63ef9b" name="Parcelasqtdvalor.php"/>
+							</dir>
+							<dir name="Descontojuros">
+								<file hash="5781a44c63d37b649f95b539d327390e" name="Checkout.php"/>
+								<file hash="61087f4ea94d31cd5c4dc79c61857371" name="Total.php"/>
+							</dir>
+							<file hash="ada29300a94a03f96fbbd659a2a29f0c" name="Eci.php"/>
+							<dir name="License">
+								<file hash="51612fe74f43f3aa93035eb085d7da14" name="License.php"/>
+								<file hash="de584cba3384640a87387c8ad7ff0964" name="Version.php"/>
+							</dir>
+							<dir name="Moeda">
+								<file hash="b67c594afc4220e99489497d516ed600" name="Checkout.php"/>
+								<file hash="9bbc505a89886b6fc82f216ee561506e" name="Total.php"/>
+							</dir>
+							<dir name="System">
+								<dir name="Config">
+									<dir name="Renderer">
+										<file hash="a61e1845df4c614fe2687ac2f5ba6881" name="Grid.php"/>
+									</dir>
+								</dir>
+							</dir>
+							<file hash="4ed63c9600e51f9618db037d3555094f" name="Transacoes.php"/>
+							<dir name="Transacoes">
+								<dir name="Colunas">
+									<dir name="Filtros">
+										<file hash="94c2fdb35adba51723f7de2ef2e34d5f" name="Operacao.php"/>
+										<file hash="dd417608cd4f78af4cdd94fa94493dc0" name="Operadora.php"/>
+									</dir>
+									<dir name="Renderer">
+										<file hash="e52cd7fea7cfcdf4a81e9fb621bcb910" name="Info.php"/>
+										<file hash="e85ab6eb194da07337439974181bf449" name="Operacao.php"/>
+										<file hash="acc1b194130132ab3f644b4d4f534b71" name="Operadora.php"/>
+										<file hash="4dbe19c4ecd20db757bcfc12b13192c4" name="Status.php"/>
+									</dir>
+								</dir>
+								<file hash="71dfd90fa3736fc97f6fdd4fc96be8e7" name="Detalhes.php"/>
+								<dir name="Detalhes">
+									<file hash="e862b58e60573954b09e0fc9fae86d9b" name="Detalhes.php"/>
+								</dir>
+								<file hash="932db921eb4b4d272534b5181fc8327b" name="Listagem.php"/>
+							</dir>
+						</dir>
+						<dir name="Checkout">
+							<file hash="0fad64a1e4b509a466d0bbf64daf41eb" name="Boleto.php"/>
+						</dir>
+						<dir name="Clearsale">
+							<file hash="db51bd53079760972784879c49cc3b37" name="Fingerprint.php"/>
+							<file hash="b13b79b36095ed7066409c38489d2654" name="Mapper.php"/>
+						</dir>
+						<dir name="Descontojuros">
+							<file hash="30e79d6de8a885b1def61f0a618017ab" name="Checkout.php"/>
+							<file hash="787bdd28b0ea7a41dbd79f87ee0277be" name="Total.php"/>
+						</dir>
+						<file hash="85af203f080f4b805ef6c5313e5be033" name="Form.php"/>
+						<dir name="Gateway">
+							<file hash="4a1a48faab75b4adec92eaf6a6031be3" name="Form.php"/>
+							<file hash="4853f435a47becd1ede3c7f3d0478a8a" name="Info.php"/>
+						</dir>
+						<file hash="9734fde47dc10443207abb3b084b227f" name="Info.php"/>
+						<dir name="Moeda">
+							<file hash="ee70ca8890d3bb62c4b629a35d033c85" name="Checkout.php"/>
+							<file hash="7985a5427a49182d4151a07d397e72d3" name="Total.php"/>
+						</dir>
+						<file hash="755507e06a76123caf479a6dc8cddff8" name="Parcelas.php"/>
+						<dir name="Parcelas">
+							<file hash="9b22625102718075849d86cc4011a6f1" name="Carrinho.php"/>
+						</dir>
+					</dir>
+					<dir name="Helper">
+						<file hash="f755c1e8ea0cc53c69ac7f8328740ded" name="Base.php"/>
+						<file hash="4158e4bc374c0b2af5e08bb8087f81cf" name="Boletos.php"/>
+						<file hash="09d3224a7405a93e8f916294ecb3d1fa" name="Cep.php"/>
+						<file hash="20a412a5890ea4426951c542d30b5845" name="Clearsale.php"/>
+						<file hash="aaf206b73cbdd8abf75a8e09849d4b5a" name="Clearsaletotal.php"/>
+						<file hash="10068d5448538407fe7bb0cf75927828" name="Data.php"/>
+						<file hash="a8a7ac5eda7386f9816cedd675e8afd8" name="Date.php"/>
+						<file hash="de772eb69d731ef4ece545089e61efeb" name="Descontojuros.php"/>
+						<file hash="670ee1e4e7150944ace370d23b73c4b5" name="Documentos.php"/>
+						<file hash="508546975cd3b5bb71b792283ec5eb27" name="Domains.php"/>
+						<file hash="31b81c65b427b94caa437012ed80e8f2" name="Endereco.php"/>
+						<file hash="bd2701a51c26fce78b64b3e237aa935e" name="Gateway.php"/>
+						<file hash="299e61bee244b7f0c6d994da5703fe55" name="Ifconfig.php"/>
+						<file hash="6fe745a23be8fcd61ed1762025f4f066" name="Moeda.php"/>
+						<file hash="61f0572b42eefb58ef8df91c069bd855" name="Multi.php"/>
+						<file hash="81186aaa2dd02986670073a16e46e33e" name="Parcelas.php"/>
+						<file hash="d9bb20573ca3b84f02b9a252179d6022" name="Precos.php"/>
+						<file hash="bc94df56399224a60344e3313e10b802" name="Promo.php"/>
+					</dir>
+					<dir name="Include">
+						<file hash="3e0e6f302bd4f5b94040b8bcee0ffe15" name="ca_cert.pem"/>
+					</dir>
+					<dir name="Model">
+						<dir name="Adminhtml">
+							<dir name="Backend">
+								<file hash="6f28fa9a8fa2947bc9969d7d5cd41ef1" name="Bandeiras.php"/>
+								<dir name="Base">
+									<file hash="a3a1462c7757a8a698fe70f72c5db5cc" name="Grid.php"/>
+									<dir name="Validacao">
+										<file hash="8dadabc2b9395bd5a8558c531443d7fc" name="Quantidademaxima.php"/>
+										<file hash="049002e1b1d65fba80af1508203a8219" name="Quantidademinima.php"/>
+										<file hash="7e7e40c236a2fb266706333886180536" name="Valormaximo.php"/>
+										<file hash="c64f55112be93bd0b5c3c1245cfde035" name="Valorminimo.php"/>
+									</dir>
+								</dir>
+								<file hash="fe849599e2a696161023ca6593d0890a" name="Camposendereco.php"/>
+								<file hash="56b839ebb4b58963a4e23fa4bd1b85f8" name="Clearsale.php"/>
+								<dir name="License">
+									<file hash="52415116cc5391e7f9811894f84484cf" name="Upload.php"/>
+								</dir>
+								<file hash="6d40ba1c475aa35561331a2611aba628" name="Parcelasdescontofiltrar.php"/>
+								<file hash="5d835c12a868278fd67a5f8debaf47f7" name="Parcelasdescontojuros.php"/>
+								<file hash="83ee5c4fa1546327b725953ff91a35bf" name="Parcelasfiltrar.php"/>
+								<file hash="60b1b6e9844eb8306ced4d0f67a37488" name="Parcelasjurosfiltrar.php"/>
+								<file hash="264f6db3da1e0b0bcae9c591af8996e7" name="Parcelasqtdvalor.php"/>
+							</dir>
+							<dir name="Base">
+								<dir name="Catalog">
+									<dir name="Product">
+										<dir name="Attributes">
+											<file hash="52ba13586ff6ba7192a6eac62b48908e" name="Grid.php"/>
+										</dir>
+									</dir>
+								</dir>
+								<file hash="63e1ff398c46acbd1572b3d9cff85981" name="Messages.php"/>
+								<file hash="41f768347e2987cbd6e39c3a6e41e54f" name="Notifications.php"/>
+							</dir>
+							<dir name="Sales">
+								<dir name="Order">
+									<dir name="Grid">
+										<file hash="d5a5467c6216a21b21ef315817f46a00" name="Clearsale.php"/>
+									</dir>
+								</dir>
+							</dir>
+							<dir name="Source">
+								<file hash="01dce75a028319c7826c746d1996226d" name="Acaopagamento.php"/>
+								<file hash="93bfb3f831d52f65eb68531cc7a9921f" name="Bandeiras.php"/>
+								<file hash="f9bc1506e89661623a6320976a1f641a" name="Boletobanco.php"/>
+								<file hash="17d884dbb1422b14bd16682ff98a2c4b" name="Boletotipo.php"/>
+								<file hash="86926124fa30dbe52daf61e2580f029e" name="Clearsale.php"/>
+								<dir name="Clearsale">
+									<file hash="1e34ce9fba4df0b4a396ec7a86a102de" name="Statuscancelar.php"/>
+									<file hash="6c95108eac1edb7c826f7ea1b8632c23" name="Statusfaturar.php"/>
+								</dir>
+								<file hash="78f64f0c738bf094d6a6ac4f4986ce1c" name="Dadoscompletos.php"/>
+								<file hash="5c3db544bb2935e4ec57fd2a4d42c849" name="Desconto.php"/>
+								<file hash="d6fe7e3b54fe4bf368023295f6f84bae" name="Documento.php"/>
+								<file hash="142ddac633902d82a844a5c812224e01" name="Juros.php"/>
+								<file hash="04ad7d556ddd045a222997ca29e34112" name="Jurosmodo.php"/>
+								<file hash="3dafc3c9db4ddf6ffe6abea454fa6945" name="Operacoes.php"/>
+								<file hash="a2f4797db69e0f9b26ed26565b716886" name="Parcelador.php"/>
+								<file hash="a5c3a78e361b4169f3f9743fa16f6d5a" name="Ssl.php"/>
+							</dir>
+							<dir name="Transacoes">
+								<dir name="Colunas">
+									<dir name="Renderer">
+										<dir name="Status">
+											<file hash="492df99c9996128c09f325a9dac3132c" name="Cieloapi30.php"/>
+										</dir>
+									</dir>
+								</dir>
+							</dir>
+						</dir>
+						<dir name="Boletos">
+							<file hash="71b30245b804a244044ba8ffd743972b" name="Observer.php"/>
+						</dir>
+						<dir name="Cartoes">
+							<file hash="f1f725a629e787e193acff4a7c4826d9" name="Bandeiras.php"/>
+							<file hash="b4a84d2b3921a62ab514236d65cfe110" name="Validacao.php"/>
+						</dir>
+						<dir name="Clearsale">
+							<file hash="d0edb225afec8ff006f8e61c47477e6d" name="Cron.php"/>
+						</dir>
+						<dir name="Db">
+							<file hash="d7329fd7a39ad4c4eedd27bcef1cc673" name="Dados.php"/>
+							<dir name="Dados">
+								<file hash="58ac3426a6cd195577f80834326c8955" name="Collection.php"/>
+							</dir>
+							<file hash="d3385b4ca64f64bfa32397fc17dbd9d0" name="Falha.php"/>
+							<dir name="Falha">
+								<file hash="4edc6aa620d1a99df710e58fb4515ce9" name="Collection.php"/>
+							</dir>
+							<file hash="6eff1697698b718f99c6b2720fdaf8d5" name="Transacao.php"/>
+							<dir name="Transacao">
+								<file hash="7684d23cc9647153da85644001ef33c9" name="Collection.php"/>
+							</dir>
+						</dir>
+						<dir name="Descontojuros">
+							<file hash="0cdcfb60d8ec1ad7c8b15fd260ef75ea" name="Creditmemo.php"/>
+							<file hash="d709631cd6c18aae23e2ccebfab80c5d" name="Invoice.php"/>
+							<file hash="fdc5df29ee4013f761be0bd90885b6dd" name="Pdf.php"/>
+							<file hash="11e17b7745b2f6eb9ca86c16456c2c73" name="Quote.php"/>
+						</dir>
+						<file hash="c10e7ec5d349158d918706da7f2b734e" name="Email.php"/>
+						<dir name="Gateway">
+							<file hash="58d65aa9113964051953f0049a8c4cb5" name="Base.php"/>
+							<file hash="fe1f856dd5cdd877e733b7dc09797d57" name="Cieloapi30.php"/>
+							<file hash="6dcceadd84ce26b2e4734fed1c9a123c" name="Cieloapi30erros.php"/>
+						</dir>
+						<dir name="License">
+							<file hash="d4e4e0bc10f948e11983e9b0bd3bc845" name="Base.php"/>
+							<file hash="c83c90f96bad33b96cea4e27a0f1faac" name="License.php"/>
+						</dir>
+						<dir name="Metodo">
+							<file hash="903e45d0f8d8131445fda34d5c6970bf" name="Base.php"/>
+							<file hash="0a5f851b002a3441dd2df96502492534" name="CieloApi30.php"/>
+							<file hash="27be358cc0e2c25a8237f81ed928e4ae" name="Gateway.php"/>
+							<file hash="e1e16278dd6e0c092582604a4dcb2862" name="Metodo.php"/>
+							<file hash="e1e16278dd6e0c092582604a4dcb2862" name="Metodo.php"/>
+							<file hash="e1e16278dd6e0c092582604a4dcb2862" name="Metodo.php"/>
+						</dir>
+						<dir name="Moeda">
+							<file hash="c80e3e092dfefb17e19fd100f8820266" name="Pdf.php"/>
+							<file hash="8749fb14d36e25459e035fd488e21263" name="Quote.php"/>
+						</dir>
+						<dir name="Promo">
+							<file hash="9e2f1f469594cf756af4406bee39d858" name="Salvar.php"/>
+						</dir>
+						<dir name="Sales">
+							<file hash="04bf0e8188bf9bd6a84b369dffd907c9" name="Observer.php"/>
+						</dir>
+						<dir name="Transacoes">
+							<file hash="d18e43a3d858070b8b3d65504fee2c7d" name="Dados.php"/>
+							<file hash="1ba414bdbcf5151c1f2d9fe7227300a1" name="Falha.php"/>
+							<file hash="e3393ce0442da6b0d0bcac074d100e2b" name="Salvar.php"/>
+							<file hash="445c765fd05a03701ae0494b3cbbac1d" name="Transacao.php"/>
+						</dir>
+					</dir>
+					<dir name="controllers">
+						<dir name="Adminhtml">
+							<file hash="1339cd99a9c62fc1e476c1bf4263198c" name="Mastershopcieloapi30detalhesbackendController.php"/>
+							<file hash="71de5a0f47d08e494f32f92ba513e8e2" name="Mastershopcieloapi30transacoesbackendController.php"/>
+						</dir>
+						<file hash="08a6a707f0b77628c115b1ff2a963ad2" name="CarrinhoController.php"/>
+						<file hash="eab61dc1bb1027baacadba291d9f7f47" name="NotificacaoController.php"/>
+						<file hash="6f5e0b5fd2f838dd42f4a14740c1895b" name="PagamentoController.php"/>
+						<file hash="00ff0fc978b6d9379d5f1afd40433ad2" name="ParcelasController.php"/>
+						<file hash="b5709992ef9fcab6cd007f31678d857c" name="RetController.php"/>
+					</dir>
+					<dir name="etc">
+						<file hash="9f5d9f49e66294fc90fb2507f67ae0ce" name="adminhtml.xml"/>
+						<file hash="f7ceb23e9e3c93293b2f585f8c00b757" name="config.xml"/>
+						<file hash="f7ceb23e9e3c93293b2f585f8c00b757" name="config.xml"/>
+						<file hash="f7ceb23e9e3c93293b2f585f8c00b757" name="config.xml"/>
+						<file hash="f7ceb23e9e3c93293b2f585f8c00b757" name="config.xml"/>
+						<file hash="f7ceb23e9e3c93293b2f585f8c00b757" name="config.xml"/>
+						<file hash="8a20be2926552b1713c5e6004a456fd1" name="jstranslator.xml"/>
+						<file hash="8a20be2926552b1713c5e6004a456fd1" name="jstranslator.xml"/>
+						<file hash="3a9c4bc18fee314a87796db16f17df95" name="system.xml"/>
+						<file hash="3a9c4bc18fee314a87796db16f17df95" name="system.xml"/>
+						<file hash="3a9c4bc18fee314a87796db16f17df95" name="system.xml"/>
+						<file hash="3a9c4bc18fee314a87796db16f17df95" name="system.xml"/>
+						<file hash="3a9c4bc18fee314a87796db16f17df95" name="system.xml"/>
+					</dir>
+					<dir name="sql">
+						<dir name="mastershop_cieloapi30_setup">
+							<file hash="35bb365ed96f17c824c9e4c794a1cb14" name="upgrade-1.5.8-1.5.9.php"/>
+							<file hash="070c4dff0f1734720c6cddf0de44f4fe" name="upgrade-1.6.0-1.7.0.php"/>
+							<file hash="4fb2d75dad117738ee10f675055a0c10" name="upgrade-1.7.0-1.7.5.php"/>
+							<file hash="5e162a72fe14179fc92a647b06fecdbd" name="upgrade-1.7.6-1.7.7.php"/>
+							<file hash="b457ae277fce705bec4748b0ef8abe37" name="upgrade-1.7.9-1.8.0.php"/>
+							<file hash="34bd84fb3b15f186798e7abc1f5655d7" name="upgrade-1.8.0-1.8.1.php"/>
+						</dir>
+					</dir>
+				<dir name="License"><file name="lic.txt" hash="257b7cb00638f8f5c8b6732802b3ecf1"/></dir></dir>
+			</dir>
+		</target>
+		<target name="magedesign">
+			<dir name="adminhtml">
+				<dir name="default">
+					<dir name="default">
+						<dir name="layout">
+							<file hash="7be00c9efcb2a8f1b8f1d871286592eb" name="mastershop_cieloapi30_checkout.xml"/>
+							<file hash="7be00c9efcb2a8f1b8f1d871286592eb" name="mastershop_cieloapi30_checkout.xml"/>
+							<file hash="413ee57b02497faa32487a50475bcff9" name="mastershop_cieloapi30_descontojuros.xml"/>
+							<file hash="79f38c0598d0408cc3883a2e6d1289f2" name="mastershop_cieloapi30_info.xml"/>
+							<file hash="df61a5ade4f17bc150129c1d4929f74b" name="mastershop_cieloapi30_moeda.xml"/>
+							<file hash="117b5b95768f9b75b0fad998960d6824" name="mastershop_cieloapi30_transacoes.xml"/>
+						</dir>
+						<dir name="template">
+							<dir name="mastershop_cieloapi30">
+								<file hash="1b733e9c83ccc2d6b739090dfe88c26f" name="antifraude.phtml"/>
+								<dir name="base">
+									<dir name="catalog">
+										<dir name="product">
+											<dir name="attributes">
+												<file hash="4334f1e214c6ac59120b1cf2a24dca9c" name="grid.phtml"/>
+											</dir>
+										</dir>
+									</dir>
+									<dir name="config">
+										<file hash="f4667d832ba21585b4b45b2b4e721b30" name="grid.phtml"/>
+									</dir>
+									<file hash="38dc590985418c7f020c34229899603a" name="listagem.phtml"/>
+									<file hash="90c3ec0508fc234ff0b9ae112172a951" name="separador.phtml"/>
+								</dir>
+								<dir name="clearsale">
+									<file hash="904a7a9fee520e163698217e678eb982" name="tabela.phtml"/>
+									<file hash="8cbeaf0718040f20bbe7977cf7b7a4c0" name="total.phtml"/>
+								</dir>
+								<file hash="b7c0cf6548e8a826e1e2acd6268545d5" name="eci.phtml"/>
+								<file hash="b2e6f0efffec20c9968a881d59bfd5ec" name="grid.phtml"/>
+								<dir name="license">
+									<file hash="9fe80ab35b9e3817d6c4ef08f7d60dc3" name="license.phtml"/>
+									<file hash="e46219d00045e8fa969790b4f249689d" name="version.phtml"/>
+								</dir>
+								<dir name="pagamento">
+									<file hash="6feae72e1c66a26706a8cea28e5803d7" name="formulario.phtml"/>
+									<file hash="d126ca525ec429d7c4f622a13c7537af" name="info_gateway.phtml"/>
+								</dir>
+								<dir name="transacoes">
+									<dir name="colunas">
+										<file hash="0b3ae93c3ed70157bb809a7ec079a7b7" name="info.phtml"/>
+										<file hash="2f8b850a1ec876b1c5cf6b55be721966" name="operacao.phtml"/>
+										<file hash="cd33058854f6e46971824893d3b0c73e" name="operadora.phtml"/>
+										<file hash="5e2214e55d11cf68a5cb539ea0839345" name="status.phtml"/>
+									</dir>
+									<file hash="e84212af23f7b8d2bfb7c0056e499b83" name="detalhes.phtml"/>
+								</dir>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="frontend">
+				<dir name="base">
+					<dir name="default">
+						<dir name="layout">
+							<file hash="f122f3318dfd455983a5d48c7ad69e26" name="mastershop_cieloapi30_carrinho.xml"/>
+							<file hash="b4488ffd44d3daafb20969bb31dc3898" name="mastershop_cieloapi30_checkout.xml"/>
+							<file hash="b4488ffd44d3daafb20969bb31dc3898" name="mastershop_cieloapi30_checkout.xml"/>
+							<file hash="b4488ffd44d3daafb20969bb31dc3898" name="mastershop_cieloapi30_checkout.xml"/>
+							<file hash="b4488ffd44d3daafb20969bb31dc3898" name="mastershop_cieloapi30_checkout.xml"/>
+							<file hash="ad70a8686ff9f506504063dad19025c8" name="mastershop_cieloapi30_clearsale.xml"/>
+							<file hash="31784e7029ba0e80d9ab4c310ff054ce" name="mastershop_cieloapi30_descontojuros.xml"/>
+							<file hash="6b8aabb0af14e154f9a07accfe443626" name="mastershop_cieloapi30_moeda.xml"/>
+							<file hash="276a62dee3620118d1a8c3879ac428cf" name="mastershop_cieloapi30_parcelas.xml"/>
+						</dir>
+						<dir name="template">
+							<dir name="mastershop_cieloapi30">
+								<dir name="checkout">
+									<file hash="0868493b35a7d3238b5f1cd5282f0e78" name="boleto.phtml"/>
+								</dir>
+								<dir name="clearsale">
+									<file hash="fbd32cf609c97ba4346cc3d9568afbd5" name="fingerprint.phtml"/>
+									<file hash="177568bafbfb73c7e74e9b9e0653f0c0" name="mapper.phtml"/>
+								</dir>
+								<dir name="html">
+									<file hash="0ae658c716d7337ee82964beb6121bda" name="parcelas.phtml"/>
+									<file hash="7e0694307e30079b31a14d21bbefa3ed" name="parcelas_carrinho.phtml"/>
+									<file hash="3c30c4c9f4cacc09d1504d5d1e77a04d" name="scripts_rodape.phtml"/>
+								</dir>
+								<dir name="pagamento">
+									<file hash="4f7a4fc1dbc36cf99a524e1b68808873" name="formulario.phtml"/>
+									<file hash="246bf3c0db5c6dceb90a24508d816626" name="formulario_alt.phtml"/>
+									<file hash="fe999bec20cacbbf50ce755d7b99af0b" name="info_gateway.phtml"/>
+								</dir>
+								<dir name="total">
+									<file hash="0352e403bec673e009262efe9ac39df4" name="moeda.phtml"/>
+								</dir>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</target>
+		<target name="mageetc">
+			<dir name="modules">
+				<file hash="3863cd2f9d04fec01ac02136df2e97db" name="MasterShop_CieloApi30.xml"/>
+			</dir>
+		</target>
+		<target name="magelocale">
+			<dir name="en_US">
+				<file hash="e2d6abf2ae352296c89edb036fb35da6" name="MasterShop_CieloApi30.csv"/>
+				<file hash="e2d6abf2ae352296c89edb036fb35da6" name="MasterShop_CieloApi30.csv"/>
+				<file hash="e2d6abf2ae352296c89edb036fb35da6" name="MasterShop_CieloApi30.csv"/>
+				<file hash="e2d6abf2ae352296c89edb036fb35da6" name="MasterShop_CieloApi30.csv"/>
+				<file hash="e2d6abf2ae352296c89edb036fb35da6" name="MasterShop_CieloApi30.csv"/>
+				<file hash="e2d6abf2ae352296c89edb036fb35da6" name="MasterShop_CieloApi30.csv"/>
+			</dir>
+			<dir name="pt_BR">
+				<file hash="f83d923d35c9320292f9236966d5fc41" name="MasterShop_CieloApi30.csv"/>
+				<file hash="f83d923d35c9320292f9236966d5fc41" name="MasterShop_CieloApi30.csv"/>
+				<file hash="f83d923d35c9320292f9236966d5fc41" name="MasterShop_CieloApi30.csv"/>
+				<file hash="f83d923d35c9320292f9236966d5fc41" name="MasterShop_CieloApi30.csv"/>
+				<file hash="f83d923d35c9320292f9236966d5fc41" name="MasterShop_CieloApi30.csv"/>
+				<file hash="f83d923d35c9320292f9236966d5fc41" name="MasterShop_CieloApi30.csv"/>
+			</dir>
+		</target>
+		<target name="mage">
+			<dir name="js">
+				<dir name="mastershop_cieloapi30">
+					<file hash="eb02b8801d3591b9fdc9d66b562ff3cd" name="cc.js"/>
+					<file hash="c16d1edec152dc899515fae95d5e8224" name="cc_alt.js"/>
+					<file hash="f8577d6492671f487984a8a1dd002199" name="checkout.js"/>
+					<file hash="aef344effac90635a8f3cc49a15dd541" name="checkout_alt.js"/>
+					<file hash="13632f8b0a06cc942b25cbcade5eb198" name="checkout_alt_msodre.js"/>
+					<file hash="e416e3bc78c8f53a508aa96ebd6f6814" name="cpfcnpj.js"/>
+					<file hash="fb658963a0faa3422a3e965df85b30e9" name="event.simulate.js"/>
+					<file hash="ce39708111250c6eddb677baad501118" name="multi.js"/>
+					<file hash="e4f0ff8b7c9fd247364b7d38f1c48a94" name="prototype.maskedinput.js"/>
+					<file hash="668643e3945b54bb2e4dfb5eddf0a552" name="vanilla-masker.js"/>
+				</dir>
+			</dir>
+		</target>
+		<target name="mageskin">
+			<dir name="adminhtml">
+				<dir name="default">
+					<dir name="default">
+						<dir name="css">
+							<dir name="mastershop_cieloapi30">
+								<file hash="ac9cf19161a02a0b8f20b80213ef8fdc" name="checkout.css"/>
+								<dir name="highlight">
+									<file hash="db8ce58adfb1b685bd575fb9395d5ddb" name="default.css"/>
+									<file hash="4d1bd050f4adb9c6f5e3e3fbd74c187b" name="xt256-mod.css"/>
+								</dir>
+								<file hash="7ab8759b31888e8ea946d376881fd092" name="listagem_transacoes.css"/>
+							</dir>
+						</dir>
+						<dir name="images">
+							<dir name="mastershop_cieloapi30">
+								<file hash="3041156deb52a1aea9936af42eb6d53e" name="ajax.gif"/>
+								<dir name="bandeiras">
+									<file hash="fdd5c02c0a5e648752228cfebc5d2d47" name="amex.png"/>
+									<file hash="be6bd085ffa127a8706be3eeb04189b5" name="amex_s.png"/>
+									<file hash="641eaddd1192fa432f13dd354754a074" name="aura.png"/>
+									<file hash="89cff012641a4be58e42f981988de610" name="aura_s.png"/>
+									<file hash="15c02c6fe1c24552422370315e6dbd78" name="boleto.png"/>
+									<file hash="16df03f3f4cfad10a1031955608cae52" name="boleto_s.png"/>
+									<file hash="046f19acad81bdece4e5b93d279b0305" name="credz.png"/>
+									<file hash="e46bc88e8a34b67a3cb7dea953ba2d8e" name="credz_s.png"/>
+									<file hash="4dcc11ed5a8122a9efd8637b3fda5422" name="debitobancodobrasil.png"/>
+									<file hash="fb6d9d8bf09be33e8ac0f841385c3ea0" name="debitobancodobrasil_s.png"/>
+									<file hash="53b6e4eab579c4d0606ceb7bbad234a7" name="debitobradesco.png"/>
+									<file hash="66b4c2c07043df23051217013ebda472" name="debitobradesco_s.png"/>
+									<file hash="b3da1a2af95549572dcc3e5a252c8a40" name="diners.png"/>
+									<file hash="7146d5627b3cec63c1ffc0b54f7cc3b6" name="diners_s.png"/>
+									<file hash="f94cbcd7a381ab1c10859027909ba7bf" name="discover.png"/>
+									<file hash="a735c82177f84dcc0605523b362b63f2" name="discover_s.png"/>
+									<file hash="924f84234e62f7b65555b32ba84aef25" name="elo.png"/>
+									<file hash="3d70f6837fda32d9372865d6ba60c2b3" name="elo_s.png"/>
+									<file hash="0b3b2570d903f72650e60be89004be4c" name="hiper.png"/>
+									<file hash="8118a3a340c9dab9a993d3e4cc22087a" name="hiper_s.png"/>
+									<file hash="3d0246e07d9e60d0fef19fd344e72a09" name="hipercard.png"/>
+									<file hash="d624d4d0a580339977189374939216f2" name="hipercard_s.png"/>
+									<file hash="2d707915cb4d72ae46c94062ab736e10" name="jcb.png"/>
+									<file hash="b22b825334b6941ca9d8110f878960eb" name="jcb_s.png"/>
+									<file hash="f437a51a7f5027509cfc381fe95e7b89" name="maestro.png"/>
+									<file hash="1b8a7827e9baec891943aa63d8ae3bca" name="maestro_s.png"/>
+									<file hash="bcb6abf653a391a5e9e55be0c291f8b6" name="mastercard.png"/>
+									<file hash="8c183995a7a0ae206d681a8200448d8a" name="mastercard_s.png"/>
+									<file hash="908091888531b83e7e349f114df49d57" name="novo.png"/>
+									<file hash="ad4804ac341077eb2ecc966ba3d20b84" name="novo_s.png"/>
+									<file hash="e6238cb23cd56e18fd48f63f92a92f44" name="visa.png"/>
+									<file hash="fca17d666366cd0a5b832c6819c86b0c" name="visa_s.png"/>
+									<file hash="366b50e03342d6217cfb2b6ad9938f46" name="visaelectron.png"/>
+									<file hash="091de328e4c78e4c5470eb6fe4854e5a" name="visaelectron_s.png"/>
+								</dir>
+								<dir name="boleto">
+									<file hash="41b32bdc3134bcec78ceb8bf3e66e234" name="boleto.png"/>
+									<file hash="84572abbd89860a8020d7116d25ddbb6" name="imprimir.png"/>
+									<file hash="d65480efac36e37f7297618c8eb62327" name="pago.png"/>
+								</dir>
+								<dir name="operadoras">
+									<file hash="463df03a216c0e6120c6bd711f060697" name="cieloapi30.png"/>
+								</dir>
+								<dir name="qtd">
+									<file hash="9e34023c575e6438c93e8f682d31e7a0" name="1.png"/>
+									<file hash="6ee08e1df952533f8a0f1671867b945e" name="1_s.png"/>
+									<file hash="86aa5b2c1f96fc5b56d36980b38e9daa" name="2.png"/>
+									<file hash="928350bd09704149d75254010455b1fc" name="2_s.png"/>
+									<file hash="868be6480964bec4419c6b9c95b5faeb" name="3.png"/>
+									<file hash="1b83d470f5ab06e7ac190aa09ca4a5cd" name="3_s.png"/>
+								</dir>
+							</dir>
+						</dir>
+						<dir name="js">
+							<dir name="mastershop_cieloapi30">
+								<file hash="efa6997934230462c87660eb5277a80e" name="highlight.js"/>
+								<file hash="718e67c7d7363f8abb07d8de01fab5fb" name="validacao.js"/>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="frontend">
+				<dir name="base">
+					<dir name="default">
+						<dir name="css">
+							<dir name="mastershop_cieloapi30">
+								<file hash="ba922582ba77a1cb168959d550a18433" name="boleto.css"/>
+								<file hash="0be37c87635b1aeac1f51c9c8d568e4f" name="checkout.css"/>
+								<file hash="88e64007d993822ef89becb10ff04aa8" name="checkout_alt.css"/>
+								<file hash="dea85a7ffb03755091e08ad0ec190303" name="parcelas.css"/>
+							</dir>
+						</dir>
+						<dir name="images">
+							<dir name="mastershop_cieloapi30">
+								<file hash="3041156deb52a1aea9936af42eb6d53e" name="ajax.gif"/>
+								<dir name="bandeiras">
+									<file hash="fdd5c02c0a5e648752228cfebc5d2d47" name="amex.png"/>
+									<file hash="be6bd085ffa127a8706be3eeb04189b5" name="amex_s.png"/>
+									<file hash="641eaddd1192fa432f13dd354754a074" name="aura.png"/>
+									<file hash="89cff012641a4be58e42f981988de610" name="aura_s.png"/>
+									<file hash="15c02c6fe1c24552422370315e6dbd78" name="boleto.png"/>
+									<file hash="16df03f3f4cfad10a1031955608cae52" name="boleto_s.png"/>
+									<file hash="046f19acad81bdece4e5b93d279b0305" name="credz.png"/>
+									<file hash="e46bc88e8a34b67a3cb7dea953ba2d8e" name="credz_s.png"/>
+									<file hash="4dcc11ed5a8122a9efd8637b3fda5422" name="debitobancodobrasil.png"/>
+									<file hash="fb6d9d8bf09be33e8ac0f841385c3ea0" name="debitobancodobrasil_s.png"/>
+									<file hash="53b6e4eab579c4d0606ceb7bbad234a7" name="debitobradesco.png"/>
+									<file hash="66b4c2c07043df23051217013ebda472" name="debitobradesco_s.png"/>
+									<file hash="b3da1a2af95549572dcc3e5a252c8a40" name="diners.png"/>
+									<file hash="7146d5627b3cec63c1ffc0b54f7cc3b6" name="diners_s.png"/>
+									<file hash="f94cbcd7a381ab1c10859027909ba7bf" name="discover.png"/>
+									<file hash="a735c82177f84dcc0605523b362b63f2" name="discover_s.png"/>
+									<file hash="924f84234e62f7b65555b32ba84aef25" name="elo.png"/>
+									<file hash="3d70f6837fda32d9372865d6ba60c2b3" name="elo_s.png"/>
+									<file hash="0b3b2570d903f72650e60be89004be4c" name="hiper.png"/>
+									<file hash="8118a3a340c9dab9a993d3e4cc22087a" name="hiper_s.png"/>
+									<file hash="3d0246e07d9e60d0fef19fd344e72a09" name="hipercard.png"/>
+									<file hash="d624d4d0a580339977189374939216f2" name="hipercard_s.png"/>
+									<file hash="2d707915cb4d72ae46c94062ab736e10" name="jcb.png"/>
+									<file hash="b22b825334b6941ca9d8110f878960eb" name="jcb_s.png"/>
+									<file hash="f437a51a7f5027509cfc381fe95e7b89" name="maestro.png"/>
+									<file hash="1b8a7827e9baec891943aa63d8ae3bca" name="maestro_s.png"/>
+									<file hash="bcb6abf653a391a5e9e55be0c291f8b6" name="mastercard.png"/>
+									<file hash="8c183995a7a0ae206d681a8200448d8a" name="mastercard_s.png"/>
+									<file hash="908091888531b83e7e349f114df49d57" name="novo.png"/>
+									<file hash="ad4804ac341077eb2ecc966ba3d20b84" name="novo_s.png"/>
+									<file hash="e6238cb23cd56e18fd48f63f92a92f44" name="visa.png"/>
+									<file hash="fca17d666366cd0a5b832c6819c86b0c" name="visa_s.png"/>
+									<file hash="366b50e03342d6217cfb2b6ad9938f46" name="visaelectron.png"/>
+									<file hash="091de328e4c78e4c5470eb6fe4854e5a" name="visaelectron_s.png"/>
+								</dir>
+								<dir name="boleto">
+									<file hash="41b32bdc3134bcec78ceb8bf3e66e234" name="boleto.png"/>
+									<file hash="84572abbd89860a8020d7116d25ddbb6" name="imprimir.png"/>
+									<file hash="d65480efac36e37f7297618c8eb62327" name="pago.png"/>
+								</dir>
+								<dir name="qtd">
+									<file hash="9e34023c575e6438c93e8f682d31e7a0" name="1.png"/>
+									<file hash="6ee08e1df952533f8a0f1671867b945e" name="1_s.png"/>
+									<file hash="86aa5b2c1f96fc5b56d36980b38e9daa" name="2.png"/>
+									<file hash="928350bd09704149d75254010455b1fc" name="2_s.png"/>
+									<file hash="868be6480964bec4419c6b9c95b5faeb" name="3.png"/>
+									<file hash="1b83d470f5ab06e7ac190aa09ca4a5cd" name="3_s.png"/>
+								</dir>
+							</dir>
+						</dir>
+						<dir name="js">
+							<dir name="mastershop_cieloapi30">
+								<file hash="719f6b04857eafe95098203c7369f81b" name="cc.js"/>
+								<file hash="ee3be324f04037e863171da2e1879077" name="checkout.js"/>
+								<file hash="81e203fc9e3735f1e2876cda0a15cead" name="opcheckout.js"/>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</target>
+	</contents>
+</package>

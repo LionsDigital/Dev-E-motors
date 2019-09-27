@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<layout version="0.1.0">
+	<adminhtml_sales_order_create_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="js_checkout">
+				<type>js</type>
+				<name>mastershop_cieloapi30/checkout.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cpfcnpj">
+				<type>js</type>
+				<name>mastershop_cieloapi30/cpfcnpj.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_cc">
+				<type>js</type>
+				<name>mastershop_cieloapi30/cc.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_eventsimulate">
+				<type>js</type>
+				<name>mastershop_cieloapi30/event.simulate.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_mask">
+				<type>js</type>
+				<name>mastershop_cieloapi30/prototype.maskedinput.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_validacao">
+				<type>skin_js</type>
+				<name>js/mastershop_cieloapi30/validacao.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_valorparcelas" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/multi.js</name>
+			</action>
+			<action method="addItem" mastershop_cieloapi30_xml="js_maskmoney" ifconfig="payment/mastershopcieloapi30/cartoes_multi_valor_por_cartao">
+				<type>js</type>
+				<name>mastershop_cieloapi30/vanilla-masker.js</name>
+			</action>
+		</reference>
+	</adminhtml_sales_order_create_index>
+	<adminhtml_sales_order_index>
+		<reference name="head">
+			<action method="addItem" mastershop_cieloapi30_xml="css_checkout">
+				<type>skin_css</type>
+				<name>css/mastershop_cieloapi30/checkout.css</name>
+			</action>
+		</reference>
+	</adminhtml_sales_order_index>
+</layout>

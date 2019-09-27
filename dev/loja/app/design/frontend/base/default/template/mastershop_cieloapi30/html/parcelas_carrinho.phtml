@@ -1,0 +1,25 @@
+<form id="formParcelas" action="<?php echo $this->getUrl('mastershop_cieloapi30/carrinho/definirParcelas') ?>" method="post">
+	<div class="shipping">
+		<h2>
+			<?php echo $this->__('Parcelamento no Cartão') ?>
+		</h2>
+		<div class="shipping-form">
+			<ul>
+				<?php
+					$parcelas = $this->recuperarParcelas();
+					$parcelaSelecionada = $this->recuperarParcelaSelecionada();
+
+					foreach ($parcelas as &$parcela)
+					{
+				?>
+					<li>
+						<input <?php if ($parcelaSelecionada == $parcela['parcelas']): ?> checked="checked"<?php endif; ?>onclick="jQuery('#formParcelas').submit();" type="radio" value="<?php echo $parcela['parcelas']; ?>" name="parcelas" id="parcelas-<?php echo $parcela['parcelas']; ?>" />
+						<?php echo $parcela['parcelas']; ?>x de R$ <?php echo $parcela['valor_parcelas']; ?>
+					</li>
+				<?php
+					}
+				?>
+			</ul>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,54 @@
+<?php
+	$parcelas = $this->recuperarParcelas();
+	if (!is_array($parcelas) || empty($parcelas))
+		return;
+?>
+<div class="mastershop_cieloapi30_parcelas">
+	<div class="titulos linha">
+		<div><?php echo $this->__("Parcelas"); ?></div>
+		<div><?php echo $this->__("Valor"); ?></div>
+		<div>&nbsp;</div>
+		<div><?php echo $this->__("Total"); ?></div>
+	</div>
+	<?php
+		$ctrl_linha = 0;
+
+		foreach ($parcelas as &$parcela)
+		{
+	?>
+		<div class="linha<?php if ($ctrl_linha % 2 == 0): ?> alternada<?php endif; ?>">
+			<div class="parcelas"><?php echo $parcela['parcelas']; ?>x</div>
+			<div class="valor">R$ <?php echo $parcela['valor_parcelas']; ?></div>
+			<?php
+				if ($parcela['juros'])
+				{
+			?>
+				<div class="juros">
+					<?php echo $parcela['valor_juros']; ?>% de juros a.m.
+				</div>
+			<?php
+				}
+				else if ($parcela['desconto'])
+				{
+			?>
+				<div class="desconto">
+					<?php echo $parcela['valor_desconto']; ?>% de desconto
+				</div>
+			<?php
+				}
+				else
+				{
+			?>
+				<div class="semjuros">
+					sem juros
+				</div>
+			<?php
+				}
+			?>
+			<div class="total">R$ <?php echo $parcela['total']; ?></div>
+		</div>
+	<?php
+			++$ctrl_linha;
+		}
+	?>
+</div>

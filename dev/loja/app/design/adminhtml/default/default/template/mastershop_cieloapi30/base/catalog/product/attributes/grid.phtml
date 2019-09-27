@@ -1,0 +1,451 @@
+<?php
+
+	$cols = $this->_columns;
+	$firstCol = key($cols);
+	$htmlId = $this->getName();
+	$htmlIdCustom = $this->getHtmlIdCustom() ? $this->getHtmlIdCustom() : $htmlId;
+	$htmlName = $this->getElement()->getName();
+	$values = $this->getArrayRows();
+
+?>
+
+<?php
+
+	if (!$this->getElement()->getIsStandalone())
+	{
+
+?>
+
+<style>
+
+	.disabled_grid
+	{ /*http://stackoverflow.com/a/25328170*/
+
+		pointer-events: none;
+		opacity: 0.4;
+
+	}
+
+	#<?php echo $htmlIdCustom; ?>_table
+	{
+		width: auto;
+		margin-left: 5px;
+	}
+
+</style>
+
+<tr>
+	<td class="label"><?php echo $this->__($this->getElement()->getLabel()) ?></td>
+	<td colspan="10" class="grid">
+
+<?php
+
+	}
+	else
+	{
+
+?>
+
+<div class="grid" id="<?php echo $htmlIdCustom; ?>_grid">
+
+<?php
+
+	}
+
+?>
+		<table cellspacing="0" id="<?php echo $htmlIdCustom; ?>_table">
+			<?php
+
+				if ($this->getIsRequired())
+				{
+
+			?>
+			<input type="hidden" class="required-option-<?php echo $htmlIdCustom; ?>-rows" name="validation_<?php echo $htmlIdCustom; ?>_result" value="" />
+			<?php
+
+				}
+
+				foreach ($cols as &$col)
+				{
+
+			?>
+			<col<?php if(!empty($col["size"])): ?> width="<?php echo $col["size"]; ?>"<?php endif; ?> />
+			<?php
+
+				}
+
+			?>
+			<col width="1" />
+			<thead>
+				<tr class="headings">
+					<?php
+
+						foreach ($cols as &$col)
+						{
+
+					?>
+					<th><?php echo $col["label"] ?><?php if ($col["is_required"]): ?> <span class="required">*</span><?php endif; ?></th>
+					<?php
+
+						}
+
+					?>
+					<th class="last"><?php echo Mage::helper("catalog")->__("Action") ?></th>
+				</tr>
+			</thead>
+			<tbody id="<?php echo $htmlIdCustom ?>_container"></tbody>
+			<tfoot>
+				<tr>
+					<td colspan="<?php echo $this->getAddButtonColspan(); ?>" class="a-right"><?php echo $this->getAddButtonHtml() ?></td>
+				</tr>
+			</tfoot>
+		</table>
+
+		<script type="text/javascript">
+		//<![CDATA[
+			<?php echo $htmlIdCustom; ?>RowTemplate = //do not use var keyword, to set it globally
+
+				'<tr>'
+				<?php
+
+					$colCtrl = 0;
+
+					foreach ($cols as $name => &$col)
+					{
+
+				?>
+			+		'<td<?php if($colCtrl == 0): ?> class="<?php echo $htmlIdCustom; ?>-<?php echo $firstCol; ?>"<?php endif; ?>>'
+			+			'<?php echo $this->getFieldHtml($col, $name); ?>'
+			+		'</td>'
+				<?php
+
+						$colCtrl++;
+
+					}
+
+				?>
+			+		'<td class="last">'
+			+			'<?php echo $this->getDeleteFieldHtml("delete"); ?>'
+			+			'<button title="<?php echo Mage::helper("catalog")->__("Delete"); ?>" type="button" class="scalable delete icon-btn delete-product-option" id="<?php echo $htmlIdCustom; ?>_row_{{index}}_delete_button" onclick="return <?php echo $htmlIdCustom; ?>Control.deleteItem(event);">'
+			+				'<span><span><span><?php echo Mage::helper('catalog')->__("Delete") ?></span></span></span>'
+			+			'</button>'
+			+		'</td>'
+			+	'</tr>';
+
+			<?php echo $htmlIdCustom; ?>Control = //do not use var keyword, to set it globally
+			{
+
+				template: new Template(<?php echo $htmlIdCustom; ?>RowTemplate.replace(/replace_js/g, "script"), new RegExp('(^|.|\\r|\\n)({{\\s*(\\w+)\\s*}})', "")),
+				itemsCount: 0,
+				addItem : function ()
+				{
+
+					var new_index = this.itemsCount++;
+
+					var data =
+					{
+						<?php
+
+							foreach ($cols as $colName => &$col)
+							{
+
+						?>
+						<?php echo $colName; ?>: "<?php if (isset($col["default"])) echo $col["default"]; ?>",
+						<?php
+
+							}
+
+						?>
+						index: new_index,
+						idx: new_index
+					};
+
+					if (arguments.length)
+					{
+
+						index_tmp = data.index;
+
+						data = arguments[0];
+						data.index = index_tmp;
+						data.idx = index_tmp;
+
+					}
+
+					var contents = this.template.evaluate(data);
+					contents = contents.replace(new RegExp("{idx}", "g"), data.idx);
+					contents = contents.replace(new RegExp("{jsal}", "g"), "('");
+					contents = contents.replace(new RegExp("{jsar}", "g"), "')");
+					contents = contents.replace(new RegExp("{apos}", "g"), "'");
+
+					Element.insert( $("<?php echo $htmlIdCustom ?>_container"), { bottom: contents } );
+
+					var script_regex = new RegExp("<script\\b[^>]*>([\\s\\S]*?)<\/script>", "gmi");
+					var script_exec;
+
+					while (script_exec = script_regex.exec(contents))
+					{
+
+						eval(script_exec[1]);
+
+					}
+
+					<?php
+
+						foreach ($cols as $colName => &$col)
+						{
+
+							$jsRowId = $this->getJsRowId($htmlId, $colName);
+
+					?>
+
+					$("<?php echo $jsRowId; ?>").value = data.<?php echo $colName; ?>;
+
+						<?php
+
+							if (isset($col["add_toggle"]) && $col["add_toggle"])
+							{
+
+						?>
+
+						if (data.<?php echo $colName; ?> != "")
+						{
+
+							var element_toggle = $("<?php echo $jsRowId; ?>_toggle");
+							element_toggle.checked = true;
+							toggle_conditional(element_toggle, element_toggle.parentNode.parentNode.select("#<?php echo $jsRowId; ?>"));
+
+						}
+
+					<?php
+
+							}
+
+						}
+
+					?>
+
+					//jscolor update
+
+					$$(".color").each
+					(
+						function(el)
+						{
+
+							if (jscolor)
+							{
+
+								new jscolor.color( el, {hash: true} );
+								el.removeClassName("color"); //don't process again on new line
+
+							}
+
+						}
+					);
+
+					$("<?php echo $htmlIdCustom ?>_container").select("input", "select").each(function(el){ Event.observe(el, "change", el.setHasChanges.bind(el)); });
+
+				},
+
+				deleteItem: function(event)
+				{
+
+					var tr = Event.findElement(event, "tr");
+
+					if (tr)
+					{
+
+						var elem_flag = [];
+
+						Element.select(tr, ".delete").each(function(elem){ elem.value="1"; elem_flag.push(elem); });
+						Element.select(tr, ["input", "select", "button"]).each(function(elem)
+						{
+
+							var delete_elem = true;
+
+							for	(i = 0; i < elem_flag.length; i++)
+							{
+
+								if (elem_flag[i] == elem)
+								{
+
+									delete_elem = false;
+									break;
+
+								}
+
+							}
+
+							if (delete_elem)
+							{
+
+								elem.remove();
+
+							}
+
+						});
+						tr.hide();
+
+					}
+
+					return false;
+
+				}
+
+			};
+
+			<?php
+
+				if (is_array($values) && !empty($values))
+				{
+
+					foreach ($values as $row)
+					{
+
+						$rowData = Mage::helper("core")->jsonEncode( $row->getData() );
+
+			?>
+				<?php echo $htmlIdCustom; ?>Control.addItem(<?php echo $rowData; ?>);
+			<?php
+
+					}
+
+				}
+
+			?>
+
+		function toggle_conditional(p_checkbox, p_element)
+		{
+
+			p_element.each(function (element)
+			{
+
+				element.disabled = (p_checkbox.checked ? "" : "disabled");
+
+				if (p_checkbox.checked)
+				{
+
+					element.removeClassName("disabled");
+
+				}
+				else
+				{
+
+					element.addClassName("disabled");
+
+				}
+
+				$$("img#" + element.id + "_trig").each(function (element_calendar)
+				{
+
+					if (p_checkbox.checked)
+					{
+
+						element_calendar.show();
+
+					}
+					else
+					{
+
+						element_calendar.hide();
+
+					}
+
+				});
+
+
+			});
+
+		}
+
+		<?php
+
+			if ($this->getIsRequired())
+			{
+
+		?>
+
+		Validation.addAllThese([
+			["required-option-<?php echo $htmlIdCustom; ?>-rows", <?php echo $this->helper("core")->jsonEncode(Mage::helper("catalog")->__("Please add rows to option.")); ?>, function(v, elm)
+			{
+				var optionContainerElm = elm.up("div.grid");
+				var gridTypesFlag = false;
+				gridTypeElements = $$("#" + optionContainerElm.id + " .<?php echo $htmlIdCustom; ?>-<?php echo $firstCol; ?>");
+				gridTypeElements.each(function(elm)
+				{
+
+					if (elm.up("tr").visible())
+					{
+						gridTypesFlag = true;
+					}
+				});
+				elm.advaiceContainer = optionContainerElm.id + "_advice";
+				return gridTypesFlag;
+			}]]);
+
+		<?php
+
+			}
+
+		?>
+
+		//]]>
+		</script>
+
+		<?php echo $this->getChildHtml("additional_javascript"); ?>
+
+<?php
+
+	if (!$this->getElement()->getIsStandalone())
+	{
+
+?>
+
+	</td>
+</tr>
+
+	<?php
+
+		if ($this->canDisplayUseDefault())
+		{
+
+	?>
+
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td colspan="10" class="scope-label use-default">
+			<?php echo $this->getScopeLabel(); ?>
+
+			<input <?php if ($this->getElement()->getReadonly()): ?> disabled="disabled"<?php endif; ?> type="checkbox" name="use_default[]" id="<?php echo $htmlIdCustom; ?>_default"<?php if ($this->usedDefault()): ?> checked="checked"<?php endif; ?> onclick="disable_grid_scope(this, '<?php echo $htmlIdCustom; ?>_table')" value="<?php echo $htmlIdCustom; ?>"/>
+			<label for="<?php echo $htmlIdCustom; ?>_default" class="normal"><?php echo $this->__("Use Default Value") ?></label>
+
+			<?php if ($this->usedDefault()): ?>
+
+				<script>
+
+					disable_grid_scope($("<?php echo $htmlIdCustom; ?>_default"), "<?php echo $htmlIdCustom; ?>_table");
+
+				</script>
+
+			<?php endif; ?>
+
+		</td>
+	</tr>
+
+<?php
+
+		}
+
+	}
+	else
+	{
+
+?>
+
+</div>
+<div class="validation_advice" id="<?php echo $htmlIdCustom; ?>_grid_advice"></div>
+
+<?php
+
+	}
+
+?>

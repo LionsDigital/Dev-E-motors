@@ -1,0 +1,189 @@
+.mastershop_cieloapi30_bandeira div.lista,
+.mastershop_cieloapi30_qtdsel div.lista,
+.mastershop_cieloapi30_salvos div.lista
+{
+	padding-left:0;
+}
+
+.mastershop_cieloapi30_bandeira div.lista div.lista-item.bandeira,
+.mastershop_cieloapi30_qtdsel div.lista div.lista-item,
+.mastershop_cieloapi30_salvos div.lista div.lista-item
+{
+	padding-top:10px;
+	display:inline-block;
+	padding-left:10px;
+	cursor:pointer;
+	position:relative;
+}
+
+.mastershop_cieloapi30_qtdsel div.lista div.lista-item div,
+.mastershop_cieloapi30_salvos div.lista div.lista-item div
+{
+	clear:both;
+	cursor:pointer;
+}
+
+.mastershop_cieloapi30_bandeira div.lista div.lista-item label,
+.mastershop_cieloapi30_qtdsel div.lista div.lista-item label,
+.mastershop_cieloapi30_salvos div.lista div.lista-item label
+{
+	display:initial;
+	padding:0;
+	margin:0;
+	color:#636363;
+}
+
+.mastershop_cieloapi30_bandeira div.lista div.lista-item img,
+.mastershop_cieloapi30_qtdsel div.lista div.lista-item img,
+.mastershop_cieloapi30_salvos div.lista div.lista-item img
+{
+	cursor:pointer;
+	margin:0 !important;
+}
+
+.mastershop_cieloapi30_bandeira div.lista div.lista-item .selecao,
+.mastershop_cieloapi30_qtdsel div.lista div.lista-item .selecao,
+.mastershop_cieloapi30_salvos div.lista div.lista-item .selecao
+{
+	position:absolute !important;
+	left:4px;
+	top:4px;
+	padding:0 !important;
+	margin:0 !important;
+}
+
+.mastershop_cieloapi30_qtd h2
+{
+	border-bottom:1px solid #000000;
+}
+
+.mastershop_cieloapi30_bandeira_debito
+{
+	color:#ff6600;
+	font-style:italic;
+	font-weight:bold;
+	font-size:small;
+}
+
+.mastershop_cieloapi30_info .status .autenticacao .titulo
+{
+	font-weight:bold;
+	font-size:small;
+}
+
+.mastershop_cieloapi30_avs_sucesso,
+.mastershop_cieloapi30_cs_aprovado,
+.mastershop_cieloapi30_eci_sucesso,
+.mastershop_cieloapi30_info .status .msg.ok
+{
+	color:#33cc33;
+}
+
+.mastershop_cieloapi30_avs_medio,
+.mastershop_cieloapi30_cs_reprovado_medio,
+.mastershop_cieloapi30_eci_medio,
+.mastershop_cieloapi30_info .status .msg.medio
+{
+	color:#ff6600;
+}
+
+.mastershop_cieloapi30_avs_perigo,
+.mastershop_cieloapi30_cs_reprovado_perigo,
+.mastershop_cieloapi30_eci_perigo,
+.mastershop_cieloapi30_info .status .msg.erro,
+.mastershop_cieloapi30_info .status .info.erro
+{
+	color:#ff0000;
+}
+
+.mastershop_cieloapi30_cs_novo
+{
+	color:#3399ff;
+}
+
+.mastershop_cieloapi30_bandeira_externo
+{
+	color:#3399ff;
+	font-style:italic;
+	font-weight:bold;
+	font-size:small;
+}
+
+.mastershop_cieloapi30_info .num_cartao
+{
+	padding:10px 0;
+}
+
+.mastershop_cieloapi30_salvos div.lista div.lista-item
+{
+	padding:10px;
+	border:1px solid rgb(145, 145, 145);
+	text-align:center;
+	border-radius:10px;
+	margin-bottom:5px;
+}
+@media only screen and (max-width: 500px) {
+	.mastershop_cieloapi30_salvos div.lista div.lista-item
+	{
+		width:100%;
+	}
+}
+
+.mastershop_cieloapi30_salvos div.lista div.lista-item.selecao
+{
+	background:rgb(145, 145, 145);
+}
+.mastershop_cieloapi30_salvos div.lista div.lista-item input
+{
+	display:none;
+}
+
+.mastershop_cieloapi30_salvos div.lista div.lista-item.selecao label
+{
+	color:#ffffff;
+}
+
+.mastershop_cieloapi30_salvos div.lista div.lista-item label
+{
+	text-align:center;
+	font-weight: normal;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.mastershop_cieloapi30_salvos div.lista div.lista-item img
+{
+	float:none;
+	display:inline-block;
+}
+
+.mastershop_cieloapi30_info .status
+{
+	margin:10px 0;
+	border:1px solid #d6d6d6;
+	background:#f2f2f2;
+	padding:5px;
+}
+
+.mastershop_cieloapi30_info .status .msg
+{
+	font-weight:bold;
+}
+
+.mastershop_cieloapi30_info_clearsale .titulo
+{
+	font-weight:bold;
+	color:#ff0000;
+}
+
+.mastershop_cieloapi30_info_clearsale iframe
+{
+	width:100%;
+	height:100px;
+	border:1px solid #d6d6d6;
+}
+
+.mastershop_cieloapi30_info .status .pagamento .titulo
+{
+	font-weight:bold;
+}

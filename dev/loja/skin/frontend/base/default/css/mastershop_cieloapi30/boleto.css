@@ -1,0 +1,15 @@
+.mastershop_cieloapi30_boleto
+{
+	margin-top:10px;
+	padding-top:10px;
+	border-top:1px solid #ededed;
+}
+
+.mastershop_cieloapi30_boleto .boleto
+{
+	border:2px solid #ededed;
+	width:90%;
+	height:300px;
+	padding:5px;
+	overflow:scroll;
+}

@@ -1,0 +1,147 @@
+.mastershop_cieloapi30_detalhes_detalhes
+{
+	display:table;
+	border-spacing:20px;
+}
+
+.mastershop_cieloapi30_detalhes_detalhes div.linha
+{
+	display:table-row;
+}
+
+.mastershop_cieloapi30_detalhes_detalhes div.linha div
+{
+	display:table-cell;
+	padding:5px;
+}
+
+.mastershop_cieloapi30_detalhes_detalhes div.linha div.campo
+{
+	font-weight:bold;
+	background:#f2f2f2;
+	border:#bfbfbf;
+}
+
+.mastershop_cieloapi30_detalhes_xml
+{
+	display:table;
+	width:100%;
+	border-spacing:20px;
+}
+
+.mastershop_cieloapi30_detalhes_xml div
+{
+	display:table-cell;
+	background:#f2f2f2;
+	border:#bfbfbf;
+	padding:20px;
+}
+
+.mastershop_cieloapi30_detalhes_xml div h3
+{
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.mastershop_cieloapi30_operacao
+{
+	font-weight:bold;
+	border-radius:4px;
+	padding:2px;
+	text-align:center;
+}
+
+.mastershop_cieloapi30_operacao_autorizacao,
+.mastershop_cieloapi30_operacao_autorizacao_avs
+{
+	background:#0066cc;
+	color:#ffffff;
+}
+
+.mastershop_cieloapi30_operacao_captura
+{
+	background:#99ff33;
+	color:#000000;
+}
+
+.mastershop_cieloapi30_operacao_autorizacao_captura
+{
+	background:#009933;
+	color:#000000;
+}
+
+.mastershop_cieloapi30_operacao_cancelamento_autorizacao
+{
+	background:#ff0000;
+	color:#ffffff;
+}
+
+.mastershop_cieloapi30_operacao_estorno
+{
+	background:#ff3300;
+	color:#ffffff;
+}
+
+.mastershop_cieloapi30_operacao_pedido
+{
+	background:#990099;
+	color:#ffffff;
+}
+
+.mastershop_cieloapi30_operacao_confirmacao_pagamento
+{
+	background:#66ff33;
+	color:#000000;
+}
+
+.mastershop_cieloapi30_operacao_cancelamento
+{
+	background:#ff9900;
+	color:#000000;
+}
+
+.mastershop_cieloapi30_operacao_chargeback
+{
+	background:#ff0000;
+	color:#ffffff;
+}
+
+.mastershop_cieloapi30_operacao_pagamento_nao_finalizado
+{
+	background:#ff9900;
+	color:#000000;
+}
+
+.mastershop_cieloapi30_operacao_validacao
+{
+	background:#ccffcc;
+	color:#000000;
+}
+
+.mastershop_cieloapi30_operacao_outra,
+.mastershop_cieloapi30_operacao_atualizacao_status
+{
+	background:#ff3399;
+	color:#ffffff;
+}
+
+.mastershop_cieloapi30_operacao_consulta
+{
+	background:#66ffff;
+	color:#000000;
+}
+
+.mastershop_cieloapi30_operadora
+{
+	text-align:center;
+}
+
+.mastershop_cieloapi30_status_sucesso
+{
+	color:#009900;
+}
+
+.mastershop_cieloapi30_status_erro
+{
+	color:#ff0000;
+}

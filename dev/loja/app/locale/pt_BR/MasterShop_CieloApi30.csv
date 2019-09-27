@@ -1,0 +1,520 @@
+1 cartão,1 cartão
+1 ou débito,1 ou débito
+1-3,1-3
+1-4,1-4
+1-10,1-10
+1-12,1-12
+"*Caso este status persista após 30 minutos, será necessário cancelar esta venda*","*Caso este status persista após 30 minutos, será necessário cancelar esta venda*"
+"*somente na API online, necessário devolver valor manualmente*","*somente na API online, necessário devolver valor manualmente*"
+"<div style=""padding: 5px; border: 1px solid #dcdcdc; margin-bottom: 20px; background: #e8e8e8""><strong>Configurações para o gateway API 3.0 da Cielo.</strong><br /><br /><font color=""#ff0000""><strong>ATENÇÃO: </strong></font>antes de utilizar este método de pagamento, é necessário filiar-se à empresa Cielo (<a href=""http://www.cielo.com.br/"" target=""_blank"">www.cielo.com.br</a>).<br /><strong>Também será necessário adquirir um certificado de segurança SSL.</strong></div>","<div style=""padding: 5px; border: 1px solid #dcdcdc; margin-bottom: 20px; background: #e8e8e8""><strong>Configurações para o gateway API 3.0 da Cielo.</strong><br /><br /><font color=""#ff0000""><strong>ATENÇÃO: </strong></font>antes de utilizar este método de pagamento, é necessário filiar-se à empresa Cielo (<a href=""http://www.cielo.com.br/"" target=""_blank"">www.cielo.com.br</a>).<br /><strong>Também será necessário adquirir um certificado de segurança SSL.</strong></div>"
+"[AMA] PENDENTE, aguardando revisão por analista.","[AMA] PENDENTE, aguardando revisão por analista."
+"[APA] APROVADO, automaticamente por regras de aprovação automática.","[APA] APROVADO, automaticamente por regras de aprovação automática."
+"[APM] APROVADO, manualmente, por analista.","[APM] APROVADO, manualmente, por analista."
+"[APP] APROVADO, por regras estabelecidas pela loja ou ClearSale","[APP] APROVADO, por regras estabelecidas pela loja ou ClearSale"
+"[CAN] Pedido cancelado pela loja.","[CAN] Pedido cancelado pela loja."
+"[FRD] FRAUDE CONFIRMADA, por contato com administradora de cartão ou titular do cartão.","[FRD] FRAUDE CONFIRMADA, por contato com administradora de cartão ou titular do cartão."
+"[NVO] PENDENTE, pedido novo.","[NVO] PENDENTE, pedido novo."
+"[RPA] REPROVADO, automaticamente por regras.","[RPA] REPROVADO, automaticamente por regras."
+"[RPM] REPROVADO, sem suspeita de fraude, por falta de contato com o cliente ou política restritiva (CPF, etc).","[RPM] REPROVADO, sem suspeita de fraude, por falta de contato com o cliente ou política restritiva (CPF, etc)."
+"[RPP] REPROVADO, por regras estabelecidas pela loja ou ClearSale.","[RPP] REPROVADO, por regras estabelecidas pela loja ou ClearSale."
+"[SUS] REPROVADO, suspenso manualmente por suspeita de fraude através de contato com o cliente ou base ClearSale.","[SUS] REPROVADO, suspenso manualmente por suspeita de fraude através de contato com o cliente ou base ClearSale."
+"Aguarde, carregando...","Aguarde, carregando..."
+"Cancelamento não efetuado, banco emissor não localizou a transação original","Cancelamento não efetuado, banco emissor não localizou a transação original"
+"Cancelamento não efetuado, não foi localizada a transação original","Cancelamento não efetuado, não foi localizada a transação original"
+"Cancelamento não efetuado, saldo disponível para cancelamento insuficiente.","Cancelamento não efetuado, saldo disponível para cancelamento insuficiente."
+"Cartão bloqueado, por favor entre em contato com a central de atendimento do cartão.","Cartão bloqueado, por favor entre em contato com a central de atendimento do cartão."
+"Cartão cancelado, por favor entre em contato com a central de atendimento do cartão.","Cartão cancelado, por favor entre em contato com a central de atendimento do cartão."
+"Cartão inadimplente, por favor entre em contato com a central de atendimento do cartão.","Cartão inadimplente, por favor entre em contato com a central de atendimento do cartão."
+"Cartão não pode ser processado, banco emissor indisponível.","Cartão não pode ser processado, banco emissor indisponível."
+"CEP coincide, CPF e Endereço não coincidem.","CEP coincide, CPF e Endereço não coincidem."
+"CEP e CPF coincidem, Endereço não coincide.","CEP e CPF coincidem, Endereço não coincide."
+"CEP e Endereço coincidem, CPF não coincide.","CEP e Endereço coincidem, CPF não coincide."
+"Chave de acesso da loja virtual, senha para MerchantID","Chave de acesso da loja virtual, senha para MerchantID"
+"CPF coincide, CEP e Endereço não coincidem.","CPF coincide, CEP e Endereço não coincidem."
+"Código de identificação da empresa no sistema ClearSale. Caso não tenha recebido seu código, solicite para integracao@clear.sale","Código de identificação da empresa no sistema ClearSale. Caso não tenha recebido seu código, solicite para integracao@clear.sale"
+"Código para script mapeador. Caso não tenha recebido seu código, solicite para integracao@clear.sale","Código para script mapeador. Caso não tenha recebido seu código, solicite para integracao@clear.sale"
+"Define a origem dos dados de CPF/CNPJ. Pode ser utilizado o campo padrão do Magento (Tax/Vat) das informações de cobrança, ou um campo específico no formulário de dados do cartão.","Define a origem dos dados de CPF/CNPJ. Pode ser utilizado o campo padrão do Magento (Tax/Vat) das informações de cobrança, ou um campo específico no formulário de dados do cartão."
+"Define as opções de parcelamento que aparecerão na lista de parcelas.<br />Por exemplo: 1,3,6,9 irá mostrar as opções:<br /><br />À Vista<br />3x<br />6x<br />9x","Define as opções de parcelamento que aparecerão na lista de parcelas.<br />Por exemplo: 1,3,6,9 irá mostrar as opções:<br /><br />À Vista<br />3x<br />6x<br />9x"
+"Define o período de tempo em minutos utilizado para controlar o número de tentativas falhadas, definidas no campo 'Tentativas Falhadas'. Mínimo de 1 e máximo de 1440 (24 horas).","Define o período de tempo em minutos utilizado para controlar o número de tentativas falhadas, definidas no campo 'Tentativas Falhadas'. Mínimo de 1 e máximo de 1440 (24 horas)."
+"Define se este método de pagamento será utilizado em modo de testes, podendo ser utilizados cartões inexistentes e sem autorizar/capturar valores nos cartões existentes","Define se este método de pagamento será utilizado em modo de testes, podendo ser utilizados cartões inexistentes e sem autorizar/capturar valores nos cartões existentes"
+"Define se os campos com dados do cartão (número, nome, validade, etc) serão apagados caso algum erro ocorra com a transação. Esta é uma norma dos padrões PCI e algumas operadoras podem solicitar este comportamento durante o processo de homologação. Quando for utilizado um módulo onestepcheckout customizado, pode ser necessário desabilitar esta funcionalidade caso os erros com transações não estejam sendo exibidos para o cliente ou o módulo onestepcheckout não esteja funcionando corretamente.","Define se os campos com dados do cartão (número, nome, validade, etc) serão apagados caso algum erro ocorra com a transação. Esta é uma norma dos padrões PCI e algumas operadoras podem solicitar este comportamento durante o processo de homologação. Quando for utilizado um módulo onestepcheckout customizado, pode ser necessário desabilitar esta funcionalidade caso os erros com transações não estejam sendo exibidos para o cliente ou o módulo onestepcheckout não esteja funcionando corretamente."
+"Define se os campos de endereço (rua, número, complemento, bairro) serão especificados conforme configuração da loja/tema ou se o módulo tentará identificar os campos automaticamente.","Define se os campos de endereço (rua, número, complemento, bairro) serão especificados conforme configuração da loja/tema ou se o módulo tentará identificar os campos automaticamente."
+"Define se os dados enviados serão somente os básicos necessários para a transação (simples) ou se conterá dados adicionais do cliente (completo), como endereço de cobrança e endereço de entrega. Para transações utilizando o serviço antifraude, o tipo de envio será sempre completo, independentemente desta configuração.","Define se os dados enviados serão somente os básicos necessários para a transação (simples) ou se conterá dados adicionais do cliente (completo), como endereço de cobrança e endereço de entrega. Para transações utilizando o serviço antifraude, o tipo de envio será sempre completo, independentemente desta configuração."
+"Define taxa de desconto percentual personalizada para cada quantidade de parcelas até a quantidade de parcelas definida no campo 'Aplicar Taxa de Desconto à Parcela quando Quantidade de Parcelas for Igual ou Menor'. Quando um valor não for personalizado para uma certa quantidade de parcelas, o valor padrão definido no campo 'Taxa de Desconto da Parcela ao Mês (%)' será utilizado.","Define taxa de desconto percentual personalizada para cada quantidade de parcelas até a quantidade de parcelas definida no campo 'Aplicar Taxa de Desconto à Parcela quando Quantidade de Parcelas for Igual ou Menor'. Quando um valor não for personalizado para uma certa quantidade de parcelas, o valor padrão definido no campo 'Taxa de Desconto da Parcela ao Mês (%)' será utilizado."
+"Define taxa de juros percentual personalizada para cada quantidade de parcelas até a quantidade de parcelas definida no campo 'Aplicar Taxa de Juros à Parcela quando Quantidade de Parcelas for Igual ou Maior'. Quando um valor não for personalizado para uma certa quantidade de parcelas, o valor padrão definido no campo 'Taxa de Juros da Parcela ao Mês (%)' será utilizado.","Define taxa de juros percentual personalizada para cada quantidade de parcelas até a quantidade de parcelas definida no campo 'Aplicar Taxa de Juros à Parcela quando Quantidade de Parcelas for Igual ou Maior'. Quando um valor não for personalizado para uma certa quantidade de parcelas, o valor padrão definido no campo 'Taxa de Juros da Parcela ao Mês (%)' será utilizado."
+"Em minutos, 1-1440 (24 horas)","Em minutos, 1-1440 (24 horas)"
+"Endereço coincide, CEP e CPF não coincidem.","Endereço coincide, CEP e CPF não coincidem."
+"Endereço e CEP coincidem, CPF não coincide.","Endereço e CEP coincidem, CPF não coincide."
+"Formato: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX<br />Para modo de testes, <a href=""https://cadastrosandbox.cieloecommerce.cielo.com.br/"" target=""_blank"">realize seu cadastro no sandbox Cielo.</a>","Formato: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX<br />Para modo de testes, <a href=""https://cadastrosandbox.cieloecommerce.cielo.com.br/"" target=""_blank"">realize seu cadastro no sandbox Cielo.</a>"
+"Habilita o controle de tentativas de pagamento com falha, para evitar bloqueios no serviço da operadora.","Habilita o controle de tentativas de pagamento com falha, para evitar bloqueios no serviço da operadora."
+"Mostra a quantidade de desconto por padrão junto com as informações de parcelamento, na exibição de parcelas na página de produtos ou na seleção de parcelas durante a finalização da compra.<br /><br /><strong>Exemplos:</strong><br /><small>Mostrar: 2x de R$ 10,00 com 1% de desconto - Total R$ 20,00<br />Não Mostrar: 2x de R$ 10,00 - Total R$ 20,00</small>","Mostra a quantidade de desconto por padrão junto com as informações de parcelamento, na exibição de parcelas na página de produtos ou na seleção de parcelas durante a finalização da compra.<br /><br /><strong>Exemplos:</strong><br /><small>Mostrar: 2x de R$ 10,00 com 1% de desconto - Total R$ 20,00<br />Não Mostrar: 2x de R$ 10,00 - Total R$ 20,00</small>"
+"Mostra a quantidade de juros por padrão junto com as informações de parcelamento, na exibição de parcelas na página de produtos ou na seleção de parcelas durante a finalização da compra.<br /><br /><strong>Exemplos:</strong><br /><small>Mostrar: 2x de R$ 10,00 com 1% de juros a.m. - Total R$ 20,00<br />Não Mostrar: 2x de R$ 10,00 - Total R$ 20,00</small>","Mostra a quantidade de juros por padrão junto com as informações de parcelamento, na exibição de parcelas na página de produtos ou na seleção de parcelas durante a finalização da compra.<br /><br /><strong>Exemplos:</strong><br /><small>Mostrar: 2x de R$ 10,00 com 1% de juros a.m. - Total R$ 20,00<br />Não Mostrar: 2x de R$ 10,00 - Total R$ 20,00</small>"
+"Nenhum campo coincide (Endereço, CEP, CPF).","Nenhum campo coincide (Endereço, CEP, CPF)."
+"Não foi possível confirmar a autenticação do cartão de crédito/débito/transferência online. Se você finalizou a autenticação, por favor entre em contato para verificar o status de sua compra!","Não foi possível confirmar a autenticação do cartão de crédito/débito/transferência online. Se você finalizou a autenticação, por favor entre em contato para verificar o status de sua compra!"
+"Oferecer a opção de salvar cartões de crédito para seleção rápida em compras futuras. Somente alguns dados serão salvos localmente, os dados como número e código de segurança serão salvos pela operadora, que retornará um token para que o cartão possa ser utilizado.","Oferecer a opção de salvar cartões de crédito para seleção rápida em compras futuras. Somente alguns dados serão salvos localmente, os dados como número e código de segurança serão salvos pela operadora, que retornará um token para que o cartão possa ser utilizado."
+"Permite que o comprador especifique o valor a ser cobrado em cada cartão, no caso de ser escolhido mais de um cartão para o pagamento","Permite que o comprador especifique o valor a ser cobrado em cada cartão, no caso de ser escolhido mais de um cartão para o pagamento"
+"Por favor preencha corretamente o nome igual ao impresso no cartão #%d, sem acentos ou caracteres especiais!","Por favor preencha corretamente o nome igual ao impresso no cartão #%d, sem acentos ou caracteres especiais!"
+"Por favor preencha corretamente o nome igual ao impresso no cartão, sem acentos ou caracteres especiais!","Por favor preencha corretamente o nome igual ao impresso no cartão, sem acentos ou caracteres especiais!"
+"Prazo em dias para cálculo da data de vencimento dos boletos bancários, a partir da data da compra.","Prazo em dias para cálculo da data de vencimento dos boletos bancários, a partir da data da compra."
+"quando ambos desconto e juros para parcelamento forem especificados, a quantidade de parcelas para aplicação do desconto deve ser menor que a quantidade de parcelas para aplicação de juros.","quando ambos desconto e juros para parcelamento forem especificados, a quantidade de parcelas para aplicação do desconto deve ser menor que a quantidade de parcelas para aplicação de juros."
+"Quando possível, redirecionar o comprador para o site do emissor do banco do cartão para fazer a autenticação por senha. Dependente do banco emissor e somente disponível para bandeiras Visa e MasterCard. Não disponível para compras feitas com mais de um cartão.","Quando possível, redirecionar o comprador para o site do emissor do banco do cartão para fazer a autenticação por senha. Dependente do banco emissor e somente disponível para bandeiras Visa e MasterCard. Não disponível para compras feitas com mais de um cartão."
+"Seu navegador será redirecionado para o site do banco emissor do cartão ou site da bandeira do cartão após a finalização da compra, para efetuar a autenticação do portador do cartão.","Seu navegador será redirecionado para o site do banco emissor do cartão ou site da bandeira do cartão após a finalização da compra, para efetuar a autenticação do portador do cartão."
+"Somente letras, números e espaços, máximo de 13 caracteres.","Somente letras, números e espaços, máximo de 13 caracteres."
+"Todos os campos coincidem (Endereço, CEP, CPF).","Todos os campos coincidem (Endereço, CEP, CPF)."
+"Transação autenticada, portador verificado.","Transação autenticada, portador verificado."
+"Transação autorizada, aguardando captura do valor (criação de fatura)","Transação autorizada, aguardando captura do valor (criação de fatura)"
+"Transação inválida, dados do cartão incorretos.","Transação inválida, dados do cartão incorretos."
+"Transação não aprovada, limite excedido/sem saldo.","Transação não aprovada, limite excedido/sem saldo."
+"Transação não aprovada, por favor entre em contato com a central de atendimento do cartão.","Transação não aprovada, por favor entre em contato com a central de atendimento do cartão."
+"Transação não autorizada, a senha está vencida.","Transação não autorizada, a senha está vencida."
+"Transação não autorizada, autenticação não foi realizada.","Transação não autorizada, autenticação não foi realizada."
+"Transação não autorizada, banco emissor temporariamente indisponível.","Transação não autorizada, banco emissor temporariamente indisponível."
+"Transação não autorizada, cartão bloqueado para compras hoje.","Transação não autorizada, cartão bloqueado para compras hoje."
+"Transação não autorizada, cartão bloqueado primeiro uso.","Transação não autorizada, cartão bloqueado primeiro uso."
+"Transação não autorizada, cartão inválido.","Transação não autorizada, cartão inválido."
+"Transação não autorizada, conta corrente inexistente.","Transação não autorizada, conta corrente inexistente."
+"Transação não autorizada, dados inválidos.","Transação não autorizada, dados inválidos."
+"Transação não autorizada, divergência na data de transação/pagamento.","Transação não autorizada, divergência na data de transação/pagamento."
+"Transação não autorizada, erro no banco emissor.","Transação não autorizada, erro no banco emissor."
+"Transação não autorizada, excedida a quantidade de transações para o cartão.","Transação não autorizada, excedida a quantidade de transações para o cartão."
+"Transação não autorizada, falha na validação dos dados.","Transação não autorizada, falha na validação dos dados."
+"Transação não autorizada, limite diário excedido.","Transação não autorizada, limite diário excedido."
+"Transação não autorizada, limite excedido/sem saldo.","Transação não autorizada, limite excedido/sem saldo."
+"Transação não autorizada, suspeita de fraude.","Transação não autorizada, suspeita de fraude."
+"Transação não autorizada, tempo de comunicação excedido.","Transação não autorizada, tempo de comunicação excedido."
+"Transação não autorizada, valor abaixo do mínimo exigido pelo banco emissor.","Transação não autorizada, valor abaixo do mínimo exigido pelo banco emissor."
+"Transação não autorizada, violação de regra - Possível erro no cadastro.","Transação não autorizada, violação de regra - Possível erro no cadastro."
+"Transação não autorizada, violação de segurança.","Transação não autorizada, violação de segurança."
+"Transação não permitida, cartão de crédito sendo usado com débito. Use a função crédito.","Transação não permitida, cartão de crédito sendo usado com débito. Use a função crédito."
+"Transação não permitida, cartão de débito sendo usado com crédito. Use a função débito.","Transação não permitida, cartão de débito sendo usado com crédito. Use a função débito."
+"Transação não permitida, código da operação inválido.","Transação não permitida, código da operação inválido."
+"Transação não permitida, falha da operação.","Transação não permitida, falha da operação."
+"Transação não permitida, falha na validação dos dados.","Transação não permitida, falha na validação dos dados."
+"Transação não permitida, opção de pagamento inválida.","Transação não permitida, opção de pagamento inválida."
+"Transação não permitida, selecionada a opção incorreta.","Transação não permitida, selecionada a opção incorreta."
+"Transação não permitida, valor da operação inválido.","Transação não permitida, valor da operação inválido."
+"Transação não permitida, valor da parcela inferior ao mínimo permitido.","Transação não permitida, valor da parcela inferior ao mínimo permitido."
+"Transação referida, por favor entre em contato com a central de atendimento do cartão.","Transação referida, por favor entre em contato com a central de atendimento do cartão."
+"Título exibido na fatura do portador do cartão (soft-descriptor). Disponível para bandeiras Visa e MasterCard, dependente de disponibilidade do serviço e da operadora de cartões.","Título exibido na fatura do portador do cartão (soft-descriptor). Disponível para bandeiras Visa e MasterCard, dependente de disponibilidade do serviço e da operadora de cartões."
+"Usar o serviço adicional antifraude da Cielo para validar as informações de cobrança contra as informações do cartão de crédito.<br /><font color='#ff0000'>Atenção: este serviço pode ter custos adicionais, consulte a Cielo!</font>","Usar o serviço adicional antifraude da Cielo para validar as informações de cobrança contra as informações do cartão de crédito.<br /><font color='#ff0000'>Atenção: este serviço pode ter custos adicionais, consulte a Cielo!</font>"
+"Utilizar apenas números, separar com vírgulas. Ex: 1,3,6,9","Utilizar apenas números, separar com vírgulas. Ex: 1,3,6,9"
+"Utilizar formulário de dados alternativo, onde a bandeira do número de cartão digitado aparece automaticamente no campo do número do cartão. Válido apenas para cartões de crédito (desabilita o uso de cartões de débito).","Utilizar formulário de dados alternativo, onde a bandeira do número de cartão digitado aparece automaticamente no campo do número do cartão. Válido apenas para cartões de crédito (desabilita o uso de cartões de débito)."
+# Compra,# Compra
+% de Desconto,% de Desconto
+% de Juros Ao Mês,% de Juros Ao Mês
+%d cartões,%d cartões
+%d compras tiveram o método de pagamento atualizado para a nova versão do módulo.,%d compras tiveram o método de pagamento atualizado para a nova versão do módulo.
+%dx de R$ %s - Total R$ %s,%dx de R$ %s - Total R$ %s
+%dx de R$ %s com %s%% de desconto - Total R$ %s,%dx de R$ %s com %s%% de desconto - Total R$ %s
+%dx de R$ %s com %s%% de juros a.m. - Total R$ %s,%dx de R$ %s com %s%% de juros a.m. - Total R$ %s
+%dx de R$ %s com desconto de %s%%,%dx de R$ %s com desconto de %s%%
+%dx de R$ %s sem juros,%dx de R$ %s sem juros
+%dx de R$ %s,%dx de R$ %s
+%s000000%s%s,%s000000%s%s
+%s000000000000%s,%s000000000000%s
+%s00000000%s,%s00000000%s
+%s - Expired since %s,%s - Expirada desde %s
+%s - Valid until %s,%s - Válida até %s
+(cartão #%d), (cartão #%d)
+* Required Fields,* Campos Obrigatórios
+A autenticação do cartão de crédito/débito/transferência online está em andamento. Por favor tente novamente em alguns instantes!,A autenticação do cartão de crédito/débito/transferência online está em andamento. Por favor tente novamente em alguns instantes!
+A autenticação do cartão de crédito/débito/transferência online não foi concluída.,A autenticação do cartão de crédito/débito/transferência online não foi concluída.
+a bandeira '%s' não pode ser atribuída a mais de uma operadora de cartão.,a bandeira '%s' não pode ser atribuída a mais de uma operadora de cartão.
+A data de validade do cartão #%d não é válida!,A data de validade do cartão #%d não é válida!
+A data de validade do cartão não é válida!,A data de validade do cartão não é válida!
+a quantidade de parcelas %d foi preenchida mais de uma vez. Os registros duplicados foram removidos da listagem.,a quantidade de parcelas %d foi preenchida mais de uma vez. Os registros duplicados foram removidos da listagem.
+A quantidade de parcelas selecionada não é válida!,A quantidade de parcelas selecionada não é válida!
+A quantidade de parcelas selecionada para o cartão #%d não é válida!,A quantidade de parcelas selecionada para o cartão #%d não é válida!
+A quantidade máxima de produtos configurada (%d) para a ativação do método de pagamento foi ultrapassada (%d).,A quantidade máxima de produtos configurada (%d) para a ativação do método de pagamento foi ultrapassada (%d).
+A quantidade mínima de produtos configurada (%d) para a ativação do método de pagamento não foi atingida (%d).,A quantidade mínima de produtos configurada (%d) para a ativação do método de pagamento não foi atingida (%d).
+A transação com cartão de crédito/débito/transferência online foi cancelada.,A transação com cartão de crédito/débito/transferência online foi cancelada.
+A transação com cartão de crédito/débito/transferência online não foi autorizada.,A transação com cartão de crédito/débito/transferência online não foi autorizada.
+Acesso incorreto à plataforma de pagamentos. Por favor verifique se as credenciais de acesso foram definidas corretamente conforme o modo de testes/produção.,Acesso incorreto à plataforma de pagamentos. Por favor verifique se as credenciais de acesso foram definidas corretamente conforme o modo de testes/produção.
+Acesso incorreto à plataforma de pagamentos. Por favor verifique se as credenciais de acesso foram definidas corretamente.,Acesso incorreto à plataforma de pagamentos. Por favor verifique se as credenciais de acesso foram definidas corretamente.
+Adicionar coluna com o resultado da análise antifraude diretamente na tabela de listagem de pedidos.,Adicionar coluna com o resultado da análise antifraude diretamente na tabela de listagem de pedidos.
+Adicionar,Adicionar
+Administradora de Cartões,Administradora de Cartões
+Aguardando autenticação e pagamento via página externa,Aguardando autenticação e pagamento via página externa
+American Express,American Express
+Antifraude,Antifraude
+Análise Antifraude,Análise Antifraude
+Aperte CTRL + Click para selecionar mais de um status!,Aperte CTRL + Click para selecionar mais de um status!
+Aperte CTRL + Click para selecionar mais de uma bandeira!,Aperte CTRL + Click para selecionar mais de uma bandeira!
+Aplicar a taxa de desconto para cada parcela somente quando o cliente selecionar uma quantidade de parcelas igual ou menor que este número,Aplicar a taxa de desconto para cada parcela somente quando o cliente selecionar uma quantidade de parcelas igual ou menor que este número
+Aplicar a taxa de juros para cada parcela somente quando o cliente selecionar uma quantidade de parcelas igual ou maior que este número,Aplicar a taxa de juros para cada parcela somente quando o cliente selecionar uma quantidade de parcelas igual ou maior que este número
+Aplicar Taxa de Desconto Ao,Aplicar Taxa de Desconto Ao
+Aplicar Taxa de Desconto à Parcela quando Quantidade de Parcelas for Igual ou Menor,Aplicar Taxa de Desconto à Parcela quando Quantidade de Parcelas for Igual ou Menor
+Aplicar Taxa de Juros Ao,Aplicar Taxa de Juros Ao
+Aplicar Taxa de Juros à Parcela quando Quantidade de Parcelas for Igual ou Maior,Aplicar Taxa de Juros à Parcela quando Quantidade de Parcelas for Igual ou Maior
+Arquivo temporariamente indisponível.,Arquivo temporariamente indisponível.
+Atualização de Status,Atualização de Status
+Aura,Aura
+Autenticar Cartões de Crédito,Autenticar Cartões de Crédito
+Autorizar e Capturar,Autorizar e Capturar
+Autorização cancelada (antes da confirmação da transação),Autorização cancelada (antes da confirmação da transação)
+Autorização com AVS,Autorização com AVS
+Autorização e Captura,Autorização e Captura
+Autorização,Autorização
+Ação de Pagamento,Ação de Pagamento
+Banco do Brasil,Banco do Brasil
+Banco emissor indisponível.,Banco emissor indisponível.
+Banco Emissor para Boletos Bancários,Banco Emissor para Boletos Bancários
+Banco não pertence à rede ou cartão corporativo.,Banco não pertence à rede ou cartão corporativo.
+Bandeira do Cartão/Serviço,Bandeira do Cartão/Serviço
+Bandeiras de cartões disponíveis durante a finalização da compra,Bandeiras de cartões disponíveis durante a finalização da compra
+Bandeiras de Cartões Permitidas,Bandeiras de Cartões Permitidas
+Boleto Bancário,Boleto Bancário
+Boleto Pago,Boleto Pago
+Bradesco,Bradesco
+Campo de CPF/CNPJ,Campo de CPF/CNPJ
+Cancelamento Automático,Cancelamento Automático
+Cancelamento de Autorização,Cancelamento de Autorização
+Cancelar Pedido Automaticamente,Cancelar Pedido Automaticamente
+Cancelar/estornar o pedido automaticamente se a análise antifraude retornar resultado negativo conforme status definidos no campo 'Status para Cancelamento Automático'.,Cancelar/estornar o pedido automaticamente se a análise antifraude retornar resultado negativo conforme status definidos no campo 'Status para Cancelamento Automático'.
+Captura,Captura
+Cartão #%d,Cartão #%d
+Cartão bloqueado por perda.,Cartão bloqueado por perda.
+Cartão bloqueado por roubo.,Cartão bloqueado por roubo.
+Cartão com dígito de controle inválido.,Cartão com dígito de controle inválido.
+Cartão de Crédito,Cartão de Crédito
+Cartão de Débito,Cartão de Débito
+Cartão de Testes / Bandeira Desconhecida,Cartão de Testes / Bandeira Desconhecida
+Cartão excedeu o limite para parcelamento.,Cartão excedeu o limite para parcelamento.
+Cartão expirado.,Cartão expirado.
+Cartão inadimplente.,Cartão inadimplente.
+Cartão inválido.,Cartão inválido.
+Cartão poupança inválido.,Cartão poupança inválido.
+Cartão restrito para uso doméstico.,Cartão restrito para uso doméstico.
+Cartão terminado em %s,Cartão terminado em %s
+Cartão vencido.,Cartão vencido.
+Cartões de Crédito e Débito/Boleto/Débito Online,Cartões de Crédito e Débito/Boleto/Débito Online
+Cedente para Boletos Bancários,Cedente para Boletos Bancários
+Charge Back,Charge Back
+Cielo (API 3.0),Cielo (API 3.0)
+ClearSale Start,ClearSale Start
+ClearSale Total / Total Garantido,ClearSale Total / Total Garantido
+Com Registro,Com Registro
+Comentários de Analistas:,Comentários de Analistas:
+Completo,Completo
+Comprovante de Vendas (NSU): %s,Comprovante de Vendas (NSU): %s
+Comprovante de Vendas,Comprovante de Vendas
+Confirmação de Pagamento,Confirmação de Pagamento
+Consulta de status indicou pagamento cancelado (%s). A compra será cancelada automaticamente.,Consulta de status indicou pagamento cancelado (%s). A compra será cancelada automaticamente.
+Consulta de Transação,Consulta de Transação
+CPF/CNPJ do Cedente,CPF/CNPJ do Cedente
+CPF/CNPJ do Dono do Cartão,CPF/CNPJ do Dono do Cartão
+Credz,Credz
+Criada solicitação de autenticação de cartão de crédito/débito.,Criada solicitação de autenticação de cartão de crédito/débito.
+Criada solicitação de autenticação de débito online.,Criada solicitação de autenticação de débito online.
+Criada solicitação de emissão de boleto bancário.,Criada solicitação de emissão de boleto bancário.
+CV / Autorização / TID,CV / Autorização / TID
+Código da Empresa,Código da Empresa
+Código de acesso da empresa/pessoa ao sistema da Cielo,Código de acesso da empresa/pessoa ao sistema da Cielo
+Código de Integração ClearSale Start,Código de Integração ClearSale Start
+Código de segurança incorreto.,Código de segurança incorreto.
+Código de segurança inválido.,Código de segurança inválido.
+Código do App Mapeador,Código do App Mapeador
+Data de expiração incorreta.,Data de expiração incorreta.
+Data de Expiração,Data de Expiração
+Data/Hora da Transação,Data/Hora da Transação
+Data/Hora,Data/Hora
+Define a ação final de pagamento:<br /><br /><strong>Somente Autorizar</strong> irá tentar autorizar a transação de cartão de crédito. O administrador da loja então pode capturar o valor no admin do Magento (ao criar uma fatura) ou no painel de administração da operadora. Transações não capturadas podem ser automaticamente canceladas após determinado número de dias (dependendo da operadora).<br /><br /><strong>Autorizar e Capturar</strong> irá completar a compra e cobrar o valor no cartão de crédito imediatamente.,Define a ação final de pagamento:<br /><br /><strong>Somente Autorizar</strong> irá tentar autorizar a transação de cartão de crédito. O administrador da loja então pode capturar o valor no admin do Magento (ao criar uma fatura) ou no painel de administração da operadora. Transações não capturadas podem ser automaticamente canceladas após determinado número de dias (dependendo da operadora).<br /><br /><strong>Autorizar e Capturar</strong> irá completar a compra e cobrar o valor no cartão de crédito imediatamente.
+Define a mensagem de erro que será exibida ao cliente quando ocorrerem erros com o módulo ou erros de comunicação com o gateway de pagamento,Define a mensagem de erro que será exibida ao cliente quando ocorrerem erros com o módulo ou erros de comunicação com o gateway de pagamento
+Define a posição na qual este método de pagamento será exibido se houverem outros métodos de pagamento disponíveis,Define a posição na qual este método de pagamento será exibido se houverem outros métodos de pagamento disponíveis
+Define a quantidade máxima de cartões que podem ser usados em uma mesma compra,Define a quantidade máxima de cartões que podem ser usados em uma mesma compra
+Define a quantidade máxima de parcelas que o cliente pode escolher para o pagamento conforme o valor total da compra,Define a quantidade máxima de parcelas que o cliente pode escolher para o pagamento conforme o valor total da compra
+Define a quantidade máxima de parcelas que o cliente pode escolher para o pagamento,Define a quantidade máxima de parcelas que o cliente pode escolher para o pagamento
+Define a quantidade máxima de produtos em uma compra para que este método de pagamento continue disponível,Define a quantidade máxima de produtos em uma compra para que este método de pagamento continue disponível
+Define a quantidade mínima de produtos em uma compra para que este método de pagamento esteja disponível,Define a quantidade mínima de produtos em uma compra para que este método de pagamento esteja disponível
+Define a versão do certificado SSL utilizado para transações http,Define a versão do certificado SSL utilizado para transações http
+Define como deve ser feito o parcelamento. Consulte a operadora da plataforma de pagamentos para verificar os juros incidentes para o parcelamento no modo 'Administradora de Cartões'.,Define como deve ser feito o parcelamento. Consulte a operadora da plataforma de pagamentos para verificar os juros incidentes para o parcelamento no modo 'Administradora de Cartões'.
+Define o número de tentivas que um cliente pode tentar refazer um pagamento que falhou anteriormente com o mesmo número de cartão de crédito. Mínimo de 1 e máximo de 10.,Define o número de tentivas que um cliente pode tentar refazer um pagamento que falhou anteriormente com o mesmo número de cartão de crédito. Mínimo de 1 e máximo de 10.
+Define o status de uma nova compra realizada com este método de pagamento,Define o status de uma nova compra realizada com este método de pagamento
+Define o valor mínimo por cartão para que as opções de divisão do valor em mais de um cartão sejam ativadas,Define o valor mínimo por cartão para que as opções de divisão do valor em mais de um cartão sejam ativadas
+Define o valor mínimo que cada parcela deverá conter. Este valor afetará o campo 'Máximo de Parcelas' definido.,Define o valor mínimo que cada parcela deverá conter. Este valor afetará o campo 'Máximo de Parcelas' definido.
+Define o valor total máximo de uma compra para que este método de pagamento continue disponível,Define o valor total máximo de uma compra para que este método de pagamento continue disponível
+Define o valor total mínimo de uma compra para que este método de pagamento esteja disponível,Define o valor total mínimo de uma compra para que este método de pagamento esteja disponível
+Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for boleto bancário.,Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for boleto bancário.
+Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for cartão de débito.,Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for cartão de débito.
+Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for débito/transferência online (ex: débito via Bradesco ou Banco do Brasil).,Define qualquer taxa de desconto percentual a ser aplicada quando o método de pagamento selecionado for débito/transferência online (ex: débito via Bradesco ou Banco do Brasil).
+Define qualquer taxa de desconto percentual a ser subtraída do valor mensal da parcela.,Define qualquer taxa de desconto percentual a ser subtraída do valor mensal da parcela.
+Define qualquer taxa de juros percentual a ser adicionada ao valor mensal da parcela.,Define qualquer taxa de juros percentual a ser adicionada ao valor mensal da parcela.
+Define se erros ocorridos com o módulo ou erros de comunicação com o gateway de pagamento serão exibidos diretamente ao cliente. Problemas relacionados ao cartão de crédito/débito sempre serão exibidos.,Define se erros ocorridos com o módulo ou erros de comunicação com o gateway de pagamento serão exibidos diretamente ao cliente. Problemas relacionados ao cartão de crédito/débito sempre serão exibidos.
+Define se o cadastro de pedidos via ClearSale será ativado para novas compras.,Define se o cadastro de pedidos via ClearSale será ativado para novas compras.
+Definir Desconto por Parcela,Definir Desconto por Parcela
+Definir Juros por Parcela,Definir Juros por Parcela
+Desconto do Boleto Bancário,Desconto do Boleto Bancário
+Desconto do Cartão de Crédito #%d,Desconto do Cartão de Crédito #%d
+Desconto do Cartão de Crédito,Desconto do Cartão de Crédito
+Desconto do Cartão de Débito,Desconto do Cartão de Débito
+Desconto do Débito/Transferência Online,Desconto do Débito/Transferência Online
+Desconto no Cartão de Crédito #2,Desconto no Cartão de Crédito #2
+Desconto no Cartão de Crédito #3,Desconto no Cartão de Crédito #3
+Desconto no Cartão de Crédito,Desconto no Cartão de Crédito
+Descrição na Fatura do Cartão,Descrição na Fatura do Cartão
+Detalhes da Transação,Detalhes da Transação
+Diners Club,Diners Club
+Discover,Discover
+Do Total:,Do Total:
+Documento de identificação do cedente para impressão nos boletos bancários.,Documento de identificação do cedente para impressão nos boletos bancários.
+Débito Online (Banco do Brasil),Débito Online (Banco do Brasil)
+Débito Online (Bradesco),Débito Online (Bradesco)
+Débito Online,Débito Online
+Elo,Elo
+Em dias,Em dias
+Emissor temporariamente fora de operação.,Emissor temporariamente fora de operação.
+Encaminhado para autenticação,Encaminhado para autenticação
+Endereço de localização da empresa cedente para impressão nos boletos bancários.,Endereço de localização da empresa cedente para impressão nos boletos bancários.
+Endereço do Cedente,Endereço do Cedente
+Envia o e-mail de confirmação de pagamento (fatura) automaticamente ao capturar transações com cartões ou ao confirmar o pagamento de outros métodos de pagamento.,Envia o e-mail de confirmação de pagamento (fatura) automaticamente ao capturar transações com cartões ou ao confirmar o pagamento de outros métodos de pagamento.
+Enviar E-Mail de Confirmação de Pagamento,Enviar E-Mail de Confirmação de Pagamento
+Erro de formato.,Erro de formato.
+Erro desconhecido.,Erro desconhecido.
+Erro do sistema de pagamentos: URL de autenticação indefinido. Por favor tente novamente em alguns instantes!,Erro do sistema de pagamentos: URL de autenticação indefinido. Por favor tente novamente em alguns instantes!
+Erro na transação.,Erro na transação.
+Erro no controle de senhas.,Erro no controle de senhas.
+Erro(s) do sistema de pagamentos:%s%s%s%sPor favor tente novamente em alguns instantes!,Erro(s) do sistema de pagamentos:%s%s%s%sPor favor tente novamente em alguns instantes!
+Especificar Campos de Endereço,Especificar Campos de Endereço
+Estabelecimento inválido.,Estabelecimento inválido.
+Estabelecimento,Estabelecimento
+Estorno,Estorno
+Exibir Boleto ao Finalizar Compra,Exibir Boleto ao Finalizar Compra
+Exibir Erros,Exibir Erros
+Exibir o boleto bancário automaticamente na página de sucesso após a finalização da compra,Exibir o boleto bancário automaticamente na página de sucesso após a finalização da compra
+Exibir Resultado na Tabela de Pedidos,Exibir Resultado na Tabela de Pedidos
+Falha na validação dos dados.,Falha na validação dos dados.
+Falha no processamento.,Falha no processamento.
+Faturar o pedido automaticamente se a análise antifraude retornar resultado positivo conforme status definidos no campo 'Status para Faturamento Automático'.,Faturar o pedido automaticamente se a análise antifraude retornar resultado positivo conforme status definidos no campo 'Status para Faturamento Automático'.
+Faturar Pedido Automaticamente,Faturar Pedido Automaticamente
+Filtrar Quantidades de Parcelas,Filtrar Quantidades de Parcelas
+Finalizar Pagamento &gt;&gt;,Finalizar Pagamento &gt;&gt;
+Formato: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX,Formato: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+greater than or equal to,maior ou igual que
+Habilitar Controle de Tentativas Falhadas,Habilitar Controle de Tentativas Falhadas
+Habilitar este método de pagamento para seus clientes,Habilitar este método de pagamento para seus clientes
+Habilitar Integração ClearSale,Habilitar Integração ClearSale
+Habilitar,Habilitar
+Hiper,Hiper
+Hipercard,Hipercard
+ID da autorização: %s,ID da autorização: %s
+ID da Transação,ID da Transação
+ID da Transação: %s,ID da Transação: %s
+Identificador ECI ausente.,Identificador ECI ausente.
+Imprimir Boleto,Imprimir Boleto
+Instituição sem comunicação.,Instituição sem comunicação.
+Instruções a serem impressas com o boleto bancário.,Instruções a serem impressas com o boleto bancário.
+Instruções para Boletos Bancários,Instruções para Boletos Bancários
+Invalid license file.,Arquivo de licença inválido.
+Invalid value for the field '%s' of the section/module '%s'! Please check the instructions of the field and try again.,Valor inválido para o campo '%s' da seção/módulo '%s'! Por favor verifique as instruções do campo e tente novamente.
+Invalid value for the field '%s' of the section/module '%s': %s,Valor inválido para o campo '%s' da seção/módulo '%s': %s
+JCB,JCB
+Juros Compostos,Juros Compostos
+Juros de Parcelamento do Cartão de Crédito #%d,Juros de Parcelamento do Cartão de Crédito #%d
+Juros de Parcelamento do Cartão de Crédito,Juros de Parcelamento do Cartão de Crédito
+Juros do Parcelamento no Cartão de Crédito #2,Juros do Parcelamento no Cartão de Crédito #2
+Juros do Parcelamento no Cartão de Crédito #3,Juros do Parcelamento no Cartão de Crédito #3
+Juros Simples,Juros Simples
+less than or equal to,menor ou igual que
+License,Licença
+Limpar Campos de Cartão após Erros,Limpar Campos de Cartão após Erros
+Listar Transações,Listar Transações
+Load License,Carregar Licença
+Maestro (Débito),Maestro (Débito)
+MasterCard,MasterCard
+Mensagem de Erro Padrão,Mensagem de Erro Padrão
+MerchantID,MerchantID
+MerchantKey,MerchantKey
+Modo de Cálculo dos Juros,Modo de Cálculo dos Juros
+Modo de Homologação,Modo de Homologação
+Modo de Testes,Modo de Testes
+Module Version,Versão do Módulo
+Mostrar Porcentagem de Desconto nas Parcelas,Mostrar Porcentagem de Desconto nas Parcelas
+Mostrar Porcentagem de Juros nas Parcelas,Mostrar Porcentagem de Juros nas Parcelas
+Máximo de 450 caracteres,Máximo de 450 caracteres
+Máximo de Cartões,Máximo de Cartões
+Máximo de Parcelas por Valor,Máximo de Parcelas por Valor
+Máximo de Parcelas,Máximo de Parcelas
+Mínimo de R$ 5.00 - Utilizar apenas números e ponto para separar casas decimais!,Mínimo de R$ 5.00 - Utilizar apenas números e ponto para separar casas decimais!
+Nome da empresa cedente para impressão nos boletos bancários.,Nome da empresa cedente para impressão nos boletos bancários.
+Nome Impresso no Cartão,Nome Impresso no Cartão
+Novo Cartão,Novo Cartão
+Não foi possível autorizar a transação com cartão: %s - %s,Não foi possível autorizar a transação com cartão: %s - %s
+Não foi possível autorizar a transação com o cartão #%d: %s - %s,Não foi possível autorizar a transação com o cartão #%d: %s - %s
+Não foi possível cancelar a transação autorizada com o cartão #%d: %s - %s,Não foi possível cancelar a transação autorizada com o cartão #%d: %s - %s
+Não foi possível cancelar a transação autorizada com o cartão: %s - %s,Não foi possível cancelar a transação autorizada com o cartão: %s - %s
+Não foi possível completar a transação com cartão: %s - %s,Não foi possível completar a transação com cartão: %s - %s
+Não foi possível completar a transação com o cartão #%d: %s - %s,Não foi possível completar a transação com o cartão #%d: %s - %s
+Não foi possível confirmar a transação do cartão de crédito/débito/transferência online. Por favor entre em contato para verificar o status de sua compra!,Não foi possível confirmar a transação do cartão de crédito/débito/transferência online. Por favor entre em contato para verificar o status de sua compra!
+Número de Autorização,Número de Autorização
+Número de cartão inválido.,Número de cartão inválido.
+Número de Verificação do Cartão,Número de Verificação do Cartão
+Número do Cartão,Número do Cartão
+Número inválido de parcelas.,Número inválido de parcelas.
+O boleto será disponibilizado para impressão após a finalização da compra.,O boleto será disponibilizado para impressão após a finalização da compra.
+O cartão #%d selecionado não é válido!,O cartão #%d selecionado não é válido!
+O cartão selecionado não é válido!,O cartão selecionado não é válido!
+o mesmo campo de endereço não pode ser especificado para a mesma posição.,o mesmo campo de endereço não pode ser especificado para a mesma posição.
+O número de verificação do cartão #%d não é válido!,O número de verificação do cartão #%d não é válido!
+O número de verificação do cartão não é válido!,O número de verificação do cartão não é válido!
+O número do cartão #%d não é válido!,O número do cartão #%d não é válido!
+O número do cartão #%d é o mesmo número do cartão #%d!,O número do cartão #%d é o mesmo número do cartão #%d!
+O número do cartão não é válido!,O número do cartão não é válido!
+O número do CPF ou CNPJ do dono do cartão #%d não é válido!,O número do CPF ou CNPJ do dono do cartão #%d não é válido!
+O número do CPF ou CNPJ do dono do cartão não é válido!,O número do CPF ou CNPJ do dono do cartão não é válido!
+O pagamento com cartão de crédito/débito/transferência online foi cancelado. A compra será cancelada automaticamente.,O pagamento com cartão de crédito/débito/transferência online foi cancelado. A compra será cancelada automaticamente.
+O pagamento com cartão de crédito/débito/transferência online não foi autenticado. A compra será cancelada automaticamente.,O pagamento com cartão de crédito/débito/transferência online não foi autenticado. A compra será cancelada automaticamente.
+O pagamento com cartão de crédito/débito/transferência online não foi autorizado. A compra será cancelada automaticamente.,O pagamento com cartão de crédito/débito/transferência online não foi autorizado. A compra será cancelada automaticamente.
+O parcelamento só pode ser realizado por cartões emitidos no Brasil!,O parcelamento só pode ser realizado por cartões emitidos no Brasil!
+O que é isto?,O que é isto?
+o valor da quantidade de parcelas deve ser entre 1 e %d para a linha %d. A linha foi removida da listagem.,o valor da quantidade de parcelas deve ser entre 1 e %d para a linha %d. A linha foi removida da listagem.
+o valor da quantidade de parcelas deve ser entre %d e 12 para a linha %d. A linha foi removida da listagem.,o valor da quantidade de parcelas deve ser entre %d e 12 para a linha %d. A linha foi removida da listagem.
+O valor máximo configurado (%f) para a ativação do método de pagamento foi ultrapassado (%f).,O valor máximo configurado (%f) para a ativação do método de pagamento foi ultrapassado (%f).
+O valor mínimo configurado (%f) para a ativação do método de pagamento não foi atingido (%f).,O valor mínimo configurado (%f) para a ativação do método de pagamento não foi atingido (%f).
+O valor mínimo para o cartão #%d não foi atingido!,O valor mínimo para o cartão #%d não foi atingido!
+O valor mínimo para o cartão não foi atingido.,O valor mínimo para o cartão não foi atingido.
+o valor não pode ser maior que a quantidade de campos definida em Sistema > Configuração > Clientes > Configuração de Clientes > Opções de Nome e Endereço > Número de Linhas em um Endereço.,o valor não pode ser maior que a quantidade de campos definida em Sistema > Configuração > Clientes > Configuração de Clientes > Opções de Nome e Endereço > Número de Linhas em um Endereço.
+o valor total %f foi preenchido mais de uma vez. Os registros duplicados foram removidos da listagem.,o valor total %f foi preenchido mais de uma vez. Os registros duplicados foram removidos da listagem.
+Ocorreu um erro com a resposta da plataforma de pagamentos. Por favor tente novamente em alguns instantes!,Ocorreu um erro com a resposta da plataforma de pagamentos. Por favor tente novamente em alguns instantes!
+Ocorreu um erro de conexão com a plataforma de pagamentos. Por favor tente novamente em alguns instantes!,Ocorreu um erro de conexão com a plataforma de pagamentos. Por favor tente novamente em alguns instantes!
+Ocorreu um erro de transação com a plataforma de pagamentos. Por favor tente novamente em alguns instantes!,Ocorreu um erro de transação com a plataforma de pagamentos. Por favor tente novamente em alguns instantes!
+Ocorreu uma falha no sistema de pagamentos. Por favor tente novamente em alguns instantes!,Ocorreu uma falha no sistema de pagamentos. Por favor tente novamente em alguns instantes!
+Operadora,Operadora
+Operação Desconhecida,Operação Desconhecida
+Operação,Operação
+Ordem de Exibição,Ordem de Exibição
+Os valores especificados para cada cartão não completam ou ultrapassam o valor total.,Os valores especificados para cada cartão não completam ou ultrapassam o valor total.
+Outras,Outras
+Padrão,Padrão
+Pagamento confirmado.,Pagamento confirmado.
+Pagamento do boleto identificado. A fatura será criada automaticamente.,Pagamento do boleto identificado. A fatura será criada automaticamente.
+Pagamento Não Finalizado,Pagamento Não Finalizado
+Pagamento à Vista - 1x de R$ %s,Pagamento à Vista - 1x de R$ %s
+Pagamento à Vista com %s%% de acréscimo - 1x de R$ %s,Pagamento à Vista com %s%% de acréscimo - 1x de R$ %s
+Pagamento à Vista com %s%% de desconto - 1x de R$ %s,Pagamento à Vista com %s%% de desconto - 1x de R$ %s
+Pagamento à vista,Pagamento à vista
+Pagar Com,Pagar Com
+Pagar Utilizando %d,Pagar Utilizando %d
+Parcelado em %dx,Parcelado em %dx
+Parcelamento no Cartão,Parcelamento no Cartão
+Parcelamento,Parcelamento
+Parcelas,Parcelas
+Pedido de Transação,Pedido de Transação
+Pedido,Pedido
+Permitir Valor Diferente por Cartão,Permitir Valor Diferente por Cartão
+Período para Tentivas Falhadas,Período para Tentivas Falhadas
+Por favor selecione a bandeira do cartão #%d corretamente! A bandeira selecionada não corresponde ao número do cartão especificado.,Por favor selecione a bandeira do cartão #%d corretamente! A bandeira selecionada não corresponde ao número do cartão especificado.
+Por favor selecione a bandeira do cartão corretamente! A bandeira selecionada não corresponde ao número do cartão especificado.,Por favor selecione a bandeira do cartão corretamente! A bandeira selecionada não corresponde ao número do cartão especificado.
+Posição do Campo Bairro,Posição do Campo Bairro
+Posição do Campo Complemento,Posição do Campo Complemento
+Posição do campo de endereço contendo o complemento. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.,Posição do campo de endereço contendo o complemento. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.
+Posição do campo de endereço contendo o nome da rua. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.,Posição do campo de endereço contendo o nome da rua. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.
+Posição do campo de endereço contendo o nome do bairro. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.,Posição do campo de endereço contendo o nome do bairro. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.
+Posição do campo de endereço contendo o número da localização. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.,Posição do campo de endereço contendo o número da localização. Deve estar dentro da quantidade de linhas de endereço configurada para a loja.
+Posição do Campo Número,Posição do Campo Número
+Posição do Campo Rua,Posição do Campo Rua
+Prazo de Vencimento,Prazo de Vencimento
+Qtd. Máxima de Produtos,Qtd. Máxima de Produtos
+Qtd. Mínima de Produtos,Qtd. Mínima de Produtos
+Quantidade de Cartões para o Pagamento,Quantidade de Cartões para o Pagamento
+Quantidade de Parcelas,Quantidade de Parcelas
+Resultado Antifraude%s:,Resultado Antifraude%s:
+Resultado,Resultado
+Salvar Cartões de Crédito,Salvar Cartões de Crédito
+Salvar dados para compras futuras,Salvar dados para compras futuras
+Score:,Score:
+Sem Registro,Sem Registro
+Senha bloqueada.,Senha bloqueada.
+Senha incorreta.,Senha incorreta.
+Serviço ClearSale,Serviço ClearSale
+Seu navegador será redirecionado para o site do banco após a finalização da compra.,Seu navegador será redirecionado para o site do banco após a finalização da compra.
+Simples,Simples
+Sistema/comunicação indisponível.,Sistema/comunicação indisponível.
+Somente Autorizar,Somente Autorizar
+SSL 1,SSL 1
+SSL 3,SSL 3
+Status de Novas Compras,Status de Novas Compras
+Status ECI:,Status ECI:
+Status para Cancelamento Automático,Status para Cancelamento Automático
+Status para Faturamento Automático,Status para Faturamento Automático
+Status permitidos para o cancelamento automático do pedido.,Status permitidos para o cancelamento automático do pedido.
+Status permitidos para o faturamento automático do pedido.,Status permitidos para o faturamento automático do pedido.
+Subtotal (Sem Frete),Subtotal (Sem Frete)
+Tabela PRICE (Padrão para Cartão de Crédito),Tabela PRICE (Padrão para Cartão de Crédito)
+Taxa de Desconto da Parcela ao Mês (%),Taxa de Desconto da Parcela ao Mês (%)
+Taxa de Desconto para Pagamento via Boleto Bancário (%),Taxa de Desconto para Pagamento via Boleto Bancário (%)
+Taxa de Desconto para Pagamento via Débito (%),Taxa de Desconto para Pagamento via Débito (%)
+Taxa de Desconto para Pagamento via Débito/Transferência Online (%),Taxa de Desconto para Pagamento via Débito/Transferência Online (%)
+Taxa de Juros da Parcela ao Mês (%),Taxa de Juros da Parcela ao Mês (%)
+Tempo excedido na comunicação com o banco emissor.,Tempo excedido na comunicação com o banco emissor.
+Tentativa de autenticação (falhada/cancelada).,Tentativa de autenticação (falhada/cancelada).
+Tentativas Falhadas,Tentativas Falhadas
+The current domain url is not licensed.,O endereço de domínio atual não está licenciado.
+The license directory (%s) does not exists and could not be created. Please check the directory permissions!,A pasta de licença (%s) não existe e não pôde ser criada. Por favor verifique as permissões de pastas!
+The value for the field '%s' of the section/module '%s' must be filled with a minimum value of '0.01'. <br />You may also leave the field blank!,O valor do campo '%s' da seção/módulo '%s' deve ser preenchido com um valor mínimo de '0.01'. <br />Você pode também deixar o campo em branco!
+The value for the field '%s' of the section/module '%s' must be filled with a minimum value of '1'. <br />You may also leave the field blank!,O valor do campo '%s' da seção/módulo '%s' deve ser preenchido com um valor mínimo de '1'. <br />Você também pode deixar o campo em branco!
+The value for the field '%s' of the section/module '%s' must be filled with a value %s the value of the field '%s'.,O valor do campo '%s' da seção/módulo '%s' deve ser preenchido com um valor %s o valor do campo '%s'.
+The value of the field '%s' of the section/module '%s' was automatically corrected to the field value specifications.,O valor do campo '%s' da seção/módulo '%s' foi automaticamente corrigido para as especificações de valores para o campo.
+Tipo de Boletos Bancários,Tipo de Boletos Bancários
+Tipo de emissão de boletos bancários pelo gateway: com registro junto ao banco ou sem registro.,Tipo de emissão de boletos bancários pelo gateway: com registro junto ao banco ou sem registro.
+Tipo de Envio de Dados,Tipo de Envio de Dados
+Tipo de Parcelamento,Tipo de Parcelamento
+TLS 1,TLS 1
+TLS 1.0,TLS 1.0
+TLS 1.1,TLS 1.1
+TLS 1.2,TLS 1.2
+Total Geral (Com Frete),Total Geral (Com Frete)
+Transação cancelada (valor estornado),Transação cancelada (valor estornado)
+Transação com Autenticação,Transação com Autenticação
+Transação confirmada,Transação confirmada
+Transação Inválida (Antifraude não contratado).,Transação Inválida (Antifraude não contratado).
+Transação negada.,Transação negada.
+Transação não autenticada.,Transação não autenticada.
+Transação não autorizada. Entre em contato com a Central de Atendimento AmEx no telefone 08007285090.,Transação não autorizada. Entre em contato com a Central de Atendimento AmEx no telefone 08007285090.
+Transação não autorizada.,Transação não autorizada.
+Transação não localizada.,Transação não localizada.
+Transação não permitida para o cartão.,Transação não permitida para o cartão.
+Transação não permitida. Indicador da operação inválido.,Transação não permitida. Indicador da operação inválido.
+Transação não permitida. Transação de crédito ou débito em uma operação que permite apenas Private Label.,Transação não permitida. Transação de crédito ou débito em uma operação que permite apenas Private Label.
+Transação não permitida.,Transação não permitida.
+Transações de Cartões de Crédito/Débito,Transações de Cartões de Crédito/Débito
+Título exibido para este método de pagamento na página de finalização da compra,Título exibido para este método de pagamento na página de finalização da compra
+Título,Título
+Unknown license error.,Erro de licença desconhecido.
+Unlicensed. Please upload your license file!,Não licenciado. Por favor carregue seu arquivo de licença!
+Usar campo CPF/CNPJ no formulário do cartão,Usar campo CPF/CNPJ no formulário do cartão
+Usar campo Tax/Vat das informações de cobrança,Usar campo Tax/Vat das informações de cobrança
+Usar Formulário Alternativo,Usar Formulário Alternativo
+Usar modo de homologação para testes ou produção após os testes serem concluídos e aprovados pela ClearSale.,Usar modo de homologação para testes ou produção após os testes serem concluídos e aprovados pela ClearSale.
+Usar Serviço Antifraude Cielo,Usar Serviço Antifraude Cielo
+Use apenas números e ponto para separar casas decimais!,Use apenas números e ponto para separar casas decimais!
+Use apenas números!,Use apenas números!
+Utilizar apenas números e ponto para separar casas decimais (no caso das porcentagens)!,Utilizar apenas números e ponto para separar casas decimais (no caso das porcentagens)!
+Utilizar apenas números e ponto para separar casas decimais (no caso dos valores totais)!,Utilizar apenas números e ponto para separar casas decimais (no caso dos valores totais)!
+Utilizar apenas números e ponto para separar casas decimais!,Utilizar apenas números e ponto para separar casas decimais!
+Utilizar apenas números!,Utilizar apenas números!
+Validação de Cartão,Validação de Cartão
+Valor a Cobrar Neste Cartão,Valor a Cobrar Neste Cartão
+Valor Até,Valor Até
+Valor Cobrado no Cartão (em moeda BRL),Valor Cobrado no Cartão (em moeda BRL)
+Valor da transação inválido.,Valor da transação inválido.
+Valor Máximo da Compra,Valor Máximo da Compra
+Valor Mínimo da Compra,Valor Mínimo da Compra
+Valor Mínimo por Cartão,Valor Mínimo por Cartão
+Valor Mínimo por Parcela,Valor Mínimo por Parcela
+Valor não especificado ou especificado valor inválido para o cartão #%d!,Valor não especificado ou especificado valor inválido para o cartão #%d!
+Valor não permitido para essa transação.,Valor não permitido para essa transação.
+Valor,Valor
+MasterShop - Cartões de Crédito/Débito/Boleto/Transferência Online - Cielo (API 3.0),MasterShop - Cartões de Crédito/Débito/Boleto/Transferência Online - Cielo (API 3.0)
+Versão SSL,Versão SSL
+Visa Electron (Débito),Visa Electron (Débito)
+Visa,Visa
+Visualizar Detalhes da Transação,Visualizar Detalhes da Transação
+Você atingiu o limite de tentativas de pagamento utilizando este cartão. Tente novamente mais tarde ou entre em contato com a central de atendimento de seu cartão para verificar quaisquer problemas.,Você atingiu o limite de tentativas de pagamento utilizando este cartão. Tente novamente mais tarde ou entre em contato com a central de atendimento de seu cartão para verificar quaisquer problemas.
+Você atingiu o limite de tentativas de pagamento utilizando o cartão #%d. Tente novamente mais tarde ou entre em contato com a central de atendimento do cartão #%d para verificar quaisquer problemas.,Você atingiu o limite de tentativas de pagamento utilizando o cartão #%d. Tente novamente mais tarde ou entre em contato com a central de atendimento do cartão #%d para verificar quaisquer problemas.
+Você atingiu o limite de tentativas de pagamento. Tente novamente mais tarde ou entre em contato com a central de atendimento de seu cartão para verificar quaisquer problemas.,Você atingiu o limite de tentativas de pagamento. Tente novamente mais tarde ou entre em contato com a central de atendimento de seu cartão para verificar quaisquer problemas.
+XX%s-%s,XX%s-%s
+XXXX-%s,XXXX-%s
+XXXX-XXXX-XX%s-%s,XXXX-XXXX-XX%s-%s
+XXXX-XXXX-XXXX-%s,XXXX-XXXX-XXXX-%s
+XXXX-XXXX-XXXX-XXXX-%s,XXXX-XXXX-XXXX-XXXX-%s
+é necessário selecionar pelo menos uma bandeira de pelo menos uma operadora.,é necessário selecionar pelo menos uma bandeira de pelo menos uma operadora.

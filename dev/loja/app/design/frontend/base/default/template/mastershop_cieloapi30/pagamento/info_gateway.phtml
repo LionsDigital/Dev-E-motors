@@ -1,0 +1,84 @@
+<div class="mastershop_cieloapi30_info">
+	<div class="titulo">
+		<?php echo $this->recuperarTitulo(); ?>
+	</div>
+	<?php
+		$qtdCartoes = $this->recuperarQtdCartoes();
+
+		for ($numCartao = 1; $numCartao <= $qtdCartoes; ++$numCartao)
+		{
+			if ($this->verificarPagamentoBoleto($numCartao))
+			{
+	?>
+		<div class="boleto">
+			<?php
+				if ($this->verificarCompraCancelada())
+				{
+			?>
+				<img src="<?php echo $this->recuperarBoletoImagem($numCartao, 'boleto'); ?>" border="0" />
+			<?php
+				}
+				else if ($this->verificarBoletoPago($numCartao))
+				{
+			?>
+				<img src="<?php echo $this->recuperarBoletoImagem($numCartao, 'pago'); ?>" border="0" />
+				<?php echo $this->__('Boleto Pago'); ?>
+			<?php
+				}
+				else
+				{
+			?>
+				<a href="<?php echo $this->recuperarBoletoUrl($numCartao); ?>" target="_blank">
+					<img src="<?php echo $this->recuperarBoletoImagem($numCartao, 'imprimir'); ?>" border="0" />
+					<?php echo $this->__('Imprimir Boleto'); ?>
+				</a>
+			<?php
+				}
+			?>
+		</div>
+
+	<?php
+			}
+			else
+			{
+	?>
+
+		<div class="cartao">
+			<?php
+				if ($qtdCartoes > 1)
+				{
+			?>
+				<div class="num_cartao">
+					<?php echo $this->__('Cartão #%d', $numCartao); ?>
+				</div>
+			<?php
+				}
+			?>
+			<div class="bandeira">
+				<?php echo $this->recuperarBandeira($numCartao); ?>
+			</div>
+			<div class="numero">
+				<?php echo $this->recuperarCartao($numCartao); ?>
+			</div>
+			<div class="parcelas">
+				<?php echo $this->recuperarParcelas($numCartao); ?>
+			</div>
+			<?php
+				if ($this->verificarPagamentoPendente($numCartao) && $this->verificarPagamentoUrl($numCartao))
+				{
+			?>
+				<div class="pagamento">
+					<img src="<?php echo $this->recuperarPagamentoBandeiraImagem($numCartao); ?>" border="0" />
+					<a href="<?php echo $this->recuperarPagamentoUrl($numCartao); ?>"><?php echo $this->__('Finalizar Pagamento &gt;&gt;'); ?></a>
+				</div>
+			<?php
+				}
+			?>
+		</div>
+
+	<?php
+			}
+		}
+	?>
+</div>
+<?php echo $this->getChildHtml()?>
