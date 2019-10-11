@@ -10,17 +10,17 @@
  * http://opensource.org/licenses/afl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@magento.com so we can send you a copy immediately.
+ * to license@magentocommerce.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade Magento to newer
  * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magento.com for more information.
+ * needs please refer to http://www.magentocommerce.com for more information.
  *
  * @category    design
  * @package     default_default
- * @copyright   Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
@@ -84,7 +84,7 @@ $orderStoreDate = $this->formatDate($_order->getCreatedAtStoreDate(), 'medium', 
             <?php if($_order->getRemoteIp() && $this->shouldDisplayCustomerIp()): ?>
             <tr>
                 <td class="label"><label><?php echo Mage::helper('sales')->__('Placed from IP') ?></label></td>
-                <td class="value"><strong><?php echo $this->escapeHtml($_order->getRemoteIp()); echo ($_order->getXForwardedFor())?' (' . $this->escapeHtml($_order->getXForwardedFor()) . ')':''; ?></strong></td>
+                <td class="value"><strong><?php echo $_order->getRemoteIp(); echo ($_order->getXForwardedFor())?' (' . $this->escapeHtml($_order->getXForwardedFor()) . ')':''; ?></strong></td>
             </tr>
             <?php endif; ?>
             <?php if($_order->getGlobalCurrencyCode() != $_order->getBaseCurrencyCode()): ?>
@@ -125,12 +125,12 @@ $orderStoreDate = $this->formatDate($_order->getCreatedAtStoreDate(), 'medium', 
                 </tr>
                 <tr>
                     <td class="label"><label><?php echo Mage::helper('sales')->__('Email') ?></label></td>
-                    <td class="value"><a href="mailto:<?php echo $this->escapeHtml($_order->getCustomerEmail()) ?>"><strong><?php echo $this->escapeHtml($_order->getCustomerEmail()) ?></strong></a></td>
+                    <td class="value"><a href="mailto:<?php echo $_order->getCustomerEmail() ?>"><strong><?php echo $_order->getCustomerEmail() ?></strong></a></td>
                 </tr>
                 <?php if ($_groupName = $this->getCustomerGroupName()) : ?>
                 <tr>
                     <td class="label"><label><?php echo Mage::helper('sales')->__('Customer Group') ?></label></td>
-                    <td class="value"><strong><?php echo $this->escapeHtml($_groupName) ?></strong></td>
+                    <td class="value"><strong><?php echo $_groupName ?></strong></td>
                 </tr>
                 <?php endif; ?>
                 <?php foreach ($this->getCustomerAccountData() as $data):?>
@@ -154,7 +154,31 @@ $orderStoreDate = $this->formatDate($_order->getCreatedAtStoreDate(), 'medium', 
             <div class="tools"><?php echo $this->getAddressEditLink($_order->getBillingAddress())?></div>
         </div>
         <fieldset>
-            <address><?php echo $_order->getBillingAddress()->getFormated(true) ?></address>
+            <? /* <address><?php echo $_order->getBillingAddress()->getFormated(true) ?></address> */ ?>
+            <address><?php
+$order = $this->getOrder();
+$billing_address = $order->getBillingAddress();
+echo "<font color='red'>Nome: </font> ".' '.$billing_address->getFirstname().' '.$billing_address->getLastname();
+echo "<br />";
+echo "<font color='red'>Endere&ccedil;o: </font> "." ".$billing_address->getStreet(1).", <font color='red'>N&#176;</font> ".$billing_address->getStreet(2);
+$complemento = $billing_address->getStreet(3);
+if ($complemento == NULL) {
+echo "<br />";
+} else {
+echo "<br />";
+echo "<font color='red'>Complemento: </font> ".' '.$billing_address->getStreet(3);
+echo "<br />";
+}
+echo "<font color='red'>Bairro: </font> ".' '.$billing_address->getStreet(4);
+echo "<br />";
+echo "<font color='red'>Cidade: </font> ".' '.$billing_address->getCity();
+echo "<br />";
+echo "<font color='red'>UF: </font> ".' '.$billing_address->getRegion().' '."<font color='red'>CEP: </font> ".' '.$billing_address->getPostcode();
+echo "<br />";
+echo "<font color='red'>Telefone: </font> ".' '.$billing_address->getTelephone();
+echo "<br />";
+echo "<font color='red'>Celular: </font> ".' '.$billing_address->getFax();
+?></address>
         </fieldset>
     </div>
 </div>
@@ -167,7 +191,31 @@ $orderStoreDate = $this->formatDate($_order->getCreatedAtStoreDate(), 'medium', 
             <div class="tools"><?php echo $this->getAddressEditLink($_order->getShippingAddress())?></div>
         </div>
         <fieldset>
-            <address><?php echo $_order->getShippingAddress()->getFormated(true) ?></address>
+            <? /* <address><?php echo $_order->getShippingAddress()->getFormated(true) ?></address> */ ?>
+            <address><?php
+$order = $this->getOrder();
+$shipping_address = $order->getShippingAddress();
+echo "<font color='red'>Nome: </font> ".' '.$shipping_address->getFirstname().' '.$shipping_address->getLastname();
+echo "<br />";
+echo "<font color='red'>Endere&ccedil;o: </font> "." ".$shipping_address->getStreet(1).", <font color='red'>N&#176;</font> ".$shipping_address->getStreet(2);
+$complemento = $shipping_address->getStreet(3);
+if ($complemento == NULL) {
+echo "<br />";
+} else {
+echo "<br />";
+echo "<font color='red'>Complemento: </font> ".' '.$shipping_address->getStreet(3);
+echo "<br />";
+}
+echo "<font color='red'>Bairro: </font> ".' '.$shipping_address->getStreet(4);
+echo "<br />";
+echo "<font color='red'>Cidade: </font> ".' '.$shipping_address->getCity();
+echo "<br />";
+echo "<font color='red'>UF: </font> ".' '.$shipping_address->getRegion().' '."<font color='red'>CEP: </font> ".' '.$shipping_address->getPostcode();
+echo "<br />";
+echo "<font color='red'>Telefone: </font> ".' '.$shipping_address->getTelephone();
+echo "<br />";
+echo "<font color='red'>Celular: </font> ".' '.$shipping_address->getFax();
+?></address>
         </fieldset>
     </div>
 </div>

@@ -1,7 +1,7 @@
 
 
 # php -- BEGIN cPanel-generated handler, do not edit
-# Defina o pacote “ea-php71” como a linguagem padrão de programação “PHP”.
+# Set the “ea-php71” package as the default “PHP” programming language.
 <IfModule mime_module>
   AddHandler application/x-httpd-ea-php71 .php .php7 .phtml
 </IfModule>
